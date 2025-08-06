@@ -11,7 +11,7 @@ title: The Vet Kennel
   <p>🧭 Where would you like to sniff?</p>
   <div class="button-group">
     <a class="retro-button" href="/notebook">📓 Notebook</a>
-    <span>Blogs that break down ICVA NAVLE diagnoses into scooby-snack size bites.</span><br>
+    <span>Pages that break down ICVA NAVLE diagnoses into scooby-snack size bites (insert megaoesophagus joke here).</span><br>
     <a class="retro-button" href="/library">📚 Library</a>
     <span>Flashcard decks, diagnosis spreadsheets, clinical placement templates, any other resource that pops into my head, etc.</span>
   </div>
