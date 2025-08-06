@@ -1,0 +1,5 @@
+
+<article class="blog-card">
+  <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+  <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+</article>
