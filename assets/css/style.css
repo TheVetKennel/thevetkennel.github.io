@@ -180,3 +180,43 @@ header nav a {
   text-align: center;
   margin-top: 3em;
 }
+
+
+body {
+  background-color: #fdfcf7;
+  background-image: linear-gradient(to bottom, transparent 97%, #e1e6da 95%);
+  background-size: 100% 30px;
+  font-family: 'IBM Plex Sans', 'Verdana', sans-serif;
+  color: #000000;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.logo-wrapper {
+  text-align: center;
+  padding: 1em;
+}
+.logo {
+  height: 100px;
+  max-width: 100%;
+}
+
+textarea.intro-textarea {
+  width: 90%;
+  max-width: 600px;
+  margin: 2em auto;
+  display: block;
+  height: 150px;
+  font-size: 16px;
+  padding: 12px;
+  border: 2px solid #6b8f71;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 #9bae87;
+  background-color: #fdfcf7;
+  font-family: 'IBM Plex Sans', 'Verdana', sans-serif;
+}
+
+a {
+  color: #805463;
+}
