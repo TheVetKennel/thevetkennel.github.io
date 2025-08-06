@@ -4,4 +4,4 @@ title: Library
 ---
 
 <h1>Library</h1>
-<p>This is where descriptions of Etsy products and links will go!</p>
+<p>Don't look here omg so embarassing its so ugly I haven't finished okayy. Just... just go.</p>
