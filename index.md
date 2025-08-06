@@ -1,18 +1,10 @@
-
 ---
 layout: default
-title: Home
+title: The Vet Kennel
 ---
 
-<section class="hero">
-  <h2>Welcome to The Vet Kennel</h2>
-  <p>Study resources, blog posts, and NAVLE flashcards with a retro soul.</p>
-  <a class="button" href="/articles.html">📝 Read Vetmed Articles</a>
-</section>
-
-<section class="blog-preview">
-  <h3>Latest Posts</h3>
-  {% for post in site.posts limit:3 %}
-    {% include blog-card.html post=post %}
-  {% endfor %}
-</section>
+<div class="homepage-container">
+  <h1>Welcome to The Vet Kennel 🐾</h1>
+  <p>Your cosy corner for veterinary education, digital tools, and creative resources.</p>
+  <a class="cta-button" href="https://eepurl.com/hYOUR-LINK-HERE" target="_blank">Sign up to the newsletter</a>
+</div>
