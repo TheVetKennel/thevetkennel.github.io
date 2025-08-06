@@ -72,3 +72,51 @@ h1, h2, h3 {
   color: #805463;
   font-family: 'IBM Plex Sans', 'Verdana', sans-serif;
 }
+
+
+.homepage-container {
+  text-align: center;
+  margin: 2em auto;
+}
+
+.navigation-buttons {
+  margin-top: 2em;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.retro-button {
+  background-color: #f7eecb;
+  border: 2px solid #c4b998;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  box-shadow: 2px 2px 0px #c4b998;
+  transition: transform 0.1s ease-in-out;
+}
+
+.retro-button:hover {
+  transform: scale(1.05);
+}
+
+.post-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+
+.post-card {
+  border: 2px solid #e1e6da;
+  padding: 1em;
+  background-color: #fdfcf7;
+  border-radius: 8px;
+}

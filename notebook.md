@@ -6,11 +6,11 @@ title: Notebook
 <h1>Notebook</h1>
 <p>Explore my latest blog posts ✍️</p>
 
-<ul class="post-list">
+<div class="post-card-list">
   {% for post in site.posts %}
-    <li>
+    <div class="post-card">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p>{{ post.excerpt }}</p>
-    </li>
+    </div>
   {% endfor %}
-</ul>
+</div>
