@@ -18,4 +18,5 @@ title: The Vet Kennel
 </div>
 
   <a class="cta-button" href="https://eepurl.com/hYOUR-LINK-HERE" target="_blank">Sign up to the newsletter</a>
+<p class="retro-description">📬 For vet students who want regular(-ish) deep dives on diagnoses, notes, and vetmed updates.</p>
 </div>

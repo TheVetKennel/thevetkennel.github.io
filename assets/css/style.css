@@ -120,3 +120,45 @@ h1, h2, h3 {
   background-color: #fdfcf7;
   border-radius: 8px;
 }
+
+
+.site-title, nav a, .cta-button, .retro-description {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+  margin-top: 4em;
+  padding: 1em;
+  font-size: 0.9em;
+  color: #444;
+}
+
+
+.notebook-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+  padding: 2em;
+  justify-content: space-between;
+}
+
+.notebook-left {
+  flex: 2;
+}
+
+.notebook-right {
+  flex: 1;
+  background: #f3f1e7;
+  padding: 1em;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95em;
+}
+
+.notebook-right details {
+  margin-bottom: 0.6em;
+}
+
+.notebook-right summary {
+  cursor: pointer;
+}
