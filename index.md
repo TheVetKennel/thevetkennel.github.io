@@ -18,5 +18,5 @@ title: The Vet Kennel
 </div>
 
   <a class="cta-button" href="https://eepurl.com/hYOUR-LINK-HERE" target="_blank" style="margin-top: 2em; display: inline-block;">Your newsletter</a>
-<p class="retro-description">📬 Let me in let me in said the wolf (me) to the little piggy in his straw house (your email inbox).<br>For vet students who want regular(-ish) deep dives on diagnoses, general veterinary concepts, and my general feverish musings.</p>
+<p class="retro-description">📬 Let me in let me in said the wolf (me) to the little piggy in his straw house (your email inbox).<br>My notebook pages delivered to your digital door!<br>For those of you who can't get enough of my feverish musings.</p>
 </div>
