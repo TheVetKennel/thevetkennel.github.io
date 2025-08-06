@@ -162,3 +162,10 @@ footer {
 .notebook-right summary {
   cursor: pointer;
 }
+
+
+.retro-description {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  margin-top: 0.5em;
+}
