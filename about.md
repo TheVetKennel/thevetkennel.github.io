@@ -1,10 +1,9 @@
-
 ---
-layout: default
-title: About
+layout: page
+title: About Me
+permalink: /about/
 ---
 
-<section class="about">
-  <h2>About The Vet Kennel</h2>
-  <p>Hi, I'm Lucy — a vet creating cozy and clever tools for students and new grads. Thanks for stopping by!</p>
-</section>
+## About Me
+
+Welcome to The Vet Kennel! I’m a UK-licensed vet passionate about veterinary education, accessible pet care advice, and supporting vet students through their journey. 
