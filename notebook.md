@@ -4,11 +4,11 @@ title: Notebook
 ---
 
 <h1>Notebook</h1>
-<p>Explore my latest blog posts ✍️</p>
+<p>✍️ Explore my notebook pages where I attempt to explain ICVA diagnoses to someone who has absolutely no idea what's going on (me).<br>Mixed in with some other themes like clinical skills, study techniques, and other feverish ramblings.</p>
 
 <div class="notebook-container">
   <div class="notebook-left">
-    <h2>📓 Recent Posts</h2>
+    <h2>📓 Recent Notes</h2>
     <div class="post-card-list">
       {% for post in site.posts %}
         <div class="post-card">
@@ -19,7 +19,7 @@ title: Notebook
     </div>
   </div>
   <div class="notebook-right">
-    <h2>📚 NAVLE Library</h2>
+    <h2>📚 Note Navigation</h2>
     <details open>
       <summary><strong>NAVLE</strong></summary>
       <ul>
