@@ -4,7 +4,7 @@ title: Notebook
 ---
 
 <h1>Notebook</h1>
-<p>✍️ Explore my notebook pages where I attempt to explain ICVA diagnoses to someone who has absolutely no idea what's going on (me).<br>Mixed in with clinical skills, study techniques, and other feverish ramblings.</p>
+<p>✍️ Explore my notebook pages where I attempt to explain the ICVA Species and Diagnoses to someone who has absolutely no idea what's going on (me).<br>Mixed in with the ICVA Competency Domains, study techniques, and other ramblings.</p>
 
 <div class="notebook-container">
   <div class="notebook-left">
