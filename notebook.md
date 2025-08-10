@@ -12,13 +12,14 @@ title: Notebook
     <div class="post-card-list">
       {% for post in site.posts %}
         <div class="post-card">
-          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <p>{{ post.excerpt }}</p>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+          <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</p>
         </div>
       {% endfor %}
     </div>
   </div>
-  <div class="notebook-right">
+  <div class="notebook-right nav-tree">
     <h2>📚 Note Navigation</h2>
 
 <details open>

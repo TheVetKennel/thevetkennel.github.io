@@ -196,7 +196,7 @@ body { font-size: 18px; line-height: 1.75; }
 h2 {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
-  color: #6a4bc4;
+  color: #805463;
 }
 
 /* Indented Notion-like toggle tree for Notebook */
@@ -251,7 +251,7 @@ h2 {
 /* Headings styled to match nav/title ("The Vet Kennel") */
 h1, h2, h3, h4 {
   font-family: 'Courier New', Courier, monospace;
-  color: #6a4bc4;
+  color: #805463;
 }
 h1 { font-size: 2rem; margin-top: 1.2em; }
 h2 { font-size: 1.6rem; margin-top: 1.1em; }
@@ -287,3 +287,8 @@ h4 { font-size: 1.1rem; margin-top: 0.9em; }
 
 .nav-tree ul { margin: 0.2em 0 0.2em 1.4em; }
 .nav-tree li { margin: 0.15em 0; }
+
+
+/* Mulberry link color */
+a, a:visited { color: #805463; }
+a:hover { color: #805463; text-decoration: underline; }
