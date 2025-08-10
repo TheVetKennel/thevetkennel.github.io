@@ -5,7 +5,7 @@ title: The Vet Kennel
 
 <div class="homepage-container">
     <h1>Welcome to The Vet Kennel 🐾</h1>
-  <p>Your cosy corner in the vast scary world of veterinary medicine.<br><br>Currently home to my frantic NAVLE revision along with documented evidence of me slowly losing my mind during the process.<br><br>Have a sniff around my website and if you come across some fleas... let's just keep that between us hey?</p>
+  <p>Your cosy corner in the vast world of veterinary medicine.<br><br>Currently home to my frantic NAVLE revision along with documented evidence of me slowly losing my mind during the process.<br><br>Have a sniff around my website and if you come across some fleas... let's just keep that between us hey?</p>
 
 <div class="navigation-buttons">
   <p>🧭 Where would you like to sniff?</p>
