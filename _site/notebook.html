@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Notebook</title>
+  <title>The Vet Kennel</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/images/logo.png" type="image/png">
@@ -11,31 +11,71 @@
 <body>
     
 <header>
-  <nav class="site-nav">
-    <details class="nav-toggle">
-      <summary aria-label="Toggle navigation">Menu</summary>
-      <ul>
-        <li><a href="/notebook" class="active" aria-current="page">Notebook</a></li>
-        <li><a href="/library" class="" aria-current="">Library</a></li>
-        <li><a href="/about" class="" aria-current="">About</a></li>
-        <li><a href="/contact" class="" aria-current="">Contact</a></li>
-      </ul>
-    </details>
-    <a class="brand" href="/">
-      <img src="/assets/images/logo.png" alt="The Vet Kennel logo" />
-      <span class="brand-text">The Vet Kennel</span>
-    </a>
+  <nav style="display: flex; align-items: center; gap: 1em;">
+    <img src="/assets/images/logo.png" alt="Vet Kennel Logo" class="logo" style="height: 80px;">
+    <a class="site-title" style="font-size: 1.8em;" href="/">The Vet Kennel</a>
+    <ul style="list-style-type: none; margin-left: auto; padding: 0; display: flex; gap: 1em;">
+      <li><a href="/notebook">Notebook</a></li>
+      <li><a href="/library">Library</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
   </nav>
 </header>
 
-  <h1 id="notebook">Notebook</h1>
+  <h1>Notebook</h1>
+<p>✍️ Explore my notebook pages where I attempt to explain the ICVA Species and Diagnoses to someone who has absolutely no idea what's going on (me).<br />Mixed in with the ICVA Competency Domains, study techniques, and other ramblings.</p>
 
-<article class="blog-card">
-  <h4><a href="/notebook/2025/08/10/pda.html">Patent Ductus Arteriosus (PDA)</a></h4>
-  <p>Patent Ductus Arteriosus (PDA) 🫀
+<div class="notebook-container">
+  <div class="notebook-left">
+    <h2>📓 Recent Notes</h2>
+    <div class="post-card-list">
+      
+        <div class="post-card">
+          <h2><a href="/notebook/2025/08/10/pda.html">Patent Ductus Arteriosus (PDA)</a></h2>
+          <p><p>Patent Ductus Arteriosus (PDA) 🫀</p>
 </p>
-</article>
-
+        </div>
+      
+        <div class="post-card">
+          <h2><a href="/2025/08/06/pda.html">Patent Ductus Arteriosus in Dogs</a></h2>
+          <p><p>You’ve probably heard the term “PDA” thrown around in cardiology lectures...</p>
+<p>This article breaks it down simply and clearly for vet students.</p>
+</p>
+        </div>
+      
+    </div>
+  </div>
+  <div class="notebook-right">
+    <h2>📚 Note Navigation</h2>
+    <details open="">
+      <summary><strong>ICVA Species and Diagnoses</strong></summary>
+      <ul>
+        <li>
+          <details>
+            <summary>Canine &amp; Feline</summary>
+            <details><summary>Cardiology</summary><ul><li>Arrhythmias</li><li>Congenital</li><li>Acquired</li></ul></details>
+            <details><summary>Endocrine</summary><ul><li>Diabetes</li><li>Cushing’s</li></ul></details>
+            <details><summary>Lymph &amp; Haem</summary><ul><li>Lymphoma</li><li>IMHA</li></ul></details>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Equine</summary>
+            <details><summary>Cardiology</summary><ul><li>Valve disorders</li></ul></details>
+            <details><summary>Endocrine</summary><ul><li>PPID</li></ul></details>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Bovine</summary>
+            <details><summary>Cardiology</summary><ul><li>Hardware Disease</li></ul></details>
+          </details>
+        </li>
+      </ul>
+    </details>
+  </div>
+</div>
 
   
 <footer style="text-align:center;">

@@ -1,18 +1,13 @@
 
 <header>
-  <nav class="site-nav">
-    <details class="nav-toggle">
-      <summary aria-label="Toggle navigation">Menu</summary>
-      <ul>
-        <li><a href="/notebook" class="{% if page.url contains '/notebook' %}active{% endif %}" aria-current="{% if page.url contains '/notebook' %}page{% endif %}">Notebook</a></li>
-        <li><a href="/library" class="{% if page.url contains '/library' %}active{% endif %}" aria-current="{% if page.url contains '/library' %}page{% endif %}">Library</a></li>
-        <li><a href="/about" class="{% if page.url == '/about' or page.url contains '/about' %}active{% endif %}" aria-current="{% if page.url == '/about' or page.url contains '/about' %}page{% endif %}">About</a></li>
-        <li><a href="/contact" class="{% if page.url contains '/contact' %}active{% endif %}" aria-current="{% if page.url contains '/contact' %}page{% endif %}">Contact</a></li>
-      </ul>
-    </details>
-    <a class="brand" href="/">
-      <img src="/assets/images/logo.png" alt="The Vet Kennel logo" />
-      <span class="brand-text">{{ site.title }}</span>
-    </a>
+  <nav style="display: flex; align-items: center; gap: 1em;">
+    <img src="/assets/images/logo.png" alt="Vet Kennel Logo" class="logo" style="height: 80px;">
+    <a class="site-title" style="font-size: 1.8em;" href="{{ '/' | relative_url }}">The Vet Kennel</a>
+    <ul style="list-style-type: none; margin-left: auto; padding: 0; display: flex; gap: 1em;">
+      <li><a href="/notebook">Notebook</a></li>
+      <li><a href="/library">Library</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
   </nav>
 </header>
