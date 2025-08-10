@@ -6,7 +6,7 @@ title: About
 <section class="about">
     <h2>Hello there and welcome to The Vet Kennel</h2>
   <h2>Who am I?</h2>
-  <p>I’m a UK licensed vet and the human behind The Vet Kennel. After scrambling my way through vet school, I decided it would be a good idea to sit the most nefarious veterinary exam of all time; the NAVLE. I have planted this site today (in August 2025) and with a bit of watering and fertiliser (source of the fertiliser will not be disclosed), I hope to nurture it into a flourishing jungle of <strong>easy, accessible learning<strong> open to everyone.</p>
+  <p>I’m a UK licensed vet and the human behind The Vet Kennel. After scrambling my way through vet school, I decided it would be a good idea to sit the most nefarious veterinary exam of all time; the NAVLE. I have planted this site today (in August 2025) and with a bit of watering and fertiliser (source of the fertiliser will not be disclosed), I hope to nurture it into a flourishing jungle of <strong>easy, accessible learning<strong> open to everyone.
 
   <h2>What you’ll find here</h2>
   <ul>
