@@ -169,3 +169,37 @@ footer {
   font-size: 1em;
   margin-top: 0.5em;
 }
+
+
+/* Typography & spacing */
+body { font-size: 18px; }
+main { line-height: 1.7; }
+h2 { margin-top: 1.6rem; }
+.post-list { list-style: none; padding: 0; }
+.post-item { margin: 1rem 0 1.5rem; }
+
+/* Header & logo */
+.site-nav { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 1rem; }
+.site-nav .brand { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+.site-nav img { height: 40px; } /* smaller logo */
+.site-nav ul { display: flex; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.site-nav a { text-decoration: none; }
+.site-nav a.active { border-bottom: 2px solid currentColor; }
+
+/* Focus styles for accessibility */
+a:focus, button:focus, summary:focus { outline: 3px solid #222; outline-offset: 2px; }
+
+/* Color contrast for links on cream background */
+a { color: #1a1a1a; }
+a:hover { text-decoration: underline; }
+
+/* Mobile nav using <details> */
+.nav-toggle > summary { cursor: pointer; list-style: none; }
+.nav-toggle[open] > ul { display: block; }
+@media (max-width: 640px) {
+  .site-nav ul { display: none; flex-direction: column; gap: 0.75rem; padding: 0.5rem 0; }
+  .nav-toggle { display: block; }
+}
+@media (min-width: 641px) {
+  .nav-toggle { display: none; }
+}

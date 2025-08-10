@@ -4,4 +4,6 @@ description: NAVLE flashcards, blog posts, and tools for vet students.
 baseurl: ""
 url: "https://thevetkennel.github.io"
 theme: minima
-plugins: []
+plugins: [, jekyll-sitemap]
+
+og_image: /assets/images/logo.png
