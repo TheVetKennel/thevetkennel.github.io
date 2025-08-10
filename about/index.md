@@ -10,13 +10,13 @@ title: About
 
   <h2>What you’ll find here</h2>
   <ul>
-    <li><strong>NAVLE Anki flashcards</strong> — high-yield decks designed around active recall and spaced repetition.</li>
-    <li><strong>Printable tools</strong> — study planners, SOAP templates, placement logbooks, and whatnot.</li>
-    <li><strong>Notebook</strong> — friendly, readable posts that turn dense topics into checklists and “ohhh that makes sense” moments.</li>
+    <li>Notebook; friendly, readable notes that turn dense topics into “ohhh that makes sense” moments.</li>
+    <li>Anki flashcards; high-yield decks designed for active recall and spaced repetition.</li>
+    <li>Printable tools; study planners, SOAP templates, placement logbooks, and whatnot.</li>
   </ul>
 
   <h2>Why I built this</h2>
-  <p> I wanted to cultivate a safe, cozy corner to help me (and hopefully you) to prepare for the NAVLE, written without assuming any prior knowledge. Every tool and note is based in the 2 ICVA documents that outline the NAVLE syllabus; Species and Diagnoses, and Competency Domains. I found that although Vetprep and Zuku are great for example questions, I'm incredible at guessing MCQ answers (humble) and so I felt like the information wasn't actually going into my brain. With indepth explanations for each diagnosis, along with active recall flashcards, I hope to cement these millions of little facts into my brain. When all is said and done, my aim is to make at least 1 person feel more confident about sitting the NAVLE, even if that person is me.</p>
+  <p>I wanted to cultivate a safe, cozy corner to help me (and hopefully you) to prepare for the NAVLE, written without assuming any prior knowledge. Every tool and note is based in the 2 ICVA documents that outline the NAVLE syllabus; Species and Diagnoses, and Competency Domains. I found that although Vetprep and Zuku are great for example questions, I'm incredible at guessing MCQ answers (humble) and so I felt like the information wasn't actually going into my brain. With indepth explanations for each diagnosis, along with active recall flashcards, I hope to cement these millions of little facts into my brain. When all is said and done, my aim is to make at least 1 person feel more confident about sitting the NAVLE, even if that person is me.</p>
 
   <h2>Start here</h2>
   <ul>
