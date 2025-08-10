@@ -21,7 +21,7 @@ title: Notebook
   <div class="notebook-right">
     <h2>📚 Note Navigation</h2>
     <details open>
-      <summary><strong>NAVLE</strong></summary>
+      <summary><strong>ICVA Species and Diagnoses</strong></summary>
       <ul>
         <li>
           <details>
