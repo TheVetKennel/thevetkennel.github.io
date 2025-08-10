@@ -20,31 +20,123 @@ title: Notebook
   </div>
   <div class="notebook-right">
     <h2>📚 Note Navigation</h2>
-    <details open>
-      <summary><strong>ICVA Species and Diagnoses</strong></summary>
-      <ul>
-        <li>
-          <details>
-            <summary>Canine & Feline</summary>
-            <details><summary>Cardiology</summary><ul><li>Arrhythmias</li><li>Congenital</li><li>Acquired</li></ul></details>
-            <details><summary>Endocrine</summary><ul><li>Diabetes</li><li>Cushing’s</li></ul></details>
-            <details><summary>Lymph & Haem</summary><ul><li>Lymphoma</li><li>IMHA</li></ul></details>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>Equine</summary>
-            <details><summary>Cardiology</summary><ul><li>Valve disorders</li></ul></details>
-            <details><summary>Endocrine</summary><ul><li>PPID</li></ul></details>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>Bovine</summary>
-            <details><summary>Cardiology</summary><ul><li>Hardware Disease</li></ul></details>
-          </details>
-        </li>
-      </ul>
+
+<details open>
+  <summary><strong>ICVA Species and Diagnoses</strong></summary>
+
+  <details>
+    <summary><strong>Canine &amp; Feline</strong></summary>
+
+    <details>
+      <summary><strong>Cardiovascular</strong></summary>
+
+      <details>
+        <summary><strong>Arrhythmias</strong></summary>
+        <ul>
+          <li>(Coming soon)</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Congenital</strong></summary>
+        <ul>
+          <li><a href="{{ '/2025/08/10/pda.html' | relative_url }}">Patent Ductus Arteriosus</a> (2025-08-10)</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Acquired</strong></summary>
+        <ul>
+          <li>(Coming soon)</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Hypertension</strong></summary>
+        <ul>
+          <li>(Coming soon)</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Feline Specific</strong></summary>
+        <ul>
+          <li>(Coming soon)</li>
+        </ul>
+      </details>
+
     </details>
-  </div>
-</div>
+
+    <details>
+      <summary><strong>Endocrine</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Gastrointestinal and Digestive</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Hemic and Lymphatic</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Integumentary</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Musculoskeletal</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Nervous</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Respiratory</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Special Senses</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Urinary</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Reproductive</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Behavior</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+    <details>
+      <summary><strong>Multisystemic</strong></summary>
+      <ul><li>(Coming soon)</li></ul>
+    </details>
+
+  </details>
+
+  <details>
+    <summary><strong>Equine</strong></summary>
+    <ul><li>(Coming soon)</li></ul>
+  </details>
+
+  <details>
+    <summary><strong>Bovine</strong></summary>
+    <ul><li>(Coming soon)</li></ul>
+  </details>
+
+</details>
