@@ -1,11 +1,8 @@
-
 ---
 layout: default
-title: About
-permalink: /about/
+title: About (redirect)
+permalink: /about.html
 ---
 
-<section class="about">
-  <h2>About The Vet Kennel</h2>
-  <p>Hi, I'm Lucy — a vet creating cozy and clever tools for students and new grads. Thanks for stopping by!</p>
-</section>
+<meta http-equiv="refresh" content="0; url={{ '/about/' | relative_url }}">
+<p>Redirecting to <a href="{{ '/about/' | relative_url }}">About</a>…</p>
