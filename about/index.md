@@ -23,7 +23,7 @@ title: About
   </ul>
 
   <h3>Do you know what you're talking about?</h3>
-  <p>I think so! Everything here is mapped to the ICVA <em>Species & Diagnoses</em> and <em>Competency Domains</em>. I cross-check content with the Merck Veterinary Manual, Saunders Comprehensive Review for the NAVLE, Vetprep, Zuku, as well as peer-reviewed studies found in ResearchGate, AVMA Journals, PubMedCentral, all this in addition to my own notes and knowledge from my time studying the Bachelor of Veterinary Medicine course at the Royal Veterinary College London. If you read anything that sounds off, please do drop me a message and I will investigate.</p>
+  <p>I think so! Everything here is mapped to the ICVA <em>Species & Diagnoses</em> and <em>Competency Domains</em>. I cross-check content with the Merck Veterinary Manual, Saunders Comprehensive Review for the NAVLE, Vetprep, Zuku, as well as peer-reviewed studies found in ResearchGate, AVMA Journals, and PubMedCentral. This is all in addition to my own notes and knowledge from my time studying the Bachelor of Veterinary Medicine course at the Royal Veterinary College London. If you read anything that sounds off, please do drop me a message and I will investigate.</p>
 
 
   <h3>Can I request something?</h3>
