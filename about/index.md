@@ -5,6 +5,8 @@ title: About
 
 <section class="about">
 
+<h1>About</h1>
+
   <p><em>TLDR: I’m a UK-licensed vet who is sitting the NAVLE in March 2026. I make clear, high quality study resources so NAVLE revision feels less huge and scary.</em></p>
 
 
