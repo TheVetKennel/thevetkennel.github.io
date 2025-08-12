@@ -14,7 +14,6 @@ title: Notebook
         <div class="post-card">
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-          <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</p>
         </div>
       {% endfor %}
     </div>
