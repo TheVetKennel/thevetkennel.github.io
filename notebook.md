@@ -44,7 +44,7 @@ title: Notebook
         <ul>
           {% assign pda = site.posts | where: "title", "Patent Ductus Arteriosus (PDA)" | first %}
 {% if pda %}
-  <li><a href="{{ pda.url | relative_url }}">Patent Ductus Arteriosus</a> ({{ pda.date | date: "%Y-%m-%d" }})</li>
+  <li><a href="{{ pda.url | relative_url }}">Patent Ductus Arteriosus</a></li>
 {% else %}
   <li>Patent Ductus Arteriosus (link coming soon)</li>
 {% endif %}
