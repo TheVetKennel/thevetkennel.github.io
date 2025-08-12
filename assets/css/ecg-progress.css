@@ -1,0 +1,24 @@
+
+:root{
+  --ecg-bar-height: 40px;
+  --ecg-bg-color: #e6f0ea;
+}
+
+#ecg-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--ecg-bar-height);
+  background-color: var(--ecg-bg-color);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+#ecg-progress svg { width: 100%; height: 100%; display: block; }
+
+.ecg-bg { opacity: 0.25; } /* faint full-width pattern */
+.ecg-fill {{ }}            /* foreground fill uses same pattern */
+
+html {{ scroll-padding-top: var(--ecg-bar-height); }}
+body {{ padding-top: var(--ecg-bar-height); }}
