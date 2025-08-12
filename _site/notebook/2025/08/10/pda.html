@@ -7,6 +7,52 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/images/logo.png" type="image/png">
+
+
+<!-- Scroll Progress Bar (Vet theme ECG) -->
+<style>
+  :root {
+    --tvk-ecg-color: #6b8f71;   /* requested dark green */
+    --tvk-ecg-track: rgba(0,0,0,0.18);
+    --tvk-cream: #f7f3ea;
+    --tvk-scroll-h: 26px;       /* taller for ECG spikes */
+  }
+
+  .tvk-scroll {
+    position: fixed;
+    left: 0; top: 0; right: 0;
+    height: var(--tvk-scroll-h);
+    z-index: 9999;
+    pointer-events: none;
+    background: var(--tvk-cream);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04) inset;
+  }
+
+  /* SVG fills the bar area */
+  .tvk-scroll__svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Track + Fill strokes pulled from CSS vars */
+  .tvk-scroll__svg .ecg-track {
+    stroke: var(--tvk-ecg-track);
+    fill: none;
+  }
+  .tvk-scroll__svg .ecg-fill {
+    stroke: var(--tvk-ecg-color);
+    fill: none;
+  }
+
+  /* Make sure content doesn’t hide under the fixed bar */
+  body { padding-top: max(var(--tvk-scroll-h), 0px); }
+
+  @media (prefers-reduced-motion: reduce) {
+    /* nothing animated here, but keep hook for future */
+  }
+</style>
+
 </head>
 <body>
     
@@ -23,9 +69,9 @@
   </nav>
 </header>
 
-  <p>Patent Ductus Arteriosus (PDA) 🫀</p>
+  <h2 id="patent-ductus-arteriosus-pda-">Patent Ductus Arteriosus (PDA) 🫀</h2>
 
-<h2 id="were-kicking-off-canine--feline-congenital-cardiology-say-that-five-times-fast-with-one-you-absolutely-need-in-your-brains-always-open-tab">We’re kicking off Canine &amp; Feline Congenital Cardiology (say that five times fast…) with one you absolutely need in your brain’s “always open” tab:</h2>
+<p>We’re kicking off Canine &amp; Feline Congenital Cardiology (say that five times fast…) with one you absolutely need in your brain’s “always open” tab:</p>
 
 <p>It’s common in dogs.</p>
 
@@ -33,9 +79,7 @@
 
 <p>And it’s an examiner’s favourite (you will see it).</p>
 
-<ol>
-  <li>What is it? 🤔</li>
-</ol>
+<h2 id="1-what-is-it-">1. What is it? 🤔</h2>
 
 <p>Stop! Before we talk about the disease, let’s talk about what’s normal.</p>
 
@@ -47,37 +91,27 @@
 
 <p>Why? In most cases, it’s due to a congenital lack of smooth muscle in the wall of the ductus - meaning it physically can’t constrict properly to close.</p>
 
-<ol>
-  <li>Who gets it? 🐾</li>
-</ol>
+<h2 id="2-who-gets-it-">2. Who gets it? 🐾</h2>
 
 <p>PDA is more common in female dogs (let’s hear it for the girls 🎶)</p>
 
 <p>It’s heritable - certain family lines pass it down.</p>
 
-<h2 id="breeds-youll-see-it-in-a-lot-worth-memorising-for-exams">Breeds you’ll see it in a lot (worth memorising for exams):</h2>
+<p>Breeds you’ll see it in a lot (worth memorising for exams):</p>
 
-<p>Miniature Poodle</p>
+<ul class="list">
+  <li>Miniature Poodle</li>
+  <li>Maltese</li>
+  <li>German Shepherd</li>
+  <li>Yorkshire Terrier</li>
+  <li>Shetland Sheepdog</li>
+  <li>Collie</li>
+  <li>Pomeranian</li>
+  <li>Labrador Retriever</li>
+  <li>Bichon Frise</li>
+</ul>
 
-<p>Maltese</p>
-
-<p>German Shepherd</p>
-
-<p>Yorkshire Terrier</p>
-
-<p>Shetland Sheepdog</p>
-
-<p>Collie</p>
-
-<p>Pomeranian</p>
-
-<p>Labrador Retriever</p>
-
-<p>Bichon Frise</p>
-
-<ol>
-  <li>Haemodynamics made haemo-easy ⚡</li>
-</ol>
+<h2 id="3-haemodynamics-made-haemo-easy-">3. Haemodynamics made haemo-easy ⚡</h2>
 
 <p>In most cases, blood flows from the aorta into the pulmonary artery through the PDA. Why? Because the pressure in the aorta is normally higher than the pressure in the pulmonary artery.</p>
 
@@ -93,69 +127,58 @@
 
 <p>If left long enough, the high flow into the lungs can cause pulmonary hypertension (high pressure in the pulmonary vessels). Eventually, the pressure in the pulmonary artery can become higher than in the aorta - this flips the flow direction (to become a right-to-left shunt), sending deoxygenated blood into the body (uh oh). This is a bad stage to be in, as surgery isn’t usually an option anymore and so the prognosis ain’t looking too good.</p>
 
-<ol>
-  <li>Clinical picture 🩺</li>
-</ol>
+<h2 id="4-clinical-picture-">4. Clinical picture 🩺</h2>
 
-<h2 id="some-dogs-have-no-obvious-symptoms-others-might-show">Some dogs have no obvious symptoms. Others might show:</h2>
+<p>Some dogs have no obvious signs. Others might show:</p>
 
-<p>Poor tolerance for exercise</p>
+<ul class="list">
+  <li>Poor tolerance for exercise</li>
+  <li>Tiredness or lethargy</li>
+  <li>Cough</li>
+  <li>Trouble breathing (dyspnoea)</li>
+</ul>
 
-<p>Tiredness or lethargy</p>
+<p>On physical exam, the “gold nugget” findings are:</p>
 
-<p>Cough</p>
-
-<p>Trouble breathing (dyspnoea)</p>
-
-<h2 id="on-physical-exam-the-gold-nugget-findings-are">On physical exam, the “gold nugget” findings are:</h2>
-
-<p>Continuous “washing machine” murmur, heard best at the base of the heart on the left side. “Continuous” means you hear it during both systole and diastole.</p>
-
-<p>Sometimes a second murmur from mitral valve leakage.</p>
-
-<p>Bounding pulses - the difference between systolic and diastolic pressure is large, so the pulse feels extra strong.</p>
+<ul class="list">
+  <li>Continuous “washing machine” murmur, heard best at the base of the heart on the left side. “Continuous” means you hear it during both systole and diastole.</li>
+  <li>Sometimes a second murmur from mitral valve leakage.</li>
+  <li>TBounding pulses - the difference between systolic and diastolic pressure is large, so the pulse feels extra strong.</li>
+</ul>
 
 <p>If congestive heart failure has developed, you may see laboured breathing or other signs of fluid build-up.</p>
 
-<ol>
-  <li>How we diagnose it 🔍</li>
-</ol>
+<h2 id="5-how-we-diagnose-it-">5. How we diagnose it 🔍</h2>
 
 <p>Echocardiography (heart ultrasound)</p>
-
-<p>Enlarged left atrium and left ventricle.</p>
-
-<p>A visible swirl of continuous blood flow in the main pulmonary artery.</p>
-
-<p>PDA often has a funnel shape with the narrow end on the pulmonary artery side.</p>
-
-<p>Mitral regurgitation is common.</p>
+<ul class="list">
+  <li>Enlarged left atrium and left ventricle.</li>
+  <li>A visible swirl of continuous blood flow in the main pulmonary artery.</li>
+  <li>PDA often has a funnel shape with the narrow end on the pulmonary artery side.</li>
+  <li>Mitral regurgitation is common.</li>
+</ul>
 
 <p>Electrocardiography (ECG)</p>
-
-<p>Tall R waves (suggesting left ventricular enlargement).</p>
-
-<p>Wide P waves (suggesting left atrial enlargement).</p>
+<ul class="list">
+  <li>Tall R waves (suggesting left ventricular enlargement).</li>
+  <li>Wide P waves (suggesting left atrial enlargement).</li>
+</ul>
 
 <p>Thoracic radiographs (chest X-rays)</p>
-
-<p>Can look normal in mild cases.</p>
-
-<p>May show enlarged left heart chambers.</p>
-
-<p>Sometimes an aneurysmal bulge of the descending aorta.</p>
-
-<p>Evidence of over-circulated lungs (possibly with pulmonary oedema).</p>
+<ul class="list">
+  <li>Can look normal in mild cases.</li>
+  <li>May show enlarged left heart chambers.</li>
+  <li>Sometimes an aneurysmal bulge of the descending aorta.</li>
+  <li>Evidence of over-circulated lungs (possibly with pulmonary oedema).</li>
+</ul>
 
 <p>Blood pressure</p>
+<ul class="list">
+  <li>Systolic pressure often normal.</li>
+  <li>Diastolic pressure decreased (widening the gap between systolic and diastolic values).</li>
+</ul>
 
-<p>Systolic pressure often normal.</p>
-
-<p>Diastolic pressure decreased (widening the gap between systolic and diastolic values).</p>
-
-<ol>
-  <li>Treatment options 💊</li>
-</ol>
+<h2 id="6-treatment-options-">6. Treatment options 💊</h2>
 
 <p>Interventional catheterisation: device occlusion (coil, vascular plug, Amplatz ductal occluder).</p>
 
@@ -163,9 +186,7 @@
 
 <p>Medical management only if CHF present or PDA can’t be closed (diuretics, ACE inhibitors, oxygen, inotropes).</p>
 
-<ol>
-  <li>Prognosis 📈</li>
-</ol>
+<h2 id="7-prognosis-">7. Prognosis 📈</h2>
 
 <p>Small PDA: may never cause signs, but closure still considered.</p>
 
@@ -173,17 +194,13 @@
 
 <p>Right-to-left PDA: poor prognosis; manage symptoms (phlebotomy/hydroxyurea for polycythaemia), no closure.</p>
 
-<ol>
-  <li>Why it matters (clinically and in exams) 💡</li>
-</ol>
+<h2 id="8-why-it-matters-clinically-and-in-exams-">8. Why it matters (clinically and in exams) 💡</h2>
 
 <p>Clinically: Untreated PDA can lead to congestive heart failure, arrhythmias, and shunt reversal. Early surgical or catheter-based closure is usually curative.</p>
 
 <p>Exam pattern recognition: A young, small-breed female dog with a continuous left basilar murmur and bounding pulses = 🛎 alarm bells for PDA!!! 🛎</p>
 
-<ol>
-  <li>Key takeaways 🔑</li>
-</ol>
+<h2 id="9-key-takeaways-">9. Key takeaways 🔑</h2>
 
 <p>PDA = leftover fetal vessel that should close but doesn’t.</p>
 
@@ -195,7 +212,7 @@
 
 <p>Treat early for the win.</p>
 
-<p>Quick Reference (No funny Business)</p>
+<h2 id="quick-reference-no-funny-business">Quick Reference (No funny Business)</h2>
 
 <p>Type: Common congenital heart defect in dogs</p>
 
@@ -207,62 +224,179 @@
 
 <p>Breeds: Miniature Poodle, Maltese, GSD, Yorkie, Sheltie, Collie, Pomeranian, Labrador, Bichon</p>
 
-<h2 id="clinical-signs">Clinical signs:</h2>
+<p>Clinical signs: Often none. Exercise intolerance, lethargy, cough, dyspnoea</p>
 
-<p>Often none</p>
+<p>Physical exam:</p>
 
-<p>Exercise intolerance, lethargy, cough, dyspnoea</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Continuous left basilar murmur
 
-<h2 id="physical-exam">Physical exam:</h2>
+Possible systolic left apical murmur (mitral regurg)
 
-<p>Continuous left basilar murmur</p>
+Bounding pulses (↑ systolic–diastolic gap)
 
-<p>Possible systolic left apical murmur (mitral regurg)</p>
+Dyspnoea (if CHF)
+</code></pre></div></div>
 
-<p>Bounding pulses (↑ systolic–diastolic gap)</p>
+<p>Diagnosis:</p>
 
-<p>Dyspnoea (if CHF)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Echo: LA/LV enlargement, continuous PA flow, funnel-shaped PDA, ± MR
 
-<h2 id="diagnosis">Diagnosis:</h2>
+ECG: Tall R waves (LV enlargement), wide P waves (LA enlargement)
 
-<p>Echo: LA/LV enlargement, continuous PA flow, funnel-shaped PDA, ± MR</p>
+X-ray: LA/LV enlargement, aneurysmal descending aorta, pulmonary overcirculation ± oedema
 
-<p>ECG: Tall R waves (LV enlargement), wide P waves (LA enlargement)</p>
+BP: Normal systolic, ↓ diastolic
+</code></pre></div></div>
 
-<p>X-ray: LA/LV enlargement, aneurysmal descending aorta, pulmonary overcirculation ± oedema</p>
+<p>Treatment:</p>
 
-<p>BP: Normal systolic, ↓ diastolic</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Interventional closure (coil, plug, ductal occluder)
 
-<h2 id="treatment">Treatment:</h2>
+Surgical ligation
 
-<p>Interventional closure (coil, plug, ductal occluder)</p>
+CHF management (O₂, diuretics, inotropes, nitroglycerin, ACEi)
+</code></pre></div></div>
 
-<p>Surgical ligation</p>
+<p>Prognosis:</p>
 
-<p>CHF management (O₂, diuretics, inotropes, nitroglycerin, ACEi)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Small PDA: Good, may remain asymptomatic
 
-<h2 id="prognosis">Prognosis:</h2>
+Moderate/large PDA: Good if closed early; shortened lifespan if untreated
+</code></pre></div></div>
 
-<p>Small PDA: Good, may remain asymptomatic</p>
+<p>Right-to-left PDA:</p>
 
-<p>Moderate/large PDA: Good if closed early; shortened lifespan if untreated</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cause: Pulmonary hypertension
 
-<h2 id="right-to-left-pda">Right-to-left PDA:</h2>
+Signs: Hypoxaemia, exercise intolerance, collapse, tachypnoea, dyspnoea, ascites
 
-<p>Cause: Pulmonary hypertension</p>
+Polycythaemia → phlebotomy or hydroxyurea
 
-<p>Signs: Hypoxaemia, exercise intolerance, collapse, tachypnoea, dyspnoea, ascites</p>
+Closure contraindicated → severe hypoxaemia &amp; death
 
-<p>Polycythaemia → phlebotomy or hydroxyurea</p>
-
-<p>Closure contraindicated → severe hypoxaemia &amp; death</p>
-
-<p>Prognosis: Poor</p>
+Prognosis: Poor
+</code></pre></div></div>
 
   
 <footer style="text-align:center;">
   <p>© 2025 The Vet Kennel · All rights reserved</p>
 </footer>
+
+
+<!-- Veterinary-themed scroll progress -->
+
+<!-- Veterinary-themed ECG scroll progress -->
+<div class="tvk-scroll"
+     role="progressbar"
+     aria-label="Page scroll progress"
+     aria-valuemin="0"
+     aria-valuemax="100"
+     aria-valuenow="0">
+  <svg class="tvk-scroll__svg" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <!-- One heartbeat motif (width 12 units by 24 tall) -->
+      
+      
+      
+      
+      <pattern id="tvk-ecg-track" patternUnits="userSpaceOnUse" width="12" height="28">
+        <path class="ecg-track" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+              vector-effect="non-scaling-stroke"
+              d="
+                M 0 20
+                L 1 20
+                C 1.3 20, 1.8 19.4, 2.2 18.8
+                C 2.6 18.2, 2.9 18.5, 3.2 20
+                L 3.6 21.0
+                L 4.2 20.3
+                L 4.7 19.0     
+
+                L 5.2 8.0      
+                L 5.6 4.0      
+                L 6.2 27.0     
+                L 6.8 20.0     
+
+                C 7.4 20.2, 8.0 20.6, 8.8 20.9
+                C 9.6 21.2, 10.2 20.0, 10.8 18.5
+                C 11.2 17.2, 11.6 17.6, 12.0 20.0
+              " />
+      </pattern>
+      <pattern id="tvk-ecg-fill" patternUnits="userSpaceOnUse" width="12" height="28">
+        <path class="ecg-fill" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+              vector-effect="non-scaling-stroke"
+              d="
+                M 0 20
+                L 1 20
+                C 1.3 20, 1.8 19.4, 2.2 18.8
+                C 2.6 18.2, 2.9 18.5, 3.2 20
+                L 3.6 21.0
+                L 4.2 20.3
+                L 4.7 19.0     
+
+                L 5.2 8.0      
+                L 5.6 4.0      
+                L 6.2 27.0     
+                L 6.8 20.0     
+
+                C 7.4 20.2, 8.0 20.6, 8.8 20.9
+                C 9.6 21.2, 10.2 20.0, 10.8 18.5
+                C 11.2 17.2, 11.6 17.6, 12.0 20.0
+              " />
+      </pattern>
+
+
+
+
+    </defs>
+    <!-- Light track across full width -->
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#tvk-ecg-track)"></rect>
+    <!-- Green progress overlay: width updated in JS -->
+    <rect id="tvk-ecg-progress" x="0" y="0" width="0%" height="100%" fill="url(#tvk-ecg-fill)"></rect>
+  </svg>
+</div>
+
+  <div class="tvk-scroll__bar" aria-hidden="true"></div>
+  <div class="tvk-scroll__paw" aria-hidden="true">🐾</div>
+</div>
+
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var bar = document.querySelector('.tvk-scroll');
+  var progressRect = document.getElementById('tvk-ecg-progress');
+  if (!bar || !progressRect) return;
+
+  function computePct() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var docH = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+    var winH = window.innerHeight || document.documentElement.clientHeight;
+    var maxScroll = Math.max(docH - winH, 1);
+    var pct = (scrollTop / maxScroll) * 100;
+    return Math.max(0, Math.min(100, pct));
+  }
+
+  var rafId = null;
+  function update() {
+    rafId = null;
+    var pct = computePct();
+    progressRect.setAttribute('width', pct.toFixed(2) + '%');
+    bar.setAttribute('aria-valuenow', pct.toFixed(0));
+  }
+  function onScrollOrResize() {
+    if (rafId == null) rafId = requestAnimationFrame(update);
+  }
+
+  window.addEventListener('scroll', onScrollOrResize, { passive: true });
+  window.addEventListener('resize', onScrollOrResize);
+  document.addEventListener('DOMContentLoaded', update);
+  update();
+})();
+</script>
 
 </body>
 </html>

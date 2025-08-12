@@ -7,6 +7,52 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/images/logo.png" type="image/png">
+
+
+<!-- Scroll Progress Bar (Vet theme ECG) -->
+<style>
+  :root {
+    --tvk-ecg-color: #6b8f71;   /* requested dark green */
+    --tvk-ecg-track: rgba(0,0,0,0.18);
+    --tvk-cream: #f7f3ea;
+    --tvk-scroll-h: 26px;       /* taller for ECG spikes */
+  }
+
+  .tvk-scroll {
+    position: fixed;
+    left: 0; top: 0; right: 0;
+    height: var(--tvk-scroll-h);
+    z-index: 9999;
+    pointer-events: none;
+    background: var(--tvk-cream);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04) inset;
+  }
+
+  /* SVG fills the bar area */
+  .tvk-scroll__svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Track + Fill strokes pulled from CSS vars */
+  .tvk-scroll__svg .ecg-track {
+    stroke: var(--tvk-ecg-track);
+    fill: none;
+  }
+  .tvk-scroll__svg .ecg-fill {
+    stroke: var(--tvk-ecg-color);
+    fill: none;
+  }
+
+  /* Make sure content doesn’t hide under the fixed bar */
+  body { padding-top: max(var(--tvk-scroll-h), 0px); }
+
+  @media (prefers-reduced-motion: reduce) {
+    /* nothing animated here, but keep hook for future */
+  }
+</style>
+
 </head>
 <body>
     
@@ -24,14 +70,157 @@
 </header>
 
   <section class="about">
-  <h2>About The Vet Kennel</h2>
-  <p>Hi, I'm Lucy — a vet creating cozy and clever tools for students and new grads. Thanks for stopping by!</p>
+
+<h1>About</h1>
+
+  <p><em>TLDR: I’m a UK-licensed vet who is sitting the NAVLE in March 2026. I make clear, high quality study resources so NAVLE revision feels less huge and scary.</em></p>
+
+
+  <h3>Who are you?</h3>
+  <p>A UK-licensed vet (MRCVS) with a hurdle looming ahead in March 2026; the NAVLE (The North American Veterinary Licensing Examination). I'm growing The Vet Kennel to help me organise my revision without having to wrestle infinite scrawled notes from my time at vet school. I also have some other projects going on that may find a home here too; teaching A Level Chemistry and studying for a PGCE (Postgraduate Certificate in Education).</p>
+
+
+  <h3>What is this?</h3>
+  <p>A safe, cozy corner for evidence-based, accessible vet study resources, with no prior knowledge assumed. My website may be basic (me and technology don't get on) but it's teeming with gold nuggets of veterinary info, all delivered with some personality - not just regurgitating a textbook.</p>
+
+
+  <h3>How do I use it?</h3>
+  <ul>
+    <li>Peruse the <a href="/notebook/">Notebook</a> to find friendly, comprehensive explainers when you need clarity on a diagnosis.</li>
+    <li>Grab the goods from the <a href="/library/">Library</a> when you’re ready to practice with concise active-recall flashcard decks. Or, if you crave organisation during your hectic clinical rotations; find study planners, SOAP templates, placement logbooks, and whatnot.</li>
+  </ul>
+
+  <h3>Do you know what you're talking about?</h3>
+  <p>I think so! Everything here is mapped to the ICVA <em>Species &amp; Diagnoses</em> and <em>Competency Domains</em>. I cross-check content with the Merck Veterinary Manual, Saunders Comprehensive Review for the NAVLE, Vetprep, Zuku, as well as peer-reviewed studies found in ResearchGate, AVMA Journals, and PubMedCentral. This is all in addition to my own notes and knowledge from my time studying the Bachelor of Veterinary Medicine course at the Royal Veterinary College London. If you read anything that sounds off, please do drop me a message and I will investigate.</p>
+
+
+  <h3>Can I request something?</h3>
+  <p>Yes, please. Tell me what would actually help you and I would be happy to make that a reality: <a href="/contact/">Contact</a>.</p>
+
+
+  <p style="opacity:.8;margin-top:.75rem;"><em>Now building: Canine &amp; Feline Cardiovascular notes &amp; Anki decks. Last updated: 12th August 2025.</em></p>
 </section>
 
   
 <footer style="text-align:center;">
   <p>© 2025 The Vet Kennel · All rights reserved</p>
 </footer>
+
+
+<!-- Veterinary-themed scroll progress -->
+
+<!-- Veterinary-themed ECG scroll progress -->
+<div class="tvk-scroll"
+     role="progressbar"
+     aria-label="Page scroll progress"
+     aria-valuemin="0"
+     aria-valuemax="100"
+     aria-valuenow="0">
+  <svg class="tvk-scroll__svg" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <!-- One heartbeat motif (width 12 units by 24 tall) -->
+      
+      
+      
+      
+      <pattern id="tvk-ecg-track" patternUnits="userSpaceOnUse" width="12" height="28">
+        <path class="ecg-track" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+              vector-effect="non-scaling-stroke"
+              d="
+                M 0 20
+                L 1 20
+                C 1.3 20, 1.8 19.4, 2.2 18.8
+                C 2.6 18.2, 2.9 18.5, 3.2 20
+                L 3.6 21.0
+                L 4.2 20.3
+                L 4.7 19.0     
+
+                L 5.2 8.0      
+                L 5.6 4.0      
+                L 6.2 27.0     
+                L 6.8 20.0     
+
+                C 7.4 20.2, 8.0 20.6, 8.8 20.9
+                C 9.6 21.2, 10.2 20.0, 10.8 18.5
+                C 11.2 17.2, 11.6 17.6, 12.0 20.0
+              " />
+      </pattern>
+      <pattern id="tvk-ecg-fill" patternUnits="userSpaceOnUse" width="12" height="28">
+        <path class="ecg-fill" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+              vector-effect="non-scaling-stroke"
+              d="
+                M 0 20
+                L 1 20
+                C 1.3 20, 1.8 19.4, 2.2 18.8
+                C 2.6 18.2, 2.9 18.5, 3.2 20
+                L 3.6 21.0
+                L 4.2 20.3
+                L 4.7 19.0     
+
+                L 5.2 8.0      
+                L 5.6 4.0      
+                L 6.2 27.0     
+                L 6.8 20.0     
+
+                C 7.4 20.2, 8.0 20.6, 8.8 20.9
+                C 9.6 21.2, 10.2 20.0, 10.8 18.5
+                C 11.2 17.2, 11.6 17.6, 12.0 20.0
+              " />
+      </pattern>
+
+
+
+
+    </defs>
+    <!-- Light track across full width -->
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#tvk-ecg-track)"></rect>
+    <!-- Green progress overlay: width updated in JS -->
+    <rect id="tvk-ecg-progress" x="0" y="0" width="0%" height="100%" fill="url(#tvk-ecg-fill)"></rect>
+  </svg>
+</div>
+
+  <div class="tvk-scroll__bar" aria-hidden="true"></div>
+  <div class="tvk-scroll__paw" aria-hidden="true">🐾</div>
+</div>
+
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var bar = document.querySelector('.tvk-scroll');
+  var progressRect = document.getElementById('tvk-ecg-progress');
+  if (!bar || !progressRect) return;
+
+  function computePct() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var docH = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+    var winH = window.innerHeight || document.documentElement.clientHeight;
+    var maxScroll = Math.max(docH - winH, 1);
+    var pct = (scrollTop / maxScroll) * 100;
+    return Math.max(0, Math.min(100, pct));
+  }
+
+  var rafId = null;
+  function update() {
+    rafId = null;
+    var pct = computePct();
+    progressRect.setAttribute('width', pct.toFixed(2) + '%');
+    bar.setAttribute('aria-valuenow', pct.toFixed(0));
+  }
+  function onScrollOrResize() {
+    if (rafId == null) rafId = requestAnimationFrame(update);
+  }
+
+  window.addEventListener('scroll', onScrollOrResize, { passive: true });
+  window.addEventListener('resize', onScrollOrResize);
+  document.addEventListener('DOMContentLoaded', update);
+  update();
+})();
+</script>
 
 </body>
 </html>
