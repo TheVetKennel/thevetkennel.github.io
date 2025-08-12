@@ -1,15 +1,13 @@
 
 body {
-  background-color: #fdfcf7;
-  background-image: linear-gradient(to bottom, transparent 97%, #e1e6da 95%);
+  background-color: #f7f4ef;
+  background-image: linear-gradient(to bottom, transparent 97%, #e7eadf 95%);
   background-size: 100% 30px;
-  font-family: 'IBM Plex Sans', 'Verdana', sans-serif;
+  font-family: 'IBM Plex Sans','Verdana',sans-serif;
   font-size: 18px;
   line-height: 1.7;
-  font-size: 18px;
-  line-height: 1.75;
-  color: #000000;
-  line-height: 1.6;
+  color: #1b1b1b;
+  padding: 60px;
 }
 
 .logo-wrapper {
@@ -176,17 +174,40 @@ footer {
 
 /* Added by assistant: increase whitespace around page edges */
 body {
-  padding: 24px;
+  background-color: #f7f4ef;
+  background-image: linear-gradient(to bottom, transparent 97%, #e7eadf 95%);
+  background-size: 100% 30px;
+  font-family: 'IBM Plex Sans','Verdana',sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #1b1b1b;
+  padding: 60px;
 }
 
 @media (min-width: 768px) {
   body {
-    padding: 48px;
-  }
+  background-color: #f7f4ef;
+  background-image: linear-gradient(to bottom, transparent 97%, #e7eadf 95%);
+  background-size: 100% 30px;
+  font-family: 'IBM Plex Sans','Verdana',sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #1b1b1b;
+  padding: 60px;
+}
 }
 
 /* Increased base font size and line height per user request */
-body { font-size: 18px; line-height: 1.75; }
+body {
+  background-color: #f7f4ef;
+  background-image: linear-gradient(to bottom, transparent 97%, #e7eadf 95%);
+  background-size: 100% 30px;
+  font-family: 'IBM Plex Sans','Verdana',sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #1b1b1b;
+  padding: 60px;
+}
 
 
 
@@ -292,3 +313,35 @@ h4 { font-size: 1.1rem; margin-top: 0.9em; }
 /* Mulberry link color */
 a, a:visited { color: #805463; }
 a:hover { color: #805463; text-decoration: underline; }
+
+
+/* --- Layout & Nav polish --- */
+.site-nav { display:flex; align-items:center; gap:1rem; padding: 0.75rem 1rem; }
+.logo { height:72px; }
+.site-title { font-size: 1.8rem; font-weight: 700; color:#1b1b1b; text-decoration:none; }
+.nav-links { list-style:none; margin-left:auto; display:flex; gap:1rem; padding:0; }
+.nav-links a { text-decoration:none; padding:0.3rem 0.5rem; border-radius:8px; }
+.nav-links a.active { background:#efeae3; outline:2px solid #cbb8c0; }
+
+/* --- Cards for Notebook --- */
+.post-card-list { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+.post-card { background:#ffffffcc; backdrop-filter:saturate(120%); border:1px solid #e6e0e3; border-radius:16px; padding:1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.post-card .thumb { display:block; width:100%; height:140px; border-radius:12px; background:#f1efe9; border:1px dashed #d9d2d6; margin-bottom:0.75rem; overflow:hidden; }
+.post-card .thumb img { display:none; }
+.post-card h2 { margin:0.2rem 0 0.25rem; font-size:1.15rem; }
+.post-card .post-meta { font-size:0.9rem; opacity:0.7; margin-bottom:0.4rem; }
+
+/* Buttons */
+.cta-button { color:#fff !important; } /* override mulberry link color */
+.retro-button { transition: transform 0.06s ease-in-out; }
+.retro-button:active { transform: translateY(1px); }
+
+/* Links */
+a, a:visited { color:#805463; } /* mulberry */
+a:hover { text-decoration: underline; }
+
+/* Content spacing */
+main, .homepage-container, .notebook-container { padding: 0 1rem; }
+h1,h2,h3 { color:#2a2a2a; }
+
+.notebook-right { background-color: #E1E6DA !important; }

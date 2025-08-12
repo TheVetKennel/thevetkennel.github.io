@@ -12,8 +12,10 @@ title: Notebook
     <div class="post-card-list">
       {% for post in site.posts %}
         <div class="post-card">
+          <div class="thumb"></div>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
         </div>
       {% endfor %}
     </div>

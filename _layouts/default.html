@@ -3,7 +3,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title | default: site.title }} - The Vet Kennel</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="website">
+  <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/images/logo.png" type="image/png">
