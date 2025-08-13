@@ -9,145 +9,149 @@ title: Notebook
 <div class="notebook-container">
   <div class="notebook-left">
     <h2>📓 Recent Notes</h2>
+
     <div class="post-card-list">
       {% for post in site.posts %}
-        <div class="post-card">
-          <div class="thumb">
-            {% if post.thumbnail %}
-              <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.image_alt | default: post.title }} thumbnail">
-            {% endif %}
-          </div>
+        {% assign thumb = post.thumbnail | default: post.image %}
+        <article class="post-card">
+          <a class="thumb-link" href="{{ post.url | relative_url }}">
+            <div class="thumb"
+                 style="aspect-ratio:16/9;background-size:cover;background-position:center;border-radius:12px;{% if thumb %}background-image:url('{{ thumb | relative_url }}');{% endif %}">
+            </div>
+          </a>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
           <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
-        </div>
+        </article>
       {% endfor %}
     </div>
   </div>
+
   <div class="notebook-right nav-tree">
     <h2>📚 Note Navigation</h2>
 
-<details open>
-  <summary><strong>ICVA Species and Diagnoses</strong></summary>
-
-  <details>
-    <summary><strong>Canine &amp; Feline</strong></summary>
-
-    <details>
-      <summary><strong>Cardiovascular</strong></summary>
+    <details open>
+      <summary><strong>ICVA Species and Diagnoses</strong></summary>
 
       <details>
-        <summary><strong>Arrhythmias</strong></summary>
-        <ul>
-          <li>(Coming soon)</li>
-        </ul>
+        <summary><strong>Canine &amp; Feline</strong></summary>
+
+        <details>
+          <summary><strong>Cardiovascular</strong></summary>
+
+          <details>
+            <summary><strong>Arrhythmias</strong></summary>
+            <ul>
+              <li>(Coming soon)</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Congenital</strong></summary>
+            <ul>
+              {% assign pda = site.posts | where_exp: "p", "p.title contains 'Patent Ductus Arteriosus'" | first %}
+              {% if pda %}
+                <li><a href="{{ pda.url | relative_url }}">Patent Ductus Arteriosus</a></li>
+              {% else %}
+                <li>Patent Ductus Arteriosus (link coming soon)</li>
+              {% endif %}
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Acquired</strong></summary>
+            <ul>
+              <li>(Coming soon)</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Hypertension</strong></summary>
+            <ul>
+              <li>(Coming soon)</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Feline Specific</strong></summary>
+            <ul>
+              <li>(Coming soon)</li>
+            </ul>
+          </details>
+        </details>
+
+        <details>
+          <summary><strong>Endocrine</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Gastrointestinal and Digestive</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Hemic and Lymphatic</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Integumentary</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Musculoskeletal</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Nervous</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Respiratory</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Special Senses</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Urinary</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Reproductive</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Behavior</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
+        <details>
+          <summary><strong>Multisystemic</strong></summary>
+          <ul><li>(Coming soon)</li></ul>
+        </details>
+
       </details>
 
       <details>
-        <summary><strong>Congenital</strong></summary>
-        <ul>
-          {% assign pda = site.posts | where: "title", "Patent Ductus Arteriosus (PDA)" | first %}
-{% if pda %}
-  <li><a href="{{ pda.url | relative_url }}">Patent Ductus Arteriosus</a></li>
-{% else %}
-  <li>Patent Ductus Arteriosus (link coming soon)</li>
-{% endif %}
-        </ul>
+        <summary><strong>Equine</strong></summary>
+        <ul><li>(Coming soon)</li></ul>
       </details>
 
       <details>
-        <summary><strong>Acquired</strong></summary>
-        <ul>
-          <li>(Coming soon)</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary><strong>Hypertension</strong></summary>
-        <ul>
-          <li>(Coming soon)</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary><strong>Feline Specific</strong></summary>
-        <ul>
-          <li>(Coming soon)</li>
-        </ul>
+        <summary><strong>Bovine</strong></summary>
+        <ul><li>(Coming soon)</li></ul>
       </details>
 
     </details>
-
-    <details>
-      <summary><strong>Endocrine</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Gastrointestinal and Digestive</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Hemic and Lymphatic</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Integumentary</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Musculoskeletal</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Nervous</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Respiratory</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Special Senses</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Urinary</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Reproductive</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Behavior</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-    <details>
-      <summary><strong>Multisystemic</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
-    </details>
-
-  </details>
-
-  <details>
-    <summary><strong>Equine</strong></summary>
-    <ul><li>(Coming soon)</li></ul>
-  </details>
-
-  <details>
-    <summary><strong>Bovine</strong></summary>
-    <ul><li>(Coming soon)</li></ul>
-  </details>
-
-</details>
+  </div>
+</div>
