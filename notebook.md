@@ -6,6 +6,12 @@ title: Notebook
 <h1>Notebook</h1>
 <p>✍️ Explore my notebook pages where I attempt to explain the ICVA Species and Diagnoses to someone who has absolutely no idea what's going on (me).<br>Mixed in with the ICVA Competency Domains, study techniques, and other ramblings.</p>
 
+<!-- Override any theme sizing that was cropping thumbnails -->
+<style>
+  .post-card .thumb { aspect-ratio: auto !important; height: auto !important; }
+  .post-card .thumb img { width: 100%; height: auto; display: block; }
+</style>
+
 <div class="notebook-container">
   <div class="notebook-left">
     <h2>📓 Recent Notes</h2>
@@ -19,7 +25,7 @@ title: Notebook
               {% if thumb %}
                 <img src="{{ thumb | relative_url }}"
                      alt="{{ post.image_alt | default: post.title }} thumbnail"
-                     style="width:100%; height:auto; display:block;">
+                     loading="lazy">
               {% endif %}
             </div>
           </a>
