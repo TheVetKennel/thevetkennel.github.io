@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Notebook
-thumbnail: /assets/images/pda-thumbnail.png
 ---
 
 <h1>Notebook</h1>

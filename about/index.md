@@ -1,7 +1,6 @@
 ---
 layout: default
 title: About
-thumbnail: /assets/images/pda-thumbnail.png
 ---
 
 <section class="about">
