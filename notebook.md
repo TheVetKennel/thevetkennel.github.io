@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Notebook
-thumbnail: /assets/images/pda-thumbnail.png
 ---
 
 <h1>Notebook</h1>
@@ -13,7 +12,11 @@ thumbnail: /assets/images/pda-thumbnail.png
     <div class="post-card-list">
       {% for post in site.posts %}
         <div class="post-card">
-          <div class="thumb"></div>
+          <div class="thumb">
+            {% if post.thumbnail %}
+              <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.image_alt | default: post.title }} thumbnail">
+            {% endif %}
+          </div>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
           <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
