@@ -15,8 +15,12 @@ title: Notebook
         {% assign thumb = post.thumbnail | default: post.image %}
         <article class="post-card">
           <a class="thumb-link" href="{{ post.url | relative_url }}">
-            <div class="thumb"
-                 style="aspect-ratio:16/9;background-size:cover;background-position:center;border-radius:12px;{% if thumb %}background-image:url('{{ thumb | relative_url }}');{% endif %}">
+            <div class="thumb" style="border-radius:12px; overflow:hidden;">
+              {% if thumb %}
+                <img src="{{ thumb | relative_url }}"
+                     alt="{{ post.image_alt | default: post.title }} thumbnail"
+                     style="width:100%; height:auto; display:block;">
+              {% endif %}
             </div>
           </a>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
