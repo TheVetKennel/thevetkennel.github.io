@@ -49,12 +49,16 @@ title: Notebook
         <details>
           <summary><strong>Cardiovascular</strong></summary>
 
-          <details>
-            <summary><strong>Arrhythmias</strong></summary>
-            <ul>
-              <li>(Coming soon)</li>
-            </ul>
-          </details>
+          
+          <ul>
+            {% assign arr = site.posts | where_exp: "p", "p.title contains 'Canine & Feline Cardiology; Arrhythmias'" | first %}
+            {% if arr %}
+              <li><a href="{{ arr.url | relative_url }}">Arrhythmias</a></li>
+            {% else %}
+              <li>Arrhythmias (link coming soon)</li>
+            {% endif %}
+          </ul>
+        </details>
 
           <details>
             <summary><strong>Congenital</strong></summary>
