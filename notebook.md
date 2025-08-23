@@ -4,7 +4,7 @@ title: Notebook
 ---
 
 <h1>Notebook</h1>
-<p>✍️ Explore my notebook pages where I attempt to explain the ICVA Species and Diagnoses to someone who has absolutely no idea what's going on (me).<br>Mixed in with the ICVA Competency Domains, study techniques, and other ramblings.</p>
+<p>✍️ Explore my notebook pages where I attempt to break down the ICVA Species and Diagnoses into scooby-snack-sized bites for someone who has absolutely no idea what's going on (me).<br>Mixed in with the ICVA Competency Domains, study techniques, and other ramblings.</p>
 
 <!-- Override any theme sizing that was cropping thumbnails -->
 <style>
@@ -60,39 +60,6 @@ title: Notebook
           </ul>
         </details>
 
-          <details>
-            <summary><strong>Congenital</strong></summary>
-            <ul>
-              {% assign pda = site.posts | where_exp: "p", "p.title contains 'Patent Ductus Arteriosus'" | first %}
-              {% if pda %}
-                <li><a href="{{ pda.url | relative_url }}">Patent Ductus Arteriosus</a></li>
-              {% else %}
-                <li>Patent Ductus Arteriosus (link coming soon)</li>
-              {% endif %}
-            </ul>
-          </details>
-
-          <details>
-            <summary><strong>Acquired</strong></summary>
-            <ul>
-              <li>(Coming soon)</li>
-            </ul>
-          </details>
-
-          <details>
-            <summary><strong>Hypertension</strong></summary>
-            <ul>
-              <li>(Coming soon)</li>
-            </ul>
-          </details>
-
-          <details>
-            <summary><strong>Feline Specific</strong></summary>
-            <ul>
-              <li>(Coming soon)</li>
-            </ul>
-          </details>
-        </details>
 
         <details>
           <summary><strong>Endocrine</strong></summary>
