@@ -37,7 +37,8 @@ title: Notebook
     </div>
   </div>
 
-  <div class="notebook-right nav-tree">
+
+<div class="notebook-right nav-tree">
   <h2>📚 Note Navigation</h2>
 
   <details open>
@@ -47,217 +48,122 @@ title: Notebook
     <details>
       <summary><strong>Canine &amp; Feline</strong></summary>
 
-      <!-- Cardiovascular -->
-      <details>
-        <summary><strong>Cardiovascular</strong></summary>
-        <ul>
-          {% assign cf_cardiology = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'cardiology'" %}
-          {% if cf_cardiology.size > 0 %}
-            {% for post in cf_cardiology %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
+      {% assign cf_systems = 
+        "cardiology:Cardiovascular,
+         endocrine:Endocrine,
+         gastrointestinal:Gastrointestinal and Digestive,
+         hemic-lymphatic:Hemic/Lymphatic,
+         integumentary:Integumentary,
+         musculoskeletal:Musculoskeletal,
+         nervous:Nervous,
+         respiratory:Respiratory,
+         special-senses:Special Senses,
+         urinary:Urinary,
+         reproductive:Reproductive,
+         behavior:Behavior,
+         multisystemic:Multisystemic" 
+         | split: "," %}
 
-      <!-- Endocrine -->
-      <details>
-        <summary><strong>Endocrine</strong></summary>
-        <ul>
-          {% assign cf_endocrine = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'endocrine'" %}
-          {% if cf_endocrine.size > 0 %}
-            {% for post in cf_endocrine %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Gastrointestinal -->
-      <details>
-        <summary><strong>Gastrointestinal and Digestive</strong></summary>
-        <ul>
-          {% assign cf_gi = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'gastrointestinal'" %}
-          {% if cf_gi.size > 0 %}
-            {% for post in cf_gi %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Hemic & Lymphatic -->
-      <details>
-        <summary><strong>Hemic and Lymphatic</strong></summary>
-        <ul>
-          {% assign cf_hemic = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'hemic-lymphatic'" %}
-          {% if cf_hemic.size > 0 %}
-            {% for post in cf_hemic %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Integumentary -->
-      <details>
-        <summary><strong>Integumentary</strong></summary>
-        <ul>
-          {% assign cf_skin = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'integumentary'" %}
-          {% if cf_skin.size > 0 %}
-            {% for post in cf_skin %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Musculoskeletal -->
-      <details>
-        <summary><strong>Musculoskeletal</strong></summary>
-        <ul>
-          {% assign cf_msk = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'musculoskeletal'" %}
-          {% if cf_msk.size > 0 %}
-            {% for post in cf_msk %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Nervous -->
-      <details>
-        <summary><strong>Nervous</strong></summary>
-        <ul>
-          {% assign cf_neuro = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'nervous'" %}
-          {% if cf_neuro.size > 0 %}
-            {% for post in cf_neuro %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Respiratory -->
-      <details>
-        <summary><strong>Respiratory</strong></summary>
-        <ul>
-          {% assign cf_resp = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'respiratory'" %}
-          {% if cf_resp.size > 0 %}
-            {% for post in cf_resp %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Special Senses -->
-      <details>
-        <summary><strong>Special Senses</strong></summary>
-        <ul>
-          {% assign cf_senses = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'special-senses'" %}
-          {% if cf_senses.size > 0 %}
-            {% for post in cf_senses %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Urinary -->
-      <details>
-        <summary><strong>Urinary</strong></summary>
-        <ul>
-          {% assign cf_urinary = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'urinary'" %}
-          {% if cf_urinary.size > 0 %}
-            {% for post in cf_urinary %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Reproductive -->
-      <details>
-        <summary><strong>Reproductive</strong></summary>
-        <ul>
-          {% assign cf_repro = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'reproductive'" %}
-          {% if cf_repro.size > 0 %}
-            {% for post in cf_repro %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Behavior -->
-      <details>
-        <summary><strong>Behavior</strong></summary>
-        <ul>
-          {% assign cf_behave = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'behavior'" %}
-          {% if cf_behave.size > 0 %}
-            {% for post in cf_behave %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
-      <!-- Multisystemic -->
-      <details>
-        <summary><strong>Multisystemic</strong></summary>
-        <ul>
-          {% assign cf_multi = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'multisystemic'" %}
-          {% if cf_multi.size > 0 %}
-            {% for post in cf_multi %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li>(Coming soon)</li>
-          {% endif %}
-        </ul>
-      </details>
-
+      {% for pair in cf_systems %}
+        {% assign parts = pair | split: ":" %}
+        {% assign sys_slug = parts[0] | strip %}
+        {% assign sys_label = parts[1] | strip %}
+        <details>
+          <summary><strong>{{ sys_label }}</strong></summary>
+          <ul>
+            {% assign cf_posts = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains sys_slug" %}
+            {% if cf_posts.size > 0 %}
+              {% for post in cf_posts %}
+                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+              {% endfor %}
+            {% else %}
+              <li>(Coming soon)</li>
+            {% endif %}
+          </ul>
+        </details>
+      {% endfor %}
     </details>
 
     <!-- EQUINE -->
     <details>
       <summary><strong>Equine</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
+
+      {% assign eq_systems = 
+        "cardiology:Cardiovascular,
+         endocrine:Endocrine,
+         gastrointestinal:Gastrointestinal and Digestive,
+         hemic-lymphatic:Hemic/Lymphatic,
+         integumentary:Integumentary,
+         musculoskeletal:Musculoskeletal,
+         nervous:Nervous,
+         respiratory:Respiratory,
+         special-senses:Special Senses,
+         urinary:Urinary,
+         reproductive:Reproductive,
+         behavior:Behavior,
+         multisystemic:Multisystemic" 
+         | split: "," %}
+
+      {% for pair in eq_systems %}
+        {% assign parts = pair | split: ":" %}
+        {% assign sys_slug = parts[0] | strip %}
+        {% assign sys_label = parts[1] | strip %}
+        <details>
+          <summary><strong>{{ sys_label }}</strong></summary>
+          <ul>
+            {% assign eq_posts = site.posts | where_exp: "p", "p.categories contains 'equine' and p.categories contains sys_slug" %}
+            {% if eq_posts.size > 0 %}
+              {% for post in eq_posts %}
+                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+              {% endfor %}
+            {% else %}
+              <li>(Coming soon)</li>
+            {% endif %}
+          </ul>
+        </details>
+      {% endfor %}
     </details>
 
     <!-- BOVINE -->
     <details>
       <summary><strong>Bovine</strong></summary>
-      <ul><li>(Coming soon)</li></ul>
+
+      {% assign bov_systems = 
+        "cardiology:Cardiovascular,
+         endocrine:Endocrine,
+         gastrointestinal:Gastrointestinal and Digestive,
+         hemic-lymphatic:Hemic/Lymphatic,
+         integumentary:Integumentary,
+         musculoskeletal:Musculoskeletal,
+         nervous:Nervous,
+         respiratory:Respiratory,
+         special-senses:Special Senses,
+         urinary:Urinary,
+         reproductive:Reproductive,
+         behavior:Behavior,
+         multisystemic:Multisystemic" 
+         | split: "," %}
+
+      {% for pair in bov_systems %}
+        {% assign parts = pair | split: ":" %}
+        {% assign sys_slug = parts[0] | strip %}
+        {% assign sys_label = parts[1] | strip %}
+        <details>
+          <summary><strong>{{ sys_label }}</strong></summary>
+          <ul>
+            {% assign bov_posts = site.posts | where_exp: "p", "p.categories contains 'bovine' and p.categories contains sys_slug" %}
+            {% if bov_posts.size > 0 %}
+              {% for post in bov_posts %}
+                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+              {% endfor %}
+            {% else %}
+              <li>(Coming soon)</li>
+            {% endif %}
+          </ul>
+        </details>
+      {% endfor %}
     </details>
 
   </details>
 </div>
-    </details>
-  </div>
 </div>
