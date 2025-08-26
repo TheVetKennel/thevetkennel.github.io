@@ -93,7 +93,7 @@ title: Notebook
       <summary><strong>Equine</strong></summary>
 
       {% assign cf_systems = 
-  "cardiology:🫀 Cardiovascular,
+  "cardiovascular:🫀 Cardiovascular,
    endocrine:⚖️ Endocrine,
    gastrointestinal:🌮 Gastrointestinal and Digestive,
    hemic-lymphatic:🩸 Hemic/Lymphatic,
@@ -137,7 +137,7 @@ title: Notebook
       <summary><strong>Bovine</strong></summary>
 
       {% assign cf_systems = 
-  "cardiology:🫀 Cardiovascular,
+  "cardiovascular:🫀 Cardiovascular,
    endocrine:⚖️ Endocrine,
    gastrointestinal:🌮 Gastrointestinal and Digestive,
    hemic-lymphatic:🩸 Hemic/Lymphatic,
