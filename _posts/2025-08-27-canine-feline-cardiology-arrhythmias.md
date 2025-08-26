@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Canine & Feline Cardiovascular: Arrhythmias"
-date: 2025-08-26
+date: 2025-08-27
 categories: [notebook, canine-feline, cardiology]
 description: "Reference table of common arrhythmias in dogs & cats — diagnostics, treatment, and key exam pearls."
 ---
