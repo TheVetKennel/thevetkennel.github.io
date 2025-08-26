@@ -1,4 +1,3 @@
-
 (function () {
   const svg = document.getElementById('ecg-svg');
   if (!svg) return;
@@ -19,11 +18,11 @@
     pattern.setAttribute('width', tileWidth);
     pattern.setAttribute('height', tileHeight);
 
-    // Stretch the source image to exactly fill the tile (no gaps between repeats)
+    // Stretch the source image to exactly fill the tile
     img.setAttribute('width', tileWidth);
     img.setAttribute('height', tileHeight);
 
-    // Full-width rects
+    // Full-width background rect
     bgRect.setAttribute('width', vw);
     bgRect.setAttribute('height', BAR_HEIGHT);
   }
@@ -36,7 +35,9 @@
     const pct = maxScroll > 0 ? (scrollTop / maxScroll) : 0;
 
     const vw = window.innerWidth || document.documentElement.clientWidth;
-    fillRect.setAttribute('width', Math.round(vw * pct));
+
+    // Fill proportional to scroll percentage
+    fillRect.setAttribute('width', pct * vw);
     fillRect.setAttribute('height', BAR_HEIGHT);
   }
 
