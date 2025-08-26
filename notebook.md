@@ -51,7 +51,7 @@ title: Notebook
 
           
           <ul>
-            {% assign arr = site.posts | where_exp: "p", "p.title contains 'Canine & Feline Cardiology; Arrhythmias'" | first %}
+            {% assign arr = site.posts | where_exp: "p", "p.title contains 'Canine & Feline Cardiology: Arrhythmias'" | first %}
             {% if arr %}
               <li><a href="{{ arr.url | relative_url }}">Arrhythmias</a></li>
             {% else %}
