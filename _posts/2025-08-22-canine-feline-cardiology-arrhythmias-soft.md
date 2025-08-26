@@ -3,7 +3,7 @@ layout: default
 title: "Canine & Feline Cardiovascular: Arrhythmias"
 date: 2025-08-22
 categories: [notebook, canine-feline, cardiology]
-description: "Reference table of common arrhythmias in dogs & cats — diagnostics, treatment, and key exam pearls."
+description: "Reference table of arrhythmias in dogs & cats - pathogenesis, diagnostics, treatment, and prognosis."
 ---
 
 <h1>Canine & Feline Cardiovascular: Arrhythmias</h1>
@@ -72,34 +72,3 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
   </tbody>
 </table>
 </div>
-
-<style>
-/* Base table styling */
-.prose table { 
-  width: 100% !important; 
-  table-layout: auto !important; 
-  border-collapse: collapse; 
-  font-size: 12pt; 
-  background: #fdfcf7; /* Cream background */
-}
-.prose td, .prose th { 
-  padding: 8px; 
-  border: 1px solid #e0e0e0; /* lighter borders */
-  vertical-align: top; 
-  white-space: normal !important; 
-  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-/* Header styling */
-.prose th {
-  background: #9bae87; 
-  color: #000; 
-  font-weight: 700;
-  text-align: left;
-  border-radius: 6px 6px 0 0; /* softer rounded header corners */
-}
-/* Purple highlight class */
-.prose .purple {
-  color: #805463;
-}
-</style>
-
