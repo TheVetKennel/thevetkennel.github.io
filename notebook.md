@@ -49,7 +49,7 @@ title: Notebook
       <summary><strong>Canine &amp; Feline</strong></summary>
 
       {% assign cf_systems = 
-  "cardiology:🫀 Cardiovascular,
+  "cardiovascular:🫀 Cardiovascular,
    endocrine:⚖️ Endocrine,
    gastrointestinal:🌮 Gastrointestinal and Digestive,
    hemic-lymphatic:🩸 Hemic/Lymphatic,
