@@ -329,8 +329,15 @@ h1,h2,h3 { color:#2a2a2a; }
 
 /* === PRINT STYLES === */
 @media print {
-  header, footer, nav, .nav-tree, .download-button, #ecg-progress {
-    display: none !important;
+  header,
+footer,
+nav,
+.nav-tree,
+.download-button,
+.post-toolbar,
+#ecg-progress {
+  display: none !important;
+}
   }
 
   body {
