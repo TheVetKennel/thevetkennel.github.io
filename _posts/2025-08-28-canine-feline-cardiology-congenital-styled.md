@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Canine & Feline Cardiovascular: Congenital Heart Problems"
-date: 2025-08-27
+title: "Canine & Feline Cardiovascular: Congenital (Styled)"
+date: 2025-08-28
 categories: [notebook, canine-feline, cardiology]
-description: "Reference table of congenital heart problems in dogs & cats — diagnostics, treatment, and key exam pearls."
+description: "Styled export preserving bold, underline, and colour from Excel."
 ---
 
 <h1>Canine & Feline Cardiovascular: Congenital Heart Problems</h1>
@@ -11,17 +11,18 @@ description: "Reference table of congenital heart problems in dogs & cats — di
 <div class='prose max-w-none'>
 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:
  collapse;table-layout:fixed;width:1399pt" width="1867">
-<col width="199"/>
-<col span="3" width="463"/>
-<col width="279"/>
-<tr height="27">
+<col style="mso-width-source:userset;mso-width-alt:6357;width:149pt" width="199"/>
+<col span="3" style="mso-width-source:userset;mso-width-alt:14805;
+ width:347pt" width="463"/>
+<col style="mso-width-source:userset;mso-width-alt:8917;width:209pt" width="279"/>
+<tr height="27" style="height:20.0pt">
 <th align="left" class="xl67" height="27" width="199">Diagnoses</th>
 <th align="left" class="xl67" width="463">Pathogenesis</th>
 <th align="left" class="xl67" width="463">Diagnosis</th>
 <th align="left" class="xl67" width="463">Treatment</th>
 <th align="left" class="xl67" width="279">Prognosis</th>
 </tr>
-<tr height="320">
+<tr height="320" style="height:240.0pt">
 <td align="left" class="xl66" height="320" width="199">Patent Ductus Arteriosus (PDA)</td>
 <td align="left" class="xl66" width="463">Ductus arteriosus;
   normal connection in fetus between pulmonary artery and descending aorta →
@@ -50,7 +51,7 @@ description: "Reference table of congenital heart problems in dogs & cats — di
 <font class="font8">Poor for right-to-left</font><font class="font5">
   shunt.</font></td>
 </tr>
-<tr height="213">
+<tr height="213" style="height:160.0pt">
 <td align="left" class="xl65" height="213" width="199">Vascular Ring Anomaly (Persistent right aortic arch)</td>
 <td align="left" class="xl65" width="463"><font class="font9">Normal
   process; Left 4th aortic arch → functional aorta, and the right regresses
@@ -72,7 +73,7 @@ description: "Reference table of congenital heart problems in dogs & cats — di
 <td align="left" class="xl65" width="279">Good if treated <font class="font8">early</font><font class="font5">; residual esophageal
   dysfunction possible.</font></td>
 </tr>
-<tr height="107">
+<tr height="107" style="height:80.0pt">
 <td align="left" class="xl66" height="107" width="199">Ventricular Septal Defect (VSD)</td>
 <td align="left" class="xl66" width="463">Septal defect → <font class="font6">left-to-right</font><font class="font5"> shunting → </font><font class="font6">left heart</font><font class="font5"> volume overload (after
   passing thru lungs).<br/>
@@ -88,7 +89,7 @@ description: "Reference table of congenital heart problems in dogs & cats — di
 <td align="left" class="xl66" width="279">Favorable if small;
   poor for untreated large defects.</td>
 </tr>
-<tr height="267">
+<tr height="267" style="height:200.0pt">
 <td align="left" class="xl65" height="267" width="199">Tetralogy of Fallot</td>
 <td align="left" class="xl65" width="463"><font class="font6">1.
   Pulmonic stenosis<br/>
@@ -118,7 +119,7 @@ description: "Reference table of congenital heart problems in dogs & cats — di
   (corrective) to close VSD.</font></td>
 <td align="left" class="xl65" width="279">Poor if severe.</td>
 </tr>
-<tr height="160">
+<tr height="160" style="height:120.0pt">
 <td align="left" class="xl66" height="160" width="199">Atrial Septal Defect (ASD)</td>
 <td align="left" class="xl66" width="463">Defect in atrial
   septum → <font class="font6">left-to-right</font><font class="font5">
@@ -137,7 +138,7 @@ description: "Reference table of congenital heart problems in dogs & cats — di
 <td align="left" class="xl66" width="279">Favorable if small;
   poor for untreated large defects.</td>
 </tr>
-<tr height="187">
+<tr height="187" style="height:140.0pt">
 <td align="left" class="xl65" height="187" width="199">Atrioventricular Valvular Dysplasia</td>
 <td align="left" class="xl65" width="463">Valve malformation → <font class="font6">regurgitation</font><font class="font5"> (backflow) </font><font class="font6">or stenosis </font><font class="font5">(narrowing of valve
   orifice, restricting blood flow)</font><font class="font6"><br/>
@@ -161,7 +162,7 @@ description: "Reference table of congenital heart problems in dogs & cats — di
 <td align="left" class="xl65" width="279">Variable based on
   severity.</td>
 </tr>
-<tr height="160">
+<tr height="160" style="height:120.0pt">
 <td align="left" class="xl66" height="160" width="199">Peritoneopericardial diaphragmatic hernia (PPDH)</td>
 <td align="left" class="xl66" width="463">Failure of <font class="font8">septum transversum fusion</font><font class="font5"> → Abnormal
   communication between peritoneal and pericardial cavities → abdominal organs </font><font class="font8">herniate into pericardial sac</font><font class="font5">.<br/>
@@ -176,7 +177,7 @@ description: "Reference table of congenital heart problems in dogs & cats — di
 <td align="left" class="xl66" width="279"><font class="font6">Excellent</font><font class="font5"> unless </font><font class="font6">adhesions</font><font class="font5"> between abdominal organs and pericardium complicate surgery.</font></td>
 </tr>
 <?if supportMisalignedColumns?>
-<tr height="0">
+<tr height="0" style="display:none">
 <td width="199"></td>
 <td width="463"></td>
 <td width="463"></td>

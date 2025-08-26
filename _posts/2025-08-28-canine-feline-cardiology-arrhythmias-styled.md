@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Canine & Feline Cardiovascular: Arrhythmias"
-date: 2025-08-27
+title: "Canine & Feline Cardiovascular: Arrhythmias (Styled)"
+date: 2025-08-28
 categories: [notebook, canine-feline, cardiology]
-description: "Reference table of common arrhythmias in dogs & cats — diagnostics, treatment, and key exam pearls."
+description: "Styled export preserving bold, underline, and colour from Excel."
 ---
 
 <h1>Canine & Feline Cardiovascular: Arrhythmias</h1>
@@ -11,17 +11,18 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
 <div class='prose max-w-none'>
 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:
  collapse;table-layout:fixed;width:1399pt" width="1867">
-<col width="199"/>
-<col span="3" width="463"/>
-<col width="279"/>
-<tr height="27">
+<col style="mso-width-source:userset;mso-width-alt:6357;width:149pt" width="199"/>
+<col span="3" style="mso-width-source:userset;mso-width-alt:14805;
+ width:347pt" width="463"/>
+<col style="mso-width-source:userset;mso-width-alt:8917;width:209pt" width="279"/>
+<tr height="27" style="height:20.0pt">
 <th align="left" class="xl67" height="27" width="199">Diagnoses</th>
 <th align="left" class="xl67" width="463">Pathogenesis</th>
 <th align="left" class="xl67" width="463">Diagnosis</th>
 <th align="left" class="xl67" width="463">Treatment</th>
 <th align="left" class="xl67" width="279">Prognosis</th>
 </tr>
-<tr height="213">
+<tr height="213" style="height:160.0pt">
 <td align="left" class="xl66" height="213" width="199">(General) Arrhythmias</td>
 <td align="left" class="xl66" width="463">Disruptions in normal
   conduction; <font class="font6">Sinus node → AV node → His bundle → Right
@@ -45,7 +46,7 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
   (respiratory sinus arrhythmia), others indicate severe underlying disease
   (3rd-degree AV block, ventricular fibrillation).</td>
 </tr>
-<tr height="320">
+<tr height="320" style="height:240.0pt">
 <td align="left" class="xl65" height="320" width="199">Tachyarrhythmias</td>
 <td align="left" class="xl65" width="463"><font class="font7">Supraventricular</font><font class="font5"> (Atrial fibrillation/flutter, tachycardia) or </font><font class="font7">ventricular</font><font class="font5"> (tachycardia,
   Ventricular premature complexes, Ventricular fibrillation, Torsades de
@@ -66,7 +67,7 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
   QT interval + cyclic variation of QRS ('twisting' of QRS around isoelectric
   line).</font></td>
 <td align="left" class="xl65" width="463"><font class="font7">Supraventricular
-  tachyarrhythmias</font><font class="font5">: </font><font class="font6"><span> </span>Beta-blockers, calcium channel blockers</font><font class="font5">, digoxin (incr vagal tone), amiodarone (antiarrhythmic).
+  tachyarrhythmias</font><font class="font5">: </font><font class="font6"><span style="mso-spacerun:yes"> </span>Beta-blockers, calcium channel blockers</font><font class="font5">, digoxin (incr vagal tone), amiodarone (antiarrhythmic).
   <br/>
 </font><font class="font7">Ventricular tachycardia and Ventricular
   premature complexes:</font><font class="font5"> </font><font class="font6">Lidocaine</font><font class="font5"> (antiarrhythmic), procainamide (antiarrhythmic), mexiletine
@@ -79,7 +80,7 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
 </font><font class="font7">Torsades</font><font class="font5">: Treatable
   if underlying cause (e.g. hypokalaemia) is corrected</font></td>
 </tr>
-<tr height="267">
+<tr height="267" style="height:200.0pt">
 <td align="left" class="xl66" height="267" width="199">Bradyarrhythmias</td>
 <td align="left" class="xl66" width="463"><font class="font6">Increased
   parasympathetic tone, AV nodal disease, sinus node dysfunction</font><font class="font5"> (age-related degeneration/fibrosis).<br/>
@@ -106,7 +107,7 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
     Pacemaker improves prognosis for bradyarrhythmias.<br/>
     Poor without pacemaker for 3rd-degree AV block.</td>
 </tr>
-<tr height="107">
+<tr height="107" style="height:80.0pt">
 <td align="left" class="xl65" height="107" width="199">Sick Sinus Syndrome (SSS)</td>
 <td align="left" class="xl65" width="463">Dysfunction of the
   sinus node causing <font class="font6">inappropriate bradycardia,</font><font class="font5"> often alternating with paroxysmal </font><font class="font6">tachycardia
@@ -120,7 +121,7 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
     Antiarrhythmics for tachycardic episodes after pacemaker implanted.</td>
 <td align="left" class="xl65" width="279">Good with pacemaker.</td>
 </tr>
-<tr height="133">
+<tr height="133" style="height:100.0pt">
 <td align="left" class="xl66" height="133" width="199">Premature Beats</td>
 <td align="left" class="xl66" width="463">Ectopic pacemaker
   activity <font class="font6">outside the sinus node</font><font class="font5">.<br/>
@@ -140,7 +141,7 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
   incidental.<br/>
     VPCs: Concerning if frequent or associated with structural disease.</td>
 </tr>
-<tr height="107">
+<tr height="107" style="height:80.0pt">
 <td align="left" class="xl65" height="107" width="199">Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)</td>
 <td align="left" class="xl65" width="463">(Fibro)<font class="font6">fatty infiltration</font><font class="font5"> of the </font><font class="font6">right ventricle</font><font class="font5"> leads to electrical
   instability.<br/>
@@ -158,7 +159,7 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
 <td align="left" class="xl65" width="279">High risk of <font class="font6">sudden death</font><font class="font5"> due to fatal
   arrhythmias.</font></td>
 </tr>
-<tr height="107">
+<tr height="107" style="height:80.0pt">
 <td align="left" class="xl66" height="107" width="199">Other ECG Abnormalities</td>
 <td align="left" class="xl66" width="463">Electrical
   disturbances from structural, metabolic, or autonomic changes.</td>
@@ -172,7 +173,7 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
 <td class="xl66" width="279"> </td>
 </tr>
 <?if supportMisalignedColumns?>
-<tr height="0">
+<tr height="0" style="display:none">
 <td width="199"></td>
 <td width="463"></td>
 <td width="463"></td>
