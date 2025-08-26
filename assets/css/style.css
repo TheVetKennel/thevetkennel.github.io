@@ -423,6 +423,16 @@ nav,
   justify-content: center;
 }
 
+/* Make toggle + library note boxes fully centered */
+.post-toolbar .toolbar-box .revision-toggle,
+.post-toolbar .toolbar-box .library-note,
+.post-toolbar .toolbar-box .cta-button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
 /* Tone down Notebook Nav headings inside post toolbar only */
 .post-toolbar .toolbar-box h2,
 .post-toolbar .toolbar-box summary strong {
@@ -438,27 +448,32 @@ nav,
   color: #805463;                                 /* same mulberry color */
 }
 
-/* Center Notebook Navigation text inside toolbar box */
+/* Notebook nav in toolbar: center headings, left-align children */
 .post-toolbar .toolbar-box .nav-tree {
   display: flex;
   flex-direction: column;
   justify-content: center;   /* vertical centering */
-  align-items: center;       /* horizontal centering */
-  height: 100%;              /* fill the green box */
-  text-align: center;        /* center text */
+  align-items: center;       /* center headings */
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
-.post-toolbar .toolbar-box .nav-tree h2 {
+/* Center the main Notebook Navigation title + ICVA heading */
+.post-toolbar .toolbar-box .nav-tree h2,
+.post-toolbar .toolbar-box .nav-tree > details > summary {
+  text-align: center;
+  width: 100%;
   margin: 0 0 0.5em;
 }
 
-.post-toolbar .toolbar-box .nav-tree summary {
-  text-align: center;
-}
-
-.post-toolbar .toolbar-box h2 {
-  margin: 0 0 0.5em; /* trim down excess margin */
-  text-align: center;
+/* Left-align nested toggles (systems) under ICVA */
+.post-toolbar .toolbar-box .nav-tree > details > ul,
+.post-toolbar .toolbar-box .nav-tree > details > details {
+  text-align: left;
+  align-self: flex-start;
+  width: auto;
+  margin-left: 1em;  /* indent nicely */
 }
 
 /* Revision toggle inside box */
