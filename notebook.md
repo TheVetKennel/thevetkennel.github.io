@@ -71,7 +71,9 @@ title: Notebook
         <details>
           <summary><strong>{{ sys_label }}</strong></summary>
           <ul>
-            {% assign cf_posts = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains sys_slug" %}
+{% assign cf_posts = site.posts 
+   | where_exp: "p", "p.categories contains 'canine-feline'" 
+   | where_exp: "p", "p.categories contains sys_slug" %}
             {% if cf_posts.size > 0 %}
               {% for post in cf_posts %}
                 <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
@@ -111,7 +113,9 @@ title: Notebook
         <details>
           <summary><strong>{{ sys_label }}</strong></summary>
           <ul>
-            {% assign eq_posts = site.posts | where_exp: "p", "p.categories contains 'equine' and p.categories contains sys_slug" %}
+{% assign eq_posts = site.posts 
+   | where_exp: "p", "p.categories contains 'equine'" 
+   | where_exp: "p", "p.categories contains sys_slug" %}
             {% if eq_posts.size > 0 %}
               {% for post in eq_posts %}
                 <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
@@ -151,7 +155,9 @@ title: Notebook
         <details>
           <summary><strong>{{ sys_label }}</strong></summary>
           <ul>
-            {% assign bov_posts = site.posts | where_exp: "p", "p.categories contains 'bovine' and p.categories contains sys_slug" %}
+{% assign bov_posts = site.posts 
+   | where_exp: "p", "p.categories contains 'bovine'" 
+   | where_exp: "p", "p.categories contains sys_slug" %}
             {% if bov_posts.size > 0 %}
               {% for post in bov_posts %}
                 <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
