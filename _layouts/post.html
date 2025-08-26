@@ -21,10 +21,10 @@
   <!-- Page title -->
   <h1 class="post-title">{{ page.title }}</h1>
 
-  <!-- Unified Toolbar -->
-  <div class="post-toolbar">
+<div class="post-toolbar">
 
-    <!-- Left: Revision toggle -->
+  <!-- Left: Revision toggle -->
+  <div class="toolbar-box">
     <div class="revision-toggle">
       <label class="switch">
         <input type="checkbox" id="revision-mode">
@@ -32,22 +32,25 @@
       </label>
       <span class="toggle-text">Toggle Revision Mode (click cells to reveal)</span>
     </div>
+  </div>
 
-    <!-- Middle: Notebook navigation -->
-    <div class="toolbar-nav">
-      {% include notebook-nav.html %}
-    </div>
+  <!-- Middle: Notebook navigation -->
+  <div class="toolbar-box">
+    {% include notebook-nav.html %}
+  </div>
 
-    <!-- Right: PDF button -->
+  <!-- Right: PDF button -->
+  <div class="toolbar-box">
     <div class="download-button">
       <a href="javascript:window.print()" class="cta-button">📄 Download as PDF</a>
       <p class="library-note">
-        ...or get the editable, pretty version from the 
+        …or get the editable, pretty version from the 
         <a href="{{ '/library/' | relative_url }}">Library</a>!
       </p>
     </div>
-
   </div>
+
+</div>
 
   <!-- Post content -->
   {{ content }}
