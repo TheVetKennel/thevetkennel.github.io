@@ -453,13 +453,14 @@ input:checked + .slider:before { transform: translateX(24px); }
 .prose td.covered::after {
   content: "Click to reveal";
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 0.8em;
   font-weight: 600;
   opacity: 0.85;
-  pointer-events: none; /* allow click to hit cell */
+  pointer-events: none; /* lets clicks hit the cell itself */
 }
 
 /* Revealed cells */
