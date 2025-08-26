@@ -50,14 +50,16 @@ title: Notebook
           <summary><strong>Cardiovascular</strong></summary>
 
           
-          <ul>
-            {% assign arr = site.posts | where_exp: "p", "p.title contains 'Canine & Feline Cardiology: Arrhythmias'" | first %}
-            {% if arr %}
-              <li><a href="{{ arr.url | relative_url }}">Arrhythmias</a></li>
-            {% else %}
-              <li>Arrhythmias (link coming soon)</li>
-            {% endif %}
-          </ul>
+         <ul>
+  {% assign cf_cardiology = site.posts | where_exp: "p", "p.categories contains 'canine-feline' and p.categories contains 'cardiology'" %}
+  {% if cf_cardiology.size > 0 %}
+    {% for post in cf_cardiology %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  {% else %}
+    <li>(Coming soon)</li>
+  {% endif %}
+</ul>
         </details>
 
 
