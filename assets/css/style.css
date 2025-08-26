@@ -345,3 +345,32 @@ main, .homepage-container, .notebook-container { padding: 0 1rem; }
 h1,h2,h3 { color:#2a2a2a; }
 
 .notebook-right { background-color: #E1E6DA !important; }
+
+/* === Notebook Table Styles (soft cream theme) === */
+.prose table { 
+  width: 100% !important; 
+  table-layout: auto !important; 
+  border-collapse: collapse; 
+  font-size: 12pt; 
+  background: #fdfcf7; /* Cream background */
+}
+
+.prose td, .prose th { 
+  padding: 8px; 
+  border: 1px solid #e0e0e0; /* lighter borders */
+  vertical-align: top; 
+  white-space: normal !important; 
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.prose th {
+  background: #9bae87; 
+  color: #000; 
+  font-weight: 700;
+  text-align: left;
+  border-radius: 6px 6px 0 0; /* softer rounded corners */
+}
+
+.prose .purple {
+  color: #805463; /* mulberry highlight */
+}
