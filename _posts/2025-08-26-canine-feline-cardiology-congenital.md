@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Canine & Feline Cardiovascular: Congenital Heart Problems"
+title: "Canine & Feline Cardiovascular: Congenital"
 date: 2025-08-26
 categories: [notebook, canine-feline, cardiology]
-description: "Reference table of congenital heart problems in dogs & cats — diagnostics, treatment, and key exam pearls."
+description: "Reference table of congenital heart conditions in dogs & cats - pathogenesis, diagnostics, treatment, and prognosis."
 ---
 
-<h1>Canine & Feline Cardiovascular: Congenital Heart Problems</h1>
+<h1>Canine & Feline Cardiovascular: Congenital</h1>
 
 <div class='prose max-w-none'>
 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:
@@ -181,6 +181,7 @@ description: "Reference table of congenital heart problems in dogs & cats — di
 </font><font class="font7">PE:</font><font class="font11"> </font><font class="font5">Can be </font><font class="font8">asymptomatic</font><font class="font5">. Respiratory distress, exercise intolerance, GIT signs if
   bowel involved, muffled heart sounds (pericardial space compression).</font></td>
 <td align="left" class="xl66" style="width:347pt" width="463">Surgery: <font class="font8">Hernia repair</font><font class="font5"> (herniorrhaphy) via
+
   midline laparotomy in symptomatic cases.</font></td>
 <td align="left" class="xl66" style="width:209pt" width="279"><font class="font6">Excellent</font><font class="font5"> unless </font><font class="font6">adhesions</font><font class="font5"> between abdominal organs and pericardium complicate surgery.</font></td>
 </tr>
