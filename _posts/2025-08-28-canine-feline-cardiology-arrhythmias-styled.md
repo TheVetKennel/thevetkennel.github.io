@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Canine & Feline Cardiovascular: Arrhythmias (Styled)"
-date: 2025-08-28
+title: "Canine & Feline Cardiovascular: Arrhythmias"
+date: 2025-08-22
 categories: [notebook, canine-feline, cardiology]
-description: "Styled export preserving bold, underline, and colour from Excel."
+description: "Table summary of arrhythmias of dogs and cats; pathogenesis, diagnostics, treatment, and prognosis."
+permalink: /notebook/canine-feline/cardiology/arrhythmias/
 ---
 
 <h1>Canine & Feline Cardiovascular: Arrhythmias</h1>
@@ -166,6 +167,7 @@ description: "Styled export preserving bold, underline, and colour from Excel."
 <td align="left" class="xl66" width="463"><font class="font7">Small
   QRS complexes:</font><font class="font5"> </font><font class="font6">Pericardial
   effusion</font><font class="font5">, pleural effusion, fat,
+
   hypothyroidism.<br/>
 </font><font class="font6">Myocardial hypoxia/ischemia;</font><font class="font7"> ST elevation or depression. </font><font class="font6"><br/>
 </font><font class="font7">Wide QRS with a P wave; </font><font class="font6">Bundle branch block.</font></td>
