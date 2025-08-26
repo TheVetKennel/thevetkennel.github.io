@@ -1,27 +1,24 @@
-
 ---
-layout: default
-title: "Canine &amp; Feline Cardiology: Arrhythmias"
-date: 2025-08-26
-categories: [notebook, canine-feline, cardiology]
-description: "Table summary of arrhythmias of dogs and cats; pathogenesis, diagnostics, treatment, and prognosis."
-permalink: /notebook/canine-feline/cardiology/arrhythmias/
+layout: post
+title: "Canine & Feline Cardiology: Arrhythmias"
+date: 2025-08-28
+categories: notebook cardiology canine-feline
 ---
 
-<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:
+<div class="prose max-w-none"><table border="0" cellpadding="0" cellspacing="0" style="border-collapse:
  collapse;table-layout:fixed">
 <col style=""/>
 <col span="3" style=""/>
 <col style=""/>
 <tr height="27" style="height:20.0pt">
-<td align="left" class="xl66" height="27" style="background:#FDFCF7; color:#6B8F71; font-weight:bold; font-size:14px; font-family:'Aptos Narrow', sans-serif; border-top:0.5pt solid #4EA72E; border-bottom:0.5pt solid #4EA72E;height:20.0pt">Diagnoses</td>
-<td align="left" class="xl66" style="background:#FDFCF7; color:#6B8F71; font-weight:bold; font-size:14px; font-family:'Aptos Narrow', sans-serif; border-top:0.5pt solid #4EA72E; border-bottom:0.5pt solid #4EA72E">Pathogenesis</td>
-<td align="left" class="xl66" style="background:#FDFCF7; color:#6B8F71; font-weight:bold; font-size:14px; font-family:'Aptos Narrow', sans-serif; border-top:0.5pt solid #4EA72E; border-bottom:0.5pt solid #4EA72E">Diagnosis</td>
-<td align="left" class="xl66" style="background:#FDFCF7; color:#6B8F71; font-weight:bold; font-size:14px; font-family:'Aptos Narrow', sans-serif; border-top:0.5pt solid #4EA72E; border-bottom:0.5pt solid #4EA72E">Treatment</td>
-<td align="left" class="xl66" style="background:#FDFCF7; color:#6B8F71; font-weight:bold; font-size:14px; font-family:'Aptos Narrow', sans-serif; border-top:0.5pt solid #4EA72E; border-bottom:0.5pt solid #4EA72E">Prognosis</td>
+<th>Diagnoses</th>
+<th>Pathogenesis</th>
+<th>Diagnosis</th>
+<th>Treatment</th>
+<th>Prognosis</th>
 </tr>
 <tr height="213" style="height:160.0pt">
-<td align="left" class="xl65" height="213" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif;height:160.0pt">(General) Arrhythmias</td>
+<td align="left" class="xl65" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif">(General) Arrhythmias</td>
 <td align="left" class="xl65" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif">Disruptions in normal
   conduction; <span style="color:#000000; font-size:14px; font-weight:bold; text-decoration:none;">Sinus node → AV node → His bundle → Right
   &amp; left bundle branches → Purkinje fibres.</span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;">
@@ -45,7 +42,7 @@ permalink: /notebook/canine-feline/cardiology/arrhythmias/
   (3rd-degree AV block, ventricular fibrillation).</td>
 </tr>
 <tr height="320" style="height:240.0pt">
-<td align="left" class="xl67" height="320" style="background:#FDFCF7; font-size:14px; font-family:'Aptos Narrow', sans-serif;height:240.0pt">Tachyarrhythmias</td>
+<td align="left" class="xl67" style="background:#FDFCF7; font-size:14px; font-family:'Aptos Narrow', sans-serif">Tachyarrhythmias</td>
 <td align="left" class="xl67" style="background:#FDFCF7; font-size:14px; font-family:'Aptos Narrow', sans-serif"><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:underline;">Supraventricular</span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;"> (Atrial fibrillation/flutter, tachycardia) or </span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:underline;">ventricular</span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;"> (tachycardia,
   Ventricular premature complexes, Ventricular fibrillation, Torsades de
   Pointes).
@@ -79,7 +76,7 @@ permalink: /notebook/canine-feline/cardiology/arrhythmias/
   if underlying cause (e.g. hypokalaemia) is corrected</span></td>
 </tr>
 <tr height="267" style="height:200.0pt">
-<td align="left" class="xl65" height="267" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif;height:200.0pt">Bradyarrhythmias</td>
+<td align="left" class="xl65" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif">Bradyarrhythmias</td>
 <td align="left" class="xl65" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif"><span style="color:#000000; font-size:14px; font-weight:bold; text-decoration:none;">Increased
   parasympathetic tone, AV nodal disease, sinus node dysfunction</span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;"> (age-related degeneration/fibrosis).
     Causes include </span><span style="color:#000000; font-size:14px; font-weight:bold; text-decoration:none;">hypoxemia, hyperkalaemia</span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;">, hypothyroidism, GDV, neoplasia.
@@ -106,7 +103,7 @@ permalink: /notebook/canine-feline/cardiology/arrhythmias/
     Poor without pacemaker for 3rd-degree AV block.</td>
 </tr>
 <tr height="107" style="height:80.0pt">
-<td align="left" class="xl67" height="107" style="background:#FDFCF7; font-size:14px; font-family:'Aptos Narrow', sans-serif;height:80.0pt">Sick Sinus Syndrome (SSS)</td>
+<td align="left" class="xl67" style="background:#FDFCF7; font-size:14px; font-family:'Aptos Narrow', sans-serif">Sick Sinus Syndrome (SSS)</td>
 <td align="left" class="xl67" style="background:#FDFCF7; font-size:14px; font-family:'Aptos Narrow', sans-serif">Dysfunction of the
   sinus node causing <span style="color:#000000; font-size:14px; font-weight:bold; text-decoration:none;">inappropriate bradycardia,</span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;"> often alternating with paroxysmal </span><span style="color:#000000; font-size:14px; font-weight:bold; text-decoration:none;">tachycardia
   </span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;">(bradycardia-tachycardia syndrome)
@@ -120,7 +117,7 @@ permalink: /notebook/canine-feline/cardiology/arrhythmias/
 <td align="left" class="xl67" style="background:#FDFCF7; font-size:14px; font-family:'Aptos Narrow', sans-serif">Good with pacemaker.</td>
 </tr>
 <tr height="133" style="height:100.0pt">
-<td align="left" class="xl65" height="133" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif;height:100.0pt">Premature Beats</td>
+<td align="left" class="xl65" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif">Premature Beats</td>
 <td align="left" class="xl65" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif">Ectopic pacemaker
   activity <span style="color:#000000; font-size:14px; font-weight:bold; text-decoration:none;">outside the sinus node</span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;">.
     Supraventricular or ventricular origin.
@@ -140,7 +137,7 @@ permalink: /notebook/canine-feline/cardiology/arrhythmias/
     VPCs: Concerning if frequent or associated with structural disease.</td>
 </tr>
 <tr height="107" style="height:80.0pt">
-<td align="left" class="xl67" height="107" style="background:#FDFCF7; font-size:14px; font-family:'Aptos Narrow', sans-serif;height:80.0pt">Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)</td>
+<td align="left" class="xl67" style="background:#FDFCF7; font-size:14px; font-family:'Aptos Narrow', sans-serif">Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)</td>
 <td align="left" class="xl67" style="background:#FDFCF7; font-size:14px; font-family:'Aptos Narrow', sans-serif">(Fibro)<span style="color:#000000; font-size:14px; font-weight:bold; text-decoration:none;">fatty infiltration</span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;"> of the </span><span style="color:#000000; font-size:14px; font-weight:bold; text-decoration:none;">right ventricle</span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;"> leads to electrical
   instability.
     Predis; </span><span style="color:#805463; font-size:14px; font-weight:400; text-decoration:none;">Boxers</span><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:none;">
@@ -158,7 +155,7 @@ permalink: /notebook/canine-feline/cardiology/arrhythmias/
   arrhythmias.</span></td>
 </tr>
 <tr height="107" style="height:80.0pt">
-<td align="left" class="xl65" height="107" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif;height:80.0pt">Other ECG Abnormalities</td>
+<td align="left" class="xl65" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif">Other ECG Abnormalities</td>
 <td align="left" class="xl65" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif">Electrical
   disturbances from structural, metabolic, or autonomic changes.</td>
 <td align="left" class="xl65" style="background:#9BAE87; font-size:14px; font-family:'Aptos Narrow', sans-serif"><span style="color:#000000; font-size:14px; font-weight:400; text-decoration:underline;">Small
@@ -179,4 +176,4 @@ permalink: /notebook/canine-feline/cardiology/arrhythmias/
 <td style=""></td>
 </tr>
 <?endif?>
-</table>
+</table></div>
