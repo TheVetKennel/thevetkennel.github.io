@@ -420,3 +420,46 @@ h1,h2,h3 { color:#2a2a2a; }
 .breadcrumbs a:hover {
   text-decoration: underline;
 }
+
+.download-button {
+  margin: 1em 0;
+  text-align: right;
+}
+
+.download-button .cta-button {
+  padding: 0.6em 1em;
+  background-color: #9bae87;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 2px 2px 0 #6b8f71;
+}
+
+.download-button .cta-button:hover {
+  background-color: #6b8f71;
+}
+
+/* Print view */
+@media print {
+  header, footer, nav, .nav-tree, .download-button, #ecg-progress {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 0;
+  }
+
+  .prose table {
+    width: 100% !important;
+    border-collapse: collapse;
+  }
+
+  .prose th {
+    position: static !important; /* disable sticky header in print */
+    background: #fdfcf7 !important;
+    border-bottom: 1px solid #e1e6da;
+  }
+}
