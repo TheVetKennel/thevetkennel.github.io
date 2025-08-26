@@ -1,5 +1,4 @@
-
-:root{
+:root {
   --ecg-bar-height: 40px;
   --ecg-bg-color: #fdfcf7;
 }
@@ -11,14 +10,27 @@
   width: 100%;
   height: var(--ecg-bar-height);
   background-color: var(--ecg-bg-color);
-  z-index: 9999;
+  z-index: 10;  /* LOWERED from 9999 */
   pointer-events: none;
 }
 
-#ecg-progress svg { width: 100%; height: 100%; display: block; }
+#ecg-progress svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 
-.ecg-bg { opacity: 0; } /* faint full-width pattern */
-.ecg-fill {{ }}            /* foreground fill uses same pattern */
+.ecg-bg { opacity: 0; } 
+.ecg-fill { }            
 
-html {{ scroll-padding-top: var(--ecg-bar-height); }}
-body {{ padding-top: var(--ecg-bar-height); }}
+html { scroll-padding-top: var(--ecg-bar-height); }
+body { padding-top: var(--ecg-bar-height); }
+
+/* 🔥 Sticky headers */
+.prose th {
+  position: sticky;
+  top: var(--ecg-bar-height); /* pushes header just below ECG bar */
+  background: #fdfcf7;        /* cream background */
+  z-index: 20;                /* stays above ECG bar */
+  border-bottom: 1px solid #e1e6da;
+}
