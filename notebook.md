@@ -60,7 +60,7 @@ title: Notebook
    special-senses:👀 Special Senses,
    urinary:🚽 Urinary,
    reproductive:🧬 Reproductive,
-   behavior:Behavior,
+   behavior:🎭 Behavior,
    multisystemic:🧰 Multisystemic" 
    | split: "," %}
 
