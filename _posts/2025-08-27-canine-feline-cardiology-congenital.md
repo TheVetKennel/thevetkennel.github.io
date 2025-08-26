@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Canine & Feline Cardiovascular: Congenital"
-date: 2025-08-26
+title: "Canine & Feline Cardiovascular: Congenital Heart Problems"
+date: 2025-08-27
 categories: [notebook, canine-feline, cardiology]
-description: "Reference table of congenital heart problems in dogs & cats - pathogenesis, diagnostics, treatment, and prognosis."
+description: "Reference table of congenital heart problems in dogs & cats — diagnostics, treatment, and key exam pearls."
 ---
 
-<h1>Canine & Feline Cardiovascular: Congenital</h1>
+<h1>Canine & Feline Cardiovascular: Congenital Heart Problems</h1>
 
 <div class='prose max-w-none'>
 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:
@@ -15,11 +15,11 @@ description: "Reference table of congenital heart problems in dogs & cats - path
 <col span="3" width="463"/>
 <col width="279"/>
 <tr height="27">
-<td align="left" class="xl67" height="27" width="199">Diagnoses</td>
-<td align="left" class="xl67" width="463">Pathogenesis</td>
-<td align="left" class="xl67" width="463">Diagnosis</td>
-<td align="left" class="xl67" width="463">Treatment</td>
-<td align="left" class="xl67" width="279">Prognosis</td>
+<th align="left" class="xl67" height="27" width="199">Diagnoses</th>
+<th align="left" class="xl67" width="463">Pathogenesis</th>
+<th align="left" class="xl67" width="463">Diagnosis</th>
+<th align="left" class="xl67" width="463">Treatment</th>
+<th align="left" class="xl67" width="279">Prognosis</th>
 </tr>
 <tr height="320">
 <td align="left" class="xl66" height="320" width="199">Patent Ductus Arteriosus (PDA)</td>
@@ -172,7 +172,6 @@ description: "Reference table of congenital heart problems in dogs & cats - path
 </font><font class="font7">PE:</font><font class="font11"> </font><font class="font5">Can be </font><font class="font8">asymptomatic</font><font class="font5">. Respiratory distress, exercise intolerance, GIT signs if
   bowel involved, muffled heart sounds (pericardial space compression).</font></td>
 <td align="left" class="xl66" width="463">Surgery: <font class="font8">Hernia repair</font><font class="font5"> (herniorrhaphy) via
-
   midline laparotomy in symptomatic cases.</font></td>
 <td align="left" class="xl66" width="279"><font class="font6">Excellent</font><font class="font5"> unless </font><font class="font6">adhesions</font><font class="font5"> between abdominal organs and pericardium complicate surgery.</font></td>
 </tr>

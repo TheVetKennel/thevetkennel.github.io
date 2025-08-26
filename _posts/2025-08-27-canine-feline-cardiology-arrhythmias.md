@@ -15,11 +15,11 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
 <col span="3" width="463"/>
 <col width="279"/>
 <tr height="27">
-<td align="left" class="xl67" height="27" width="199">Diagnoses</td>
-<td align="left" class="xl67" width="463">Pathogenesis</td>
-<td align="left" class="xl67" width="463">Diagnosis</td>
-<td align="left" class="xl67" width="463">Treatment</td>
-<td align="left" class="xl67" width="279">Prognosis</td>
+<th align="left" class="xl67" height="27" width="199">Diagnoses</th>
+<th align="left" class="xl67" width="463">Pathogenesis</th>
+<th align="left" class="xl67" width="463">Diagnosis</th>
+<th align="left" class="xl67" width="463">Treatment</th>
+<th align="left" class="xl67" width="279">Prognosis</th>
 </tr>
 <tr height="213">
 <td align="left" class="xl66" height="213" width="199">(General) Arrhythmias</td>
