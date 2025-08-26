@@ -407,6 +407,14 @@ h1,h2,h3 { color:#2a2a2a; }
 .prose th:last-child {
   border-top-right-radius: 6px;
 }
+/* Sticky table headers above ECG bar */
+.prose th {
+  position: sticky;
+  top: 0; /* distance from top */
+  background: #fdfcf7; /* cream so text is readable */
+  z-index: 10; /* higher than the progress bar */
+  border-bottom: 1px solid #e1e6da; /* keep your thin divider */
+}
 
 .breadcrumbs {
   font-size: 0.9em;
@@ -419,4 +427,70 @@ h1,h2,h3 { color:#2a2a2a; }
 }
 .breadcrumbs a:hover {
   text-decoration: underline;
+}
+
+.download-button {
+  margin: 1em 0;
+  text-align: right;
+}
+
+.download-button .cta-button {
+  padding: 0.6em 1em;
+  background-color: #9bae87;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 2px 2px 0 #6b8f71;
+}
+
+.download-button .cta-button:hover {
+  background-color: #6b8f71;
+}
+
+/* Print view */
+@media print {
+  header, footer, nav, .nav-tree, .download-button, #ecg-progress {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 0;
+  }
+
+  .prose table {
+    width: 100% !important;
+    border-collapse: collapse;
+  }
+
+  .prose th {
+    position: static !important; /* disable sticky header in print */
+    background: #fdfcf7 !important;
+    border-bottom: 1px solid #e1e6da;
+  }
+}
+
+/* === Excel-exported font classes (for table text) === */
+
+/* Bold */
+.font6, .font10, .font14 {
+  font-weight: 700;
+}
+
+/* Underlined */
+.font9, .font12 {
+  text-decoration: underline;
+}
+
+/* Purple/mulberry */
+.font13 {
+  color: #805463;
+}
+
+/* Default text styling */
+.font6, .font7, .font8, .font9, .font10, .font11, .font12, .font13, .font14 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12pt;
 }
