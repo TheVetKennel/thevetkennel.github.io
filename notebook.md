@@ -37,102 +37,145 @@ title: Notebook
     </div>
   </div>
 
-  <div class="notebook-right nav-tree">
-    <h2>📚 Note Navigation</h2>
 
-    <details open>
-      <summary><strong>ICVA Species and Diagnoses</strong></summary>
+<div class="notebook-right nav-tree">
+  <h2>📚 Note Navigation</h2>
 
-      <details>
-        <summary><strong>Canine &amp; Feline</strong></summary>
+  <details open>
+    <summary><strong>ICVA Species and Diagnoses</strong></summary>
 
+    <!-- CANINE & FELINE -->
+    <details>
+      <summary><strong>Canine &amp; Feline</strong></summary>
+
+      {% assign cf_systems = 
+        "cardiology:Cardiovascular,
+         endocrine:Endocrine,
+         gastrointestinal:Gastrointestinal and Digestive,
+         hemic-lymphatic:Hemic/Lymphatic,
+         integumentary:Integumentary,
+         musculoskeletal:Musculoskeletal,
+         nervous:Nervous,
+         respiratory:Respiratory,
+         special-senses:Special Senses,
+         urinary:Urinary,
+         reproductive:Reproductive,
+         behavior:Behavior,
+         multisystemic:Multisystemic" 
+         | split: "," %}
+
+      {% for pair in cf_systems %}
+        {% assign parts = pair | split: ":" %}
+        {% assign sys_slug = parts[0] | strip %}
+        {% assign sys_label = parts[1] | strip %}
         <details>
-          <summary><strong>Cardiovascular</strong></summary>
-
-          
+          <summary><strong>{{ sys_label }}</strong></summary>
           <ul>
-            {% assign arr = site.posts | where_exp: "p", "p.title contains 'Canine & Feline Cardiology; Arrhythmias'" | first %}
-            {% if arr %}
-              <li><a href="{{ arr.url | relative_url }}">Arrhythmias</a></li>
+{% assign cf_posts = site.posts 
+   | where_exp: "p", "p.categories contains 'canine-feline'" 
+   | where_exp: "p", "p.categories contains sys_slug" %}
+            {% if cf_posts.size > 0 %}
+              {% for post in cf_posts %}
+                <li><a href="{{ post.url | relative_url }}">
+                  {{ post.title | split: ":" | last | strip }}
+                </a></li>
+              {% endfor %}
             {% else %}
-              <li>Arrhythmias (link coming soon)</li>
+              <li>(Coming soon)</li>
             {% endif %}
           </ul>
         </details>
-
-
-        <details>
-          <summary><strong>Endocrine</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Gastrointestinal and Digestive</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Hemic and Lymphatic</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Integumentary</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Musculoskeletal</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Nervous</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Respiratory</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Special Senses</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Urinary</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Reproductive</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Behavior</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-        <details>
-          <summary><strong>Multisystemic</strong></summary>
-          <ul><li>(Coming soon)</li></ul>
-        </details>
-
-      </details>
-
-      <details>
-        <summary><strong>Equine</strong></summary>
-        <ul><li>(Coming soon)</li></ul>
-      </details>
-
-      <details>
-        <summary><strong>Bovine</strong></summary>
-        <ul><li>(Coming soon)</li></ul>
-      </details>
-
+      {% endfor %}
     </details>
-  </div>
+
+    <!-- EQUINE -->
+    <details>
+      <summary><strong>Equine</strong></summary>
+
+      {% assign eq_systems = 
+        "cardiology:Cardiovascular,
+         endocrine:Endocrine,
+         gastrointestinal:Gastrointestinal and Digestive,
+         hemic-lymphatic:Hemic/Lymphatic,
+         integumentary:Integumentary,
+         musculoskeletal:Musculoskeletal,
+         nervous:Nervous,
+         respiratory:Respiratory,
+         special-senses:Special Senses,
+         urinary:Urinary,
+         reproductive:Reproductive,
+         behavior:Behavior,
+         multisystemic:Multisystemic" 
+         | split: "," %}
+
+      {% for pair in eq_systems %}
+        {% assign parts = pair | split: ":" %}
+        {% assign sys_slug = parts[0] | strip %}
+        {% assign sys_label = parts[1] | strip %}
+        <details>
+          <summary><strong>{{ sys_label }}</strong></summary>
+          <ul>
+{% assign eq_posts = site.posts 
+   | where_exp: "p", "p.categories contains 'equine'" 
+   | where_exp: "p", "p.categories contains sys_slug" %}
+            {% if eq_posts.size > 0 %}
+              {% for post in eq_posts %}
+                <li><a href="{{ post.url | relative_url }}">
+                  {{ post.title | split: ":" | last | strip }}
+                </a></li>
+              {% endfor %}
+            {% else %}
+              <li>(Coming soon)</li>
+            {% endif %}
+          </ul>
+        </details>
+      {% endfor %}
+    </details>
+
+    <!-- BOVINE -->
+    <details>
+      <summary><strong>Bovine</strong></summary>
+
+      {% assign bov_systems = 
+        "cardiology:Cardiovascular,
+         endocrine:Endocrine,
+         gastrointestinal:Gastrointestinal and Digestive,
+         hemic-lymphatic:Hemic/Lymphatic,
+         integumentary:Integumentary,
+         musculoskeletal:Musculoskeletal,
+         nervous:Nervous,
+         respiratory:Respiratory,
+         special-senses:Special Senses,
+         urinary:Urinary,
+         reproductive:Reproductive,
+         behavior:Behavior,
+         multisystemic:Multisystemic" 
+         | split: "," %}
+
+      {% for pair in bov_systems %}
+        {% assign parts = pair | split: ":" %}
+        {% assign sys_slug = parts[0] | strip %}
+        {% assign sys_label = parts[1] | strip %}
+        <details>
+          <summary><strong>{{ sys_label }}</strong></summary>
+          <ul>
+{% assign bov_posts = site.posts 
+   | where_exp: "p", "p.categories contains 'bovine'" 
+   | where_exp: "p", "p.categories contains sys_slug" %}
+            {% if bov_posts.size > 0 %}
+              {% for post in bov_posts %}
+                <li><a href="{{ post.url | relative_url }}">
+                  {{ post.title | split: ":" | last | strip }}
+                </a></li>
+              {% endfor %}
+            {% else %}
+              <li>(Coming soon)</li>
+            {% endif %}
+          </ul>
+        </details>
+      {% endfor %}
+    </details>
+
+  </details>
+</div>
 </div>
