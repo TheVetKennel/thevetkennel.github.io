@@ -431,6 +431,18 @@ h1,h2,h3 { color:#2a2a2a; }
   color: #805463;                                 /* same mulberry color */
 }
 
+/* Center notebook nav content when inside toolbar */
+.post-toolbar .toolbar-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+}
+
+.post-toolbar .toolbar-box h2 {
+  margin: 0 0 0.5em; /* trim down excess margin */
+  text-align: center;
+}
+
 /* Revision toggle inside box */
 .revision-toggle {
   display: flex;
