@@ -17,7 +17,17 @@
 
   
   
-  
+  {% include header.html %}
+
+{% if page.categories contains "notebook" %}
+  <div class="download-button">
+    <a href="javascript:window.print()" class="cta-button">📄 Download as PDF</a>
+  </div>
+{% endif %}
+
+{{ content }}
+
+{% include footer.html %}
   
   
   
