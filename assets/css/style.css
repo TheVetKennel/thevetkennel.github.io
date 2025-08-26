@@ -386,13 +386,26 @@ h1,h2,h3 { color:#2a2a2a; }
   background: #fdfcf7;   /* cream base */
 }
 
-/* Sticky table headers inside prose blocks */
-.prose table th {
+/* === Sticky Table Headers (cream with subtle bottom border) === */
+.prose th {
   position: sticky;
-  top: 0; /* sticks to top of scrolling container */
-  z-index: 2; /* keep above td cells */
-  background: #9bae87; /* match your header color */
+  top: 0;
+  z-index: 2;                     /* keep above td cells */
+  background: #fdfcf7;             /* cream header */
   color: #000;
+  font-weight: 700;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #e1e6da;       /* light borders */
+  border-bottom: 2px solid #e1e6da;/* slightly thicker bottom line */
+}
+
+/* Rounded header corners */
+.prose th:first-child {
+  border-top-left-radius: 6px;
+}
+.prose th:last-child {
+  border-top-right-radius: 6px;
 }
 
 .breadcrumbs {
