@@ -406,21 +406,21 @@ h1,h2,h3 { color:#2a2a2a; }
   justify-content: space-between;
   align-items: stretch;
   gap: 1em;
-  margin-bottom: 1.5em;
 }
 
-/* Each section styled like nav bar */
 .toolbar-box {
-  flex: 0 0 auto;              /* shrink to content instead of equal stretch */
+  flex: 1 1 0;                /* all equal width */
+  max-width: 33%;             /* prevents overflow */
   background-color: #e1e6da;
   border: 2px solid #6b8f71;
   border-radius: 12px;
-  padding: 1em 1.5em;          /* add breathing space without being oversized */
+  padding: 1em;
   font-family: 'Courier New', Courier, monospace;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;         /* keeps button + text centered inside */
+  align-items: center;
+  box-sizing: border-box;     /* include padding in width calc */
 }
 
 /* Make toggle + library note boxes fully centered */
