@@ -357,20 +357,22 @@ h1,h2,h3 { color:#2a2a2a; }
 
 .prose td, .prose th { 
   padding: 8px; 
-  border: 1px solid #e0e0e0; /* lighter borders */
+  border: 1px solid #e1e6da; /* softer light border */
   vertical-align: top; 
   white-space: normal !important; 
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* Header row */
 .prose th {
   background: #9bae87; 
   color: #000; 
   font-weight: 700;
   text-align: left;
-  border-radius: 6px 6px 0 0; /* softer rounded corners */
+  border-radius: 6px 6px 0 0; /* rounded header corners */
 }
 
+/* Purple highlights */
 .prose .purple {
   color: #805463; /* mulberry highlight */
 }
