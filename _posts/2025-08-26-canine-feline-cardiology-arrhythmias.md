@@ -3,7 +3,7 @@ layout: default
 title: "Canine & Feline Cardiovascular: Arrhythmias"
 date: 2025-08-26
 categories: [notebook, canine-feline, cardiology]
-description: "Reference table of common arrhythmias in dogs & cats — diagnostics, treatment, and key exam pearls."
+description: "Reference table of arrhythmias in dogs & cats - pathogenesis, diagnostics, treatment, and prognosis."
 ---
 
 <h1>Canine & Feline Cardiovascular: Arrhythmias</h1>
@@ -165,6 +165,7 @@ description: "Reference table of common arrhythmias in dogs & cats — diagnosti
 <td align="left" class="xl66" width="463"><font class="font7">Small
   QRS complexes:</font><font class="font5"> </font><font class="font6">Pericardial
   effusion</font><font class="font5">, pleural effusion, fat,
+
   hypothyroidism.<br/>
 </font><font class="font6">Myocardial hypoxia/ischemia;</font><font class="font7"> ST elevation or depression. </font><font class="font6"><br/>
 </font><font class="font7">Wide QRS with a P wave; </font><font class="font6">Bundle branch block.</font></td>
