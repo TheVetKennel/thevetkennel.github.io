@@ -16,39 +16,42 @@
 
   {% include header.html %}
 
-  <main class="post">
+<main class="post">
 
-    <!-- Page title -->
-    <h1 class="post-title">{{ page.title }}</h1>
+  <!-- Page title -->
+  <h1 class="post-title">{{ page.title }}</h1>
 
-    <!-- Toolbar row: toggle left, PDF button right -->
-    <div class="post-toolbar">
-      <!-- Left: Revision toggle -->
-      <div class="revision-toggle">
-        <label class="switch">
-          <input type="checkbox" id="revision-mode">
-          <span class="slider"></span>
-        </label>
-        <span class="toggle-text">Toggle Revision Mode (click cells to reveal)</span>
-      </div>
+  <!-- Unified Toolbar -->
+  <div class="post-toolbar">
 
-      <!-- Right: PDF button -->
-      <div class="download-button">
-        <a href="javascript:window.print()" class="cta-button">📄 Print as PDF</a>
-        <p class="library-note">
-          Get the editable, pretty version from the 
-          <a href="{{ '/library/' | relative_url }}">Library</a>!
-        </p>
-      </div>
+    <!-- Left: Revision toggle -->
+    <div class="revision-toggle">
+      <label class="switch">
+        <input type="checkbox" id="revision-mode">
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-text">Toggle Revision Mode (click cells to reveal)</span>
     </div>
 
-    <!-- Post content -->
-    {{ content }}
-
-    <!-- Notebook navigation -->
-    <div class="post-nav">
+    <!-- Middle: Notebook navigation -->
+    <div class="toolbar-nav">
       {% include notebook-nav.html %}
     </div>
+
+    <!-- Right: PDF button -->
+    <div class="download-button">
+      <a href="javascript:window.print()" class="cta-button">📄 Print as PDF</a>
+      <p class="library-note">
+        Get the editable, pretty version from the 
+        <a href="{{ '/library/' | relative_url }}">Library</a>!
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Post content -->
+  {{ content }}
+
   </main>
   
   {% include footer.html %}
