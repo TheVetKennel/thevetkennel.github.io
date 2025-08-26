@@ -423,6 +423,14 @@ h1,h2,h3 { color:#2a2a2a; }
   font-size: 1em;
 }
 
+/* Make toolbar text match nav headings */
+.revision-toggle .toggle-text,
+.download-button .library-note {
+  font-family: 'Courier New', Courier, monospace; /* same as nav headings */
+  font-weight: bold;                              /* same thickness */
+  color: #805463;                                 /* same mulberry color */
+}
+
 /* Revision toggle inside box */
 .revision-toggle {
   display: flex;
