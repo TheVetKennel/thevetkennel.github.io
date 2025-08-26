@@ -374,3 +374,12 @@ h1,h2,h3 { color:#2a2a2a; }
 .prose .purple {
   color: #805463; /* mulberry highlight */
 }
+
+/* === Notebook Table Row Alternating === */
+.prose table tr:nth-child(even) td {
+  background: #9bae87;   /* light green fill */
+  color: #000;
+}
+.prose table tr:nth-child(odd) td {
+  background: #fdfcf7;   /* cream base */
+}
