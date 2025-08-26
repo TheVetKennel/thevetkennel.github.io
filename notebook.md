@@ -49,20 +49,20 @@ title: Notebook
       <summary><strong>Canine &amp; Feline</strong></summary>
 
       {% assign cf_systems = 
-        "cardiology:Cardiovascular,
-         endocrine:Endocrine,
-         gastrointestinal:Gastrointestinal and Digestive,
-         hemic-lymphatic:Hemic/Lymphatic,
-         integumentary:Integumentary,
-         musculoskeletal:Musculoskeletal,
-         nervous:Nervous,
-         respiratory:Respiratory,
-         special-senses:Special Senses,
-         urinary:Urinary,
-         reproductive:Reproductive,
-         behavior:Behavior,
-         multisystemic:Multisystemic" 
-         | split: "," %}
+  "cardiology:🫀 Cardiovascular,
+   endocrine:⚖️ Endocrine,
+   gastrointestinal:🌮 Gastrointestinal and Digestive,
+   hemic-lymphatic:🩸 Hemic/Lymphatic,
+   integumentary:🐾 Integumentary,
+   musculoskeletal:🦴 Musculoskeletal,
+   nervous:🧠 Nervous,
+   respiratory:🫁 Respiratory,
+   special-senses:👀 Special Senses,
+   urinary:🚽 Urinary,
+   reproductive:🧬 Reproductive,
+   behavior:Behavior,
+   multisystemic:🧰 Multisystemic" 
+   | split: "," %}
 
       {% for pair in cf_systems %}
         {% assign parts = pair | split: ":" %}
