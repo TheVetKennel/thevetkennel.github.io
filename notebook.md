@@ -92,21 +92,21 @@ title: Notebook
     <details>
       <summary><strong>Equine</strong></summary>
 
-      {% assign eq_systems = 
-        "cardiology:Cardiovascular,
-         endocrine:Endocrine,
-         gastrointestinal:Gastrointestinal and Digestive,
-         hemic-lymphatic:Hemic/Lymphatic,
-         integumentary:Integumentary,
-         musculoskeletal:Musculoskeletal,
-         nervous:Nervous,
-         respiratory:Respiratory,
-         special-senses:Special Senses,
-         urinary:Urinary,
-         reproductive:Reproductive,
-         behavior:Behavior,
-         multisystemic:Multisystemic" 
-         | split: "," %}
+      {% assign cf_systems = 
+  "cardiology:🫀 Cardiovascular,
+   endocrine:⚖️ Endocrine,
+   gastrointestinal:🌮 Gastrointestinal and Digestive,
+   hemic-lymphatic:🩸 Hemic/Lymphatic,
+   integumentary:🐾 Integumentary,
+   musculoskeletal:🦴 Musculoskeletal,
+   nervous:🧠 Nervous,
+   respiratory:🫁 Respiratory,
+   special-senses:👀 Special Senses,
+   urinary:🚽 Urinary,
+   reproductive:🧬 Reproductive,
+   behavior:🎭 Behavior,
+   multisystemic:🧰 Multisystemic" 
+   | split: "," %}
 
       {% for pair in eq_systems %}
         {% assign parts = pair | split: ":" %}
@@ -136,21 +136,21 @@ title: Notebook
     <details>
       <summary><strong>Bovine</strong></summary>
 
-      {% assign bov_systems = 
-        "cardiology:Cardiovascular,
-         endocrine:Endocrine,
-         gastrointestinal:Gastrointestinal and Digestive,
-         hemic-lymphatic:Hemic/Lymphatic,
-         integumentary:Integumentary,
-         musculoskeletal:Musculoskeletal,
-         nervous:Nervous,
-         respiratory:Respiratory,
-         special-senses:Special Senses,
-         urinary:Urinary,
-         reproductive:Reproductive,
-         behavior:Behavior,
-         multisystemic:Multisystemic" 
-         | split: "," %}
+      {% assign cf_systems = 
+  "cardiology:🫀 Cardiovascular,
+   endocrine:⚖️ Endocrine,
+   gastrointestinal:🌮 Gastrointestinal and Digestive,
+   hemic-lymphatic:🩸 Hemic/Lymphatic,
+   integumentary:🐾 Integumentary,
+   musculoskeletal:🦴 Musculoskeletal,
+   nervous:🧠 Nervous,
+   respiratory:🫁 Respiratory,
+   special-senses:👀 Special Senses,
+   urinary:🚽 Urinary,
+   reproductive:🧬 Reproductive,
+   behavior:🎭 Behavior,
+   multisystemic:🧰 Multisystemic" 
+   | split: "," %}
 
       {% for pair in bov_systems %}
         {% assign parts = pair | split: ":" %}
