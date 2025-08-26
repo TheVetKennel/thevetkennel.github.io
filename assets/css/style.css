@@ -296,8 +296,15 @@ h1,h2,h3 { color:#2a2a2a; }
 /* Purple highlights */
 .prose .purple { color: #805463; }
 
-.download-button { margin: 1em 0; text-align: right; }
+.download-button {
+  margin: 1em 0;
+  text-align: right;
+  display: inline-block; /* shrink to button width */
+}
+
 .download-button .cta-button {
+  display: inline-block;
+  margin-bottom: 0.4em;
   padding: 0.6em 1em;
   background-color: #9bae87;
   color: #fff !important;
@@ -306,7 +313,17 @@ h1,h2,h3 { color:#2a2a2a; }
   font-weight: bold;
   box-shadow: 2px 2px 0 #6b8f71;
 }
-.download-button .cta-button:hover { background-color: #6b8f71; }
+
+.download-button .cta-button:hover {
+  background-color: #6b8f71;
+}
+
+.download-button .library-note {
+  font-size: 0.85em;
+  color: #444;
+  margin: 0;
+  text-align: left; /* align note to button's left edge */
+}
 
 /* === PRINT STYLES === */
 @media print {
