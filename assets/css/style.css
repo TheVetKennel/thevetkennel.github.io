@@ -407,6 +407,14 @@ h1,h2,h3 { color:#2a2a2a; }
 .prose th:last-child {
   border-top-right-radius: 6px;
 }
+/* Sticky table headers above ECG bar */
+.prose th {
+  position: sticky;
+  top: 0; /* distance from top */
+  background: #fdfcf7; /* cream so text is readable */
+  z-index: 10; /* higher than the progress bar */
+  border-bottom: 1px solid #e1e6da; /* keep your thin divider */
+}
 
 .breadcrumbs {
   font-size: 0.9em;
