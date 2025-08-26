@@ -471,3 +471,26 @@ h1,h2,h3 { color:#2a2a2a; }
     border-bottom: 1px solid #e1e6da;
   }
 }
+
+/* === Excel-exported font classes (for table text) === */
+
+/* Bold */
+.font6, .font10, .font14 {
+  font-weight: 700;
+}
+
+/* Underlined */
+.font9, .font12 {
+  text-decoration: underline;
+}
+
+/* Purple/mulberry */
+.font13 {
+  color: #805463;
+}
+
+/* Default text styling */
+.font6, .font7, .font8, .font9, .font10, .font11, .font12, .font13, .font14 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+}
