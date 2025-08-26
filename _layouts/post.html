@@ -16,7 +16,6 @@
 
   {% include header.html %}
   
-  {{ content }}
 
 <div class="download-button">
   <a href="javascript:window.print()" class="cta-button">📄 Print as PDF</a>
@@ -25,6 +24,8 @@
     <a href="{{ '/library/' | relative_url }}">Library</a>!
   </p>
 </div>
+
+{{ content }}
 
 <div class="post-nav">
   {% include notebook-nav.html %}
