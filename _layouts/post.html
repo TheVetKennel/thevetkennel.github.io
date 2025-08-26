@@ -16,16 +16,13 @@
 
   {% include header.html %}
 
-{% if page.categories contains "notebook" %}
-  <div class="download-button">
-    <a href="javascript:window.print()" class="cta-button">📄 Print as PDF</a>
-  </div>
-
+<div class="download-button">
+  <a href="javascript:window.print()" class="cta-button">📄 Print as PDF</a>
   <p class="library-note">
-    Get your own editable, pretty version from the 
+    Get the editable, pretty version from the 
     <a href="{{ '/library/' | relative_url }}">Library</a>!
   </p>
-{% endif %}
+</div>
 
 <div class="post-nav">
   {% include notebook-nav.html %}
