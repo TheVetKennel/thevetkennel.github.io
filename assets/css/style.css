@@ -423,14 +423,9 @@ input:checked + .slider:before { transform: translateX(24px); }
 
 /* Revision mode cells */
 .prose td.covered {
-  background-color: #6b8f71 !important;
-  color: transparent !important;
-  cursor: pointer;
-}
-/* Revision mode cells */
-.prose td.covered {
-  background-color: #6b8f71 !important;
-  color: transparent !important;        /* hide real text */
+  background-color: #6b8f71 !important;  /* green fill */
+  color: transparent !important;         /* hide text */
+  text-shadow: none !important;          /* prevent faint outlines */
   cursor: pointer;
   position: relative;
 }
@@ -443,13 +438,14 @@ input:checked + .slider:before { transform: translateX(24px); }
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 0.8em;
-  opacity: 0.8;
-  pointer-events: none; /* lets clicks pass through to cell */
+  font-weight: 600;
+  opacity: 0.85;
+  pointer-events: none; /* lets clicks pass through */
 }
 
 /* Revealed cells */
 .prose td.covered.revealed {
-  color: inherit !important;
+  color: inherit !important;              /* restore text */
   background-color: inherit !important;
 }
 
