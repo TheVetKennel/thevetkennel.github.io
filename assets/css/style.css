@@ -427,7 +427,32 @@ input:checked + .slider:before { transform: translateX(24px); }
   color: transparent !important;
   cursor: pointer;
 }
+/* Revision mode cells */
+.prose td.covered {
+  background-color: #6b8f71 !important;
+  color: transparent !important;        /* hide real text */
+  cursor: pointer;
+  position: relative;
+}
+
+/* Overlay text */
+.prose td.covered::after {
+  content: "Click to reveal";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 0.8em;
+  opacity: 0.8;
+  pointer-events: none; /* lets clicks pass through to cell */
+}
+
+/* Revealed cells */
 .prose td.covered.revealed {
   color: inherit !important;
   background-color: inherit !important;
+}
+
+.prose td.covered.revealed::after {
+  content: none; /* hide overlay */
 }
