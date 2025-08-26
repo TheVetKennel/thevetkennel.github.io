@@ -374,27 +374,11 @@ h1,h2,h3 { color:#2a2a2a; }
 }
 
 
-/* === Bottom-of-post collapsible Notebook nav === */
 .post-nav {
   margin-top: 2em;
-  padding: 0.75em 1em;
+  padding: 1em;
   background: #f3f1e7;
   border: 1px solid #e1e6da;
   border-radius: 8px;
   font-size: 0.95em;
-}
-
-.post-nav summary {
-  cursor: pointer;
-  font-weight: bold;
-  color: #805463;
-}
-
-.post-nav[open] {
-  /* subtle drop shadow when expanded */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.post-nav .nav-tree {
-  margin-top: 0.75em;
 }
