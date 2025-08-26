@@ -438,11 +438,22 @@ nav,
   color: #805463;                                 /* same mulberry color */
 }
 
-/* Center notebook nav content when inside toolbar */
-.post-toolbar .toolbar-box {
+/* Center Notebook Navigation text inside toolbar box */
+.post-toolbar .toolbar-box .nav-tree {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical centering */
+  justify-content: center;   /* vertical centering */
+  align-items: center;       /* horizontal centering */
+  height: 100%;              /* fill the green box */
+  text-align: center;        /* center text */
+}
+
+.post-toolbar .toolbar-box .nav-tree h2 {
+  margin: 0 0 0.5em;
+}
+
+.post-toolbar .toolbar-box .nav-tree summary {
+  text-align: center;
 }
 
 .post-toolbar .toolbar-box h2 {
