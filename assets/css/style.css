@@ -262,14 +262,6 @@ h1,h2,h3 { color:#2a2a2a; }
 .prose table { 
   width: 100% !important; 
   table-layout: auto !important; 
-  border-collapse: collapse; 
-  font-size: 12pt; 
-  background: #fdfcf7;
-}
-
-.prose table { 
-  width: 100% !important; 
-  table-layout: auto !important; 
   border-collapse: collapse; /* ensures shared borders */
   font-size: 12pt; 
   background: #fdfcf7;
@@ -283,18 +275,6 @@ h1,h2,h3 { color:#2a2a2a; }
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Header row */
-.prose th {
-  background: #9bae87; 
-  color: #000; 
-  font-weight: 700;
-  text-align: left;
-  border-radius: 6px 6px 0 0;
-}
-
-/* Purple highlights */
-.prose .purple { color: #805463; }
-
 /* Alternating rows */
 .prose table tr:nth-child(even) td { background: #9bae87; color: #000; }
 .prose table tr:nth-child(odd) td { background: #fdfcf7; color: #000; }
@@ -302,16 +282,19 @@ h1,h2,h3 { color:#2a2a2a; }
 /* Sticky headers */
 .prose th {
   position: sticky;
-  top: 0;
-  z-index: 10;
+  top: 20px;             /* sits just below your progress bar */
+  z-index: 50;           /* higher than progress bar */
   background: #fdfcf7;
   color: #000;
   font-weight: 700;
   text-align: left;
-  border-bottom: 1px solid #e1e6da;
+  border-bottom: 2px solid #6b8f71;
 }
 .prose th:first-child { border-top-left-radius: 6px; }
 .prose th:last-child { border-top-right-radius: 6px; }
+
+/* Purple highlights */
+.prose .purple { color: #805463; }
 
 .breadcrumbs {
   font-size: 0.9em;
@@ -356,7 +339,7 @@ h1,h2,h3 { color:#2a2a2a; }
 
   .prose td, .prose th {
     padding: 6px;
-    border: 1px solid #999;
+    border: 0.5px solid #e1e6da; /* keep same thin borders in print */
     vertical-align: top;
     white-space: normal !important;
   }
@@ -371,7 +354,7 @@ h1,h2,h3 { color:#2a2a2a; }
   }
 
   .prose th {
-    position: static !important;
+    position: static !important; /* disable sticky for print */
     background: #9bae87 !important;
     color: #000 !important;
     font-weight: 700;
