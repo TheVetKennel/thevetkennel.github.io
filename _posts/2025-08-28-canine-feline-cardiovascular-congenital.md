@@ -3,7 +3,10 @@ layout: post
 title: "Canine & Feline Cardiology: Congenital"
 date: 2025-08-28
 categories: notebook cardiology canine-feline
+description: "Table summary of congenital heart problems of dogs and cats; pathogenesis, diagnostics, treatment, and prognosis."
+permalink: /notebook/canine-feline-cardiovascular-congenital/
 ---
+
 
 <div class="prose max-w-none"><table border="0" cellpadding="0" cellspacing="0" style="border-collapse:
  collapse;table-layout:fixed">
