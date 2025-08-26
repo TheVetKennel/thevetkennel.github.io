@@ -22,12 +22,9 @@
     </div>
   {% endif %}
 
-  {{ content }}
-  <details class="post-nav">
-    <summary>📚 Notebook Navigation</summary>
-    {% include notebook-nav.html %}
-  </details>
-</main>
+<div class="post-nav">
+  {% include notebook-nav.html %}
+</div>
   
   {% include footer.html %}
 
