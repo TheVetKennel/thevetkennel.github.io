@@ -394,3 +394,16 @@ h1,h2,h3 { color:#2a2a2a; }
   background: #9bae87; /* match your header color */
   color: #000;
 }
+
+.breadcrumbs {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+  color: #805463;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  color: inherit;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
