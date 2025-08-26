@@ -76,7 +76,9 @@ title: Notebook
    | where_exp: "p", "p.categories contains sys_slug" %}
             {% if cf_posts.size > 0 %}
               {% for post in cf_posts %}
-                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                <li><a href="{{ post.url | relative_url }}">
+                  {{ post.title | split: ":" | last | strip }}
+                </a></li>
               {% endfor %}
             {% else %}
               <li>(Coming soon)</li>
@@ -118,7 +120,9 @@ title: Notebook
    | where_exp: "p", "p.categories contains sys_slug" %}
             {% if eq_posts.size > 0 %}
               {% for post in eq_posts %}
-                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                <li><a href="{{ post.url | relative_url }}">
+                  {{ post.title | split: ":" | last | strip }}
+                </a></li>
               {% endfor %}
             {% else %}
               <li>(Coming soon)</li>
@@ -160,7 +164,9 @@ title: Notebook
    | where_exp: "p", "p.categories contains sys_slug" %}
             {% if bov_posts.size > 0 %}
               {% for post in bov_posts %}
-                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                <li><a href="{{ post.url | relative_url }}">
+                  {{ post.title | split: ":" | last | strip }}
+                </a></li>
               {% endfor %}
             {% else %}
               <li>(Coming soon)</li>
