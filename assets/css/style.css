@@ -302,7 +302,8 @@ h1,h2,h3 { color:#2a2a2a; }
   display: inline-block; /* shrink to button width */
 }
 
-.download-button .cta-button {
+/* General CTA button style (applies everywhere) */
+.cta-button {
   display: inline-block;
   margin-bottom: 0.4em;
   padding: 0.6em 1em;
@@ -314,10 +315,11 @@ h1,h2,h3 { color:#2a2a2a; }
   box-shadow: 2px 2px 0 #6b8f71;
 }
 
-.download-button .cta-button:hover {
+.cta-button:hover {
   background-color: #6b8f71;
 }
 
+/* PDF buttons get their little note */
 .download-button .library-note {
   font-size: 0.85em;
   color: #444;
