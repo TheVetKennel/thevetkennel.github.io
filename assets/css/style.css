@@ -414,6 +414,13 @@ h1,h2,h3 { color:#2a2a2a; }
   justify-content: center;
 }
 
+/* Tone down Notebook Nav headings inside post toolbar only */
+.post-toolbar .toolbar-box h2,
+.post-toolbar .toolbar-box summary strong {
+  font-weight: normal;
+  font-size: 1em;
+}
+
 /* Revision toggle inside box */
 .revision-toggle {
   display: flex;
