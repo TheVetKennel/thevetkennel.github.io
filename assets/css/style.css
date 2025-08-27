@@ -296,8 +296,15 @@ h1,h2,h3 { color:#2a2a2a; }
 /* Purple highlights */
 .prose .purple { color: #805463; }
 
-.download-button { margin: 1em 0; text-align: right; }
+.download-button {
+  margin: 1em 0;
+  text-align: center;          /* center contents inside green box */
+  display: block;              /* treat as block container */
+}
+
 .download-button .cta-button {
+  display: inline-block;       /* shrink to fit text */
+  margin: 0 auto 0.5em auto;   /* center + gap below */
   padding: 0.6em 1em;
   background-color: #9bae87;
   color: #fff !important;
@@ -305,12 +312,38 @@ h1,h2,h3 { color:#2a2a2a; }
   border-radius: 8px;
   font-weight: bold;
   box-shadow: 2px 2px 0 #6b8f71;
+  width: auto;                 /* ✅ stop stretching */
+  max-width: 240px;            /* ✅ cap width so it doesn’t get huge */
+  text-align: center;
 }
-.download-button .cta-button:hover { background-color: #6b8f71; }
+
+.download-button .cta-button:hover {
+  background-color: #6b8f71;
+}
+
+.download-button .library-note {
+  font-size: 1em;
+  color: #444;
+  margin-top: 0.5em;
+  text-align: center;     
+  line-height: 1.4;
+}
+
+.download-button .library-note a {
+  white-space: nowrap;   /* ✅ stop "Library!" splitting */
+  font-weight: bold;
+  color: #805463;
+}
 
 /* === PRINT STYLES === */
 @media print {
-  header, footer, nav, .nav-tree, .download-button, #ecg-progress {
+  header,
+  footer,
+  nav,
+  .nav-tree,
+  .download-button,
+  .post-toolbar,
+  #ecg-progress {
     display: none !important;
   }
 
@@ -373,4 +406,199 @@ h1,h2,h3 { color:#2a2a2a; }
   border: 1px solid #e1e6da;
   border-radius: 8px;
   font-size: 0.95em;
+}
+
+/* Toolbar row */
+.post-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1em;
+}
+
+.toolbar-box {
+  flex: 1 1 0;                /* all equal width */
+  max-width: 33%;             /* prevents overflow */
+  background-color: #e1e6da;
+  border: 2px solid #6b8f71;
+  border-radius: 12px;
+  padding: 1em;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;     /* include padding in width calc */
+}
+
+/* Make toggle + library note boxes fully centered */
+.post-toolbar .toolbar-box .revision-toggle,
+.post-toolbar .toolbar-box .library-note,
+.post-toolbar .toolbar-box .cta-button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* Tone down Notebook Nav headings inside post toolbar only */
+.post-toolbar .toolbar-box h2,
+.post-toolbar .toolbar-box summary strong {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+/* Make toolbar text match nav headings */
+.revision-toggle .toggle-text,
+.download-button .library-note {
+  font-family: 'Courier New', Courier, monospace; /* same as nav headings */
+  font-weight: bold;                              /* same thickness */
+  color: #805463;                                 /* same mulberry color */
+}
+
+/* Notebook nav in toolbar: center headings, left-align children */
+.post-toolbar .toolbar-box .nav-tree {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical centering */
+  align-items: center;       /* center headings */
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Center the main Notebook Navigation title + ICVA heading */
+.post-toolbar .toolbar-box .nav-tree h2,
+.post-toolbar .toolbar-box .nav-tree > details > summary {
+  text-align: center;
+  width: 100%;
+  margin: 0 0 0.5em;
+}
+
+/* Left-align nested toggles (systems) under ICVA */
+.post-toolbar .toolbar-box .nav-tree > details > ul,
+.post-toolbar .toolbar-box .nav-tree > details > details {
+  text-align: left;
+  align-self: flex-start;
+  width: auto;
+  margin-left: 1em;  /* indent nicely */
+}
+
+/* Revision toggle inside box */
+.revision-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+/* Notebook nav inside box */
+.toolbar-box .nav-tree {
+  margin: 0;
+  background: none;   /* remove double background */
+  border: none;
+  padding: 0;
+}
+
+/* Download button alignment */
+.download-button {
+  text-align: center; /* center button + note inside box */
+}
+.download-button .cta-button {
+  display: inline-block;
+  margin-bottom: 0.4em;
+}
+.download-button .library-note {
+  font-weight: normal;
+  font-size: 1em;
+  color: #444;
+  margin: 0;
+}
+
+/* Revision toggle */
+.revision-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.toggle-text {
+  font-weight: normal;
+  font-size: 1em;
+  color: #444;
+  margin: 0;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc; transition: .3s; border-radius: 26px;
+}
+.slider:before {
+  position: absolute; content: "";
+  height: 20px; width: 20px; left: 3px; bottom: 3px;
+  background-color: white; transition: .3s; border-radius: 50%;
+}
+input:checked + .slider { background-color: #6b8f71; }
+input:checked + .slider:before { transform: translateX(24px); }
+
+/* Revision mode cells */
+.prose td.covered {
+  background-color: #6b8f71 !important;   /* solid green */
+  color: transparent !important;          /* hide text */
+  text-shadow: none !important;           /* remove any shadow/outline */
+  -webkit-text-fill-color: transparent !important; /* Safari/Chrome fix */
+  cursor: pointer;
+  position: relative;
+  user-select: none;                      /* prevent highlighting hidden text */
+}
+
+/* Overlay text */
+.prose td.covered::after {
+  content: "Click to reveal";
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+  opacity: 0.85;
+  pointer-events: none; /* lets clicks hit the cell itself */
+}
+
+/* Revealed cells */
+.prose td.covered.revealed {
+  color: inherit !important;              /* restore original text */
+  -webkit-text-fill-color: inherit !important;
+  background-color: inherit !important;
+}
+
+.prose td.covered.revealed::after {
+  content: none; /* remove overlay */
+}
+
+/* Ensure ECG scroll progress bar stays visible on top */
+#ecg-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 9999; /* always above toolbar and content */
+}
+
+/* Sticky table headers below progress bar + toolbar */
+.prose th {
+  position: sticky;
+  top: 214px; /* 40px ECG bar + 174px toolbar */
+  z-index: 100;
+  background: #fdfcf7;
 }

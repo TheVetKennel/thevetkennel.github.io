@@ -14,35 +14,104 @@
 </head>
 <body>
 
+<!-- ECG Scroll Progress Bar -->
+<div id="ecg-progress" aria-hidden="true">
+  <svg id="ecg-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <defs>
+      <pattern id="ecgPattern" patternUnits="userSpaceOnUse" width="100" height="40">
+        <image id="ecgImage" href="data:image/png;base64,{{ site.data.ecg_base64 }}" 
+               x="0" y="0" width="100" height="40" preserveAspectRatio="none" />
+      </pattern>
+    </defs>
+
+    <!-- ✅ Solid cream background -->
+    <rect id="ecg-solid-bg" x="0" y="0" height="40" fill="#fdfcf7"></rect>
+
+    <!-- ✅ Full ECG background strip -->
+    <rect id="ecg-bg-rect" x="0" y="0" height="40" fill="url(#ecgPattern)"></rect>
+
+    <!-- ✅ Scrolling fill -->
+    <rect id="ecg-fill-rect" x="0" y="0" height="40" width="0" fill="url(#ecgPattern)"></rect>
+  </svg>
+</div>
+
   {% include header.html %}
 
-<div class="download-button">
-  <a href="javascript:window.print()" class="cta-button">📄 Print as PDF</a>
-  <p class="library-note">
-    Get the editable, pretty version from the 
-    <a href="{{ '/library/' | relative_url }}">Library</a>!
-  </p>
-</div>
+<main class="post">
 
-<div class="post-nav">
-  {% include notebook-nav.html %}
-</div>
-  
-  {% include footer.html %}
+  <!-- Page title -->
+  <h1 class="post-title">{{ page.title }}</h1>
 
-  <!-- ECG Scroll Progress Bar -->
-  <div id="ecg-progress" aria-hidden="true">
-    <svg id="ecg-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <defs>
-        <pattern id="ecgPattern" patternUnits="userSpaceOnUse" width="100" height="40">
-          <image id="ecgImage" href="data:image/png;base64,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" x="0" y="0" width="100" height="40" preserveAspectRatio="none" />
-        </pattern>
-      </defs>
-      <rect id="ecg-bg-rect" class="ecg-bg" x="0" y="0" height="40" fill="url(#ecgPattern)"></rect>
-      <rect id="ecg-fill-rect" class="ecg-fill" x="0" y="0" height="40" fill="url(#ecgPattern)"></rect>
-    </svg>
+  <!-- Toolbar -->
+  <div class="post-toolbar">
+
+    <!-- Left: Revision toggle -->
+    <div class="toolbar-box">
+      <div class="revision-toggle">
+        <label class="switch">
+          <input type="checkbox" id="revision-mode">
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-text">Toggle Revision Mode (click cells to reveal)</span>
+      </div>
+    </div>
+
+    <!-- Middle: Notebook navigation -->
+    <div class="toolbar-box">
+      {% include notebook-nav.html %}
+    </div>
+
+    <!-- Right: PDF button -->
+    <div class="toolbar-box">
+      <div class="download-button">
+        <a href="javascript:window.print()" class="cta-button">📄 Download as PDF</a>
+        <p class="library-note">
+          …or get the editable, pretty version from the 
+          <a href="{{ '/library/' | relative_url }}">Library</a>!
+        </p>
+      </div>
+    </div>
+
   </div>
 
-  <script src="{{ "/assets/js/ecg-progress.js" | relative_url }}"></script>
+  <!-- Post content -->
+  {{ content }}
+
+</main>
+  
+{% include footer.html %}
+
+<script src="{{ "/assets/js/ecg-progress.js" | relative_url }}"></script>
+
+<!-- Revision mode script -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("revision-mode");
+  const tables = document.querySelectorAll(".prose table");
+
+  toggle.addEventListener("change", () => {
+    tables.forEach(table => {
+      const rows = table.rows;
+      for (let i = 0; i < rows.length; i++) {
+        for (let j = 0; j < rows[i].cells.length; j++) {
+          const cell = rows[i].cells[j];
+          // skip first row and first column
+          if (i === 0 || j === 0) continue;
+          if (toggle.checked) {
+            cell.classList.add("covered");
+            cell.classList.remove("revealed");
+            cell.addEventListener("click", () => {
+              cell.classList.toggle("revealed");
+            });
+          } else {
+            cell.classList.remove("covered", "revealed");
+          }
+        }
+      }
+    });
+  });
+});
+</script>
+
 </body>
 </html>
