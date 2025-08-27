@@ -1,4 +1,4 @@
-/* === Global Layout === */
+/* === Base Site Styles === */
 body {
   background-color: #fdfcf7;
   background-image: linear-gradient(to bottom, transparent 97%, #e7eadf 95%);
@@ -22,7 +22,28 @@ h4 { font-size: 1.1rem; margin-top: 0.9em; }
 
 /* Links */
 a, a:visited { color: #805463; }
-a:hover { color: #805463; text-decoration: underline; }
+a:hover { text-decoration: underline; }
+
+/* === Navigation === */
+header nav {
+  background-color: #e1e6da;
+  padding: 1em;
+  border-radius: 12px;
+  border: 2px solid #6b8f71;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+header nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #805463;
+  font-weight: bold;
+}
+.site-title, nav a {
+  font-family: 'Courier New', Courier, monospace;
+}
 
 /* === ECG Progress Bar === */
 :root {
@@ -35,7 +56,7 @@ a:hover { color: #805463; text-decoration: underline; }
   width: 100%;
   height: var(--ecg-bar-height);
   z-index: 9999;
-  border-bottom: 1px solid #6b8f71; /* ✅ thinner line */
+  border-bottom: 1px solid #6b8f71;
 }
 #ecg-svg { width: 100%; height: 100%; display: block; }
 html { scroll-padding-top: var(--ecg-bar-height); }
@@ -64,7 +85,7 @@ body { padding-top: var(--ecg-bar-height); }
   justify-content: center;
   box-sizing: border-box;
 }
-.toolbar-box a { color: #805463; font-weight: bold; } /* only Library link mulberry */
+.toolbar-box a { color: #805463; font-weight: bold; }
 
 /* === Download Button === */
 .download-button { text-align: center; }
@@ -95,11 +116,9 @@ body { padding-top: var(--ecg-bar-height); }
 .toggle-text {
   font-size: 0.9em;
   font-family: 'Courier New', Courier, monospace;
-  color: #1b1b1b;
   font-weight: bold;
+  color: #1b1b1b;
 }
-
-/* Toggle switch */
 .switch { position: relative; display: inline-block; width: 50px; height: 26px; }
 .switch input { opacity: 0; width: 0; height: 0; }
 .slider {
@@ -118,9 +137,8 @@ input:checked + .slider:before { transform: translateX(24px); }
 /* Revision mode cells */
 .prose td.covered {
   position: relative;
-  opacity: 0;                        /* ✅ hide text but keep background */
+  opacity: 0;   /* ✅ hide text but keep bg */
   cursor: pointer;
-  user-select: none;
 }
 .prose td.covered::after {
   content: "Click to reveal";
@@ -132,18 +150,14 @@ input:checked + .slider:before { transform: translateX(24px); }
   font-weight: 600;
   opacity: 0.9;
 }
-.prose td.covered.revealed {
-  opacity: 1;                        /* ✅ restore text */
-}
+.prose td.covered.revealed { opacity: 1; }
 .prose td.covered.revealed::after { content: none; }
 
-/* === Notebook Tables === */
+/* === Tables === */
 .prose table { width: 100%; border-collapse: collapse; font-size: 12pt; background: #fdfcf7; }
 .prose td, .prose th { padding: 6px; border: 0.5px solid #e1e6da; vertical-align: top; }
 .prose table tr:nth-child(even) td { background: #9bae87; color: #000; }
 .prose table tr:nth-child(odd) td { background: #fdfcf7; color: #000; }
-
-/* Sticky headers below ECG bar */
 .prose th {
   position: sticky;
   top: var(--ecg-bar-height);
