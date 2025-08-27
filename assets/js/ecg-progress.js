@@ -1,41 +1,38 @@
 (function () {
   const svg = document.getElementById('ecg-svg');
   if (!svg) return;
-
   const pattern = document.getElementById('ecgPattern');
   const img = document.getElementById('ecgImage');
-  const fillRect = document.getElementById('ecg-fill-rect');
   const bgRect = document.getElementById('ecg-bg-rect');
+  const fillRect = document.getElementById('ecg-fill-rect');
 
   const BAR_HEIGHT = 40;
   const REPEATS = 10;
 
   function sizePattern() {
-    const vw = window.innerWidth;
+    const vw = window.innerWidth || document.documentElement.clientWidth;
     const tileWidth = Math.max(40, Math.round(vw / REPEATS));
+    const tileHeight = BAR_HEIGHT;
 
-    // Pattern size
     pattern.setAttribute('width', tileWidth);
-    pattern.setAttribute('height', BAR_HEIGHT);
+    pattern.setAttribute('height', tileHeight);
 
-    // Stretch the ECG image
     img.setAttribute('width', tileWidth);
-    img.setAttribute('height', BAR_HEIGHT);
+    img.setAttribute('height', tileHeight);
 
-    // Background bar width
     bgRect.setAttribute('width', vw);
     bgRect.setAttribute('height', BAR_HEIGHT);
   }
 
   function onScroll() {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight;
-    const winHeight = window.innerHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
+    const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    const winHeight = window.innerHeight || document.documentElement.clientHeight;
     const maxScroll = docHeight - winHeight;
     const pct = maxScroll > 0 ? (scrollTop / maxScroll) : 0;
 
-    const vw = window.innerWidth;
-    fillRect.setAttribute('width', Math.round(pct * vw));
+    const vw = window.innerWidth || document.documentElement.clientWidth;
+    fillRect.setAttribute('width', pct * vw);
     fillRect.setAttribute('height', BAR_HEIGHT);
   }
 
