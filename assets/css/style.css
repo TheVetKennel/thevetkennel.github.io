@@ -323,12 +323,16 @@ h1,h2,h3 { color:#2a2a2a; }
 
 .download-button .library-note {
   font-size: 0.85em;
-  margin: 0;
-  text-align: center;          /* ✅ sits directly below button */
-  display: block;              /* own line */
-  font-family: 'Courier New', Courier, monospace;
+  color: #444;
+  margin-top: 0.5em;
+  text-align: center;     
+  line-height: 1.4;
+}
+
+.download-button .library-note a {
+  white-space: nowrap;   /* ✅ stop "Library!" splitting */
   font-weight: bold;
-  color: #805463;              /* ✅ matches ICVA style */
+  color: #805463;
 }
 
 /* === PRINT STYLES === */
@@ -504,7 +508,8 @@ h1,h2,h3 { color:#2a2a2a; }
   margin-bottom: 0.4em;
 }
 .download-button .library-note {
-  font-size: 0.85em;
+  font-weight: normal;
+  font-size: 1em;
   color: #444;
   margin: 0;
 }
@@ -517,8 +522,10 @@ h1,h2,h3 { color:#2a2a2a; }
 }
 
 .toggle-text {
-  font-size: 0.9em;
+  font-weight: normal;
+  font-size: 1em;
   color: #444;
+  margin: 0;
 }
 
 /* Toggle switch */
