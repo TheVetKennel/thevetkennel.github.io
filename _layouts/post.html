@@ -14,51 +14,6 @@
 </head>
 <body>
 
-  {% include header.html %}
-
-<main class="post">
-
-  <!-- Page title -->
-  <h1 class="post-title">{{ page.title }}</h1>
-
-<div class="post-toolbar">
-
-  <!-- Left: Revision toggle -->
-  <div class="toolbar-box">
-    <div class="revision-toggle">
-      <label class="switch">
-        <input type="checkbox" id="revision-mode">
-        <span class="slider"></span>
-      </label>
-      <span class="toggle-text">Toggle Revision Mode (click cells to reveal)</span>
-    </div>
-  </div>
-
-  <!-- Middle: Notebook navigation -->
-  <div class="toolbar-box">
-    {% include notebook-nav.html %}
-  </div>
-
-  <!-- Right: PDF button -->
-  <div class="toolbar-box">
-    <div class="download-button">
-      <a href="javascript:window.print()" class="cta-button">📄 Download as PDF</a>
-      <p class="library-note">
-        …or get the editable, pretty version from the 
-        <a href="{{ '/library/' | relative_url }}">Library</a>!
-      </p>
-    </div>
-  </div>
-
-</div>
-
-  <!-- Post content -->
-  {{ content }}
-
-  </main>
-  
-  {% include footer.html %}
-
   <!-- ECG Scroll Progress Bar -->
   <div id="ecg-progress" aria-hidden="true">
     <svg id="ecg-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -69,40 +24,87 @@
         </pattern>
       </defs>
       <rect id="ecg-bg-rect" class="ecg-bg" x="0" y="0" height="40" fill="url(#ecgPattern)"></rect>
-      <rect id="ecg-fill-rect" class="ecg-fill" x="0" y="0" height="40" fill="url(#ecgPattern)"></rect>
+      <rect id="ecg-fill-rect" class="ecg-fill" x="0" y="0" height="40" width="0" fill="url(#ecgPattern)"></rect>
     </svg>
   </div>
 
-  <script src="{{ "/assets/js/ecg-progress.js" | relative_url }}"></script>
+  {% include header.html %}
 
-  <!-- Revision mode script -->
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("revision-mode");
-    const tables = document.querySelectorAll(".prose table");
+<main class="post">
 
-    toggle.addEventListener("change", () => {
-      tables.forEach(table => {
-        const rows = table.rows;
-        for (let i = 0; i < rows.length; i++) {
-          for (let j = 0; j < rows[i].cells.length; j++) {
-            const cell = rows[i].cells[j];
-            // skip first row and first column
-            if (i === 0 || j === 0) continue;
-            if (toggle.checked) {
-              cell.classList.add("covered");
-              cell.classList.remove("revealed");
-              cell.addEventListener("click", () => {
-                cell.classList.toggle("revealed");
-              });
-            } else {
-              cell.classList.remove("covered", "revealed");
-            }
+  <!-- Page title -->
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <!-- Toolbar -->
+  <div class="post-toolbar">
+
+    <!-- Left: Revision toggle -->
+    <div class="toolbar-box">
+      <div class="revision-toggle">
+        <label class="switch">
+          <input type="checkbox" id="revision-mode">
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-text">Toggle Revision Mode (click cells to reveal)</span>
+      </div>
+    </div>
+
+    <!-- Middle: Notebook navigation -->
+    <div class="toolbar-box">
+      {% include notebook-nav.html %}
+    </div>
+
+    <!-- Right: PDF button -->
+    <div class="toolbar-box">
+      <div class="download-button">
+        <a href="javascript:window.print()" class="cta-button">📄 Download as PDF</a>
+        <p class="library-note">
+          …or get the editable, pretty version from the 
+          <a href="{{ '/library/' | relative_url }}">Library</a>!
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Post content -->
+  {{ content }}
+
+</main>
+  
+{% include footer.html %}
+
+<script src="{{ "/assets/js/ecg-progress.js" | relative_url }}"></script>
+
+<!-- Revision mode script -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("revision-mode");
+  const tables = document.querySelectorAll(".prose table");
+
+  toggle.addEventListener("change", () => {
+    tables.forEach(table => {
+      const rows = table.rows;
+      for (let i = 0; i < rows.length; i++) {
+        for (let j = 0; j < rows[i].cells.length; j++) {
+          const cell = rows[i].cells[j];
+          // skip first row and first column
+          if (i === 0 || j === 0) continue;
+          if (toggle.checked) {
+            cell.classList.add("covered");
+            cell.classList.remove("revealed");
+            cell.addEventListener("click", () => {
+              cell.classList.toggle("revealed");
+            });
+          } else {
+            cell.classList.remove("covered", "revealed");
           }
         }
-      });
+      }
     });
   });
-  </script>
+});
+</script>
+
 </body>
 </html>
