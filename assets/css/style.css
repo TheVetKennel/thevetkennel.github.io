@@ -302,9 +302,10 @@ h1,h2,h3 { color:#2a2a2a; }
   display: block;              /* treat as block container */
 }
 
-.download-button .cta-button {
-  display: inline-block;       /* shrink to fit text */
-  margin: 0 auto 0.5em auto;   /* center + gap below */
+/* Generic CTA button style (Download, Newsletter, etc.) */
+.cta-button {
+  display: inline-block;
+  margin: 0 auto 0.5em auto;
   padding: 0.6em 1em;
   background-color: #9bae87;
   color: #fff !important;
@@ -312,12 +313,12 @@ h1,h2,h3 { color:#2a2a2a; }
   border-radius: 8px;
   font-weight: bold;
   box-shadow: 2px 2px 0 #6b8f71;
-  width: auto;                 /* ✅ stop stretching */
-  max-width: 240px;            /* ✅ cap width so it doesn’t get huge */
+  width: auto;
+  max-width: 240px;
   text-align: center;
 }
 
-.download-button .cta-button:hover {
+.cta-button:hover {
   background-color: #6b8f71;
 }
 
