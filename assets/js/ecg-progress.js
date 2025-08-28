@@ -2,25 +2,13 @@
   const svg = document.getElementById('ecg-svg');
   if (!svg) return;
 
-  const pattern = document.getElementById('ecgPattern');
-  const img = document.getElementById('ecgImage');
   const fillRect = document.getElementById('ecg-fill-rect');
   const solidBg = document.getElementById('ecg-solid-bg');
 
   const BAR_HEIGHT = 40;
-  const REPEATS = 10;
 
   function sizePattern() {
     const vw = window.innerWidth || document.documentElement.clientWidth;
-    const tileWidth = Math.max(40, Math.round(vw / REPEATS));
-    const tileHeight = BAR_HEIGHT;
-
-    // pattern tile size
-    pattern.setAttribute('width', tileWidth);
-    pattern.setAttribute('height', tileHeight);
-
-    img.setAttribute('width', tileWidth);
-    img.setAttribute('height', tileHeight);
 
     // cream background always full width
     solidBg.setAttribute('width', vw);
@@ -37,10 +25,12 @@
     const pct = maxScroll > 0 ? Math.min(scrollTop / maxScroll, 1) : 0;
 
     const vw = window.innerWidth;
+
+    // grow ECG fill rect → pattern tiles automatically
     fillRect.setAttribute('width', pct * vw);
     fillRect.setAttribute('height', BAR_HEIGHT);
 
-    // DEBUG
+    // DEBUG (can remove later)
     console.log("page:", window.location.pathname, "pct:", pct);
   }
 
