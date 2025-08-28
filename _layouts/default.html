@@ -7,6 +7,7 @@
   <meta property="og:description" content="{{ page.description | default: site.description }}">
   <meta property="og:type" content="website">
   <title>{{ page.title | default: site.title }}</title>
+
   <link rel="stylesheet" href="/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/images/logo.png" type="image/png">
@@ -20,25 +21,28 @@
 
   {% include footer.html %}
 
-  <!-- ECG Scroll Progress Bar -->
+  <!-- ✅ ECG Scroll Progress Bar -->
   <div id="ecg-progress" aria-hidden="true">
     <svg id="ecg-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
       <defs>
-        <!-- 🔧 Debug pattern: green + white stripes -->
-        <pattern id="ecgPattern" patternUnits="userSpaceOnUse" width="20" height="40">
-          <rect width="10" height="40" fill="green"></rect>
-          <rect x="10" width="10" height="40" fill="white"></rect>
+        <!-- ECG pattern tile: 100x40, repeats automatically -->
+        <pattern id="ecgPattern" patternUnits="userSpaceOnUse" width="100" height="40">
+          <image 
+            href="data:image/png;base64,{{ site.data.ecg_base64 }}"
+            width="100" height="40"
+            preserveAspectRatio="none" />
         </pattern>
       </defs>
 
-      <!-- Solid cream background across full width -->
+      <!-- Solid cream background -->
       <rect id="ecg-solid-bg" x="0" y="0" height="40" width="100%" fill="#fdfcf7"></rect>
 
-      <!-- Scrolling fill (uses debug stripes) -->
+      <!-- Scrolling ECG fill -->
       <rect id="ecg-fill-rect" x="0" y="0" height="40" width="0" fill="url(#ecgPattern)"></rect>
     </svg>
   </div>
 
+  <!-- JS controller for ECG progress -->
   <script src="{{ "/assets/js/ecg-progress.js" | relative_url }}"></script>
 </body>
 </html>
