@@ -4,7 +4,7 @@ title: "Canine & Feline Cardiovascular: Arrhythmias"
 date: 2025-08-28
 categories: notebook cardiovascular canine-feline
 description: "Table summary of arrhythmias of dogs and cats; pathogenesis, diagnostics, treatment, and prognosis."
-thumbnail: /assets/images/thumbnails/arrhythmia-dog.png
+thumbnail: /assets/images/thumbnails/arrythmia-thumbnail.png
 permalink: /notebook/canine-feline-cardiovascular-arrhythmias/
 ---
 
