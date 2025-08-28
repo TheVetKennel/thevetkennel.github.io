@@ -302,9 +302,10 @@ h1,h2,h3 { color:#2a2a2a; }
   display: block;              /* treat as block container */
 }
 
-.download-button .cta-button {
-  display: inline-block;       /* shrink to fit text */
-  margin: 0 auto 0.5em auto;   /* center + gap below */
+/* Generic CTA button style (Download, Newsletter, etc.) */
+.cta-button {
+  display: inline-block;
+  margin: 0 auto 0.5em auto;
   padding: 0.6em 1em;
   background-color: #9bae87;
   color: #fff !important;
@@ -312,27 +313,26 @@ h1,h2,h3 { color:#2a2a2a; }
   border-radius: 8px;
   font-weight: bold;
   box-shadow: 2px 2px 0 #6b8f71;
-  width: auto;                 /* ✅ stop stretching */
-  max-width: 240px;            /* ✅ cap width so it doesn’t get huge */
+  width: auto;
+  max-width: 240px;
   text-align: center;
 }
 
-.download-button .cta-button:hover {
+.cta-button:hover {
   background-color: #6b8f71;
 }
 
 .download-button .library-note {
+  font-family: 'IBM Plex Sans','Verdana',sans-serif;  /* same as body */
   font-size: 1em;
-  color: #444;
-  margin-top: 0.5em;
-  text-align: center;     
   line-height: 1.4;
+  color: #1b1b1b;
 }
 
 .download-button .library-note a {
-  white-space: nowrap;   /* ✅ stop "Library!" splitting */
-  font-weight: bold;
-  color: #805463;
+  color: #805463;              /* mulberry */
+  font-weight: normal;         /* no bold */
+  text-decoration: underline;  /* underline */
 }
 
 /* === PRINT STYLES === */
@@ -410,10 +410,11 @@ h1,h2,h3 { color:#2a2a2a; }
 
 /* Toolbar row */
 .post-toolbar {
-  display: flex;
+  display: flex;               /* ✅ lay out boxes horizontally */
   justify-content: space-between;
   align-items: stretch;
-  gap: 1em;
+  gap: 1em;                    /* space between boxes */
+  margin-bottom: 2rem;         /* space below toolbar */
 }
 
 .toolbar-box {
@@ -433,7 +434,6 @@ h1,h2,h3 { color:#2a2a2a; }
 
 /* Make toggle + library note boxes fully centered */
 .post-toolbar .toolbar-box .revision-toggle,
-.post-toolbar .toolbar-box .library-note,
 .post-toolbar .toolbar-box .cta-button {
   display: flex;
   justify-content: center;
@@ -448,12 +448,23 @@ h1,h2,h3 { color:#2a2a2a; }
   font-size: 1em;
 }
 
-/* Make toolbar text match nav headings */
-.revision-toggle .toggle-text,
-.download-button .library-note {
-  font-family: 'Courier New', Courier, monospace; /* same as nav headings */
-  font-weight: bold;                              /* same thickness */
-  color: #805463;                                 /* same mulberry color */
+/* Make ALL toolbar box text match Notebook Navigation style */
+.post-toolbar .toolbar-box {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  color: #1b1b1b;  /* same as centre */
+  font-weight: normal;
+  text-align: center;
+}
+
+.post-toolbar .toolbar-box a {
+  color: #805463; /* keep links mulberry */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.post-toolbar .toolbar-box a:hover {
+  text-decoration: underline;
 }
 
 /* Notebook nav in toolbar: center headings, left-align children */
@@ -508,10 +519,16 @@ h1,h2,h3 { color:#2a2a2a; }
   margin-bottom: 0.4em;
 }
 .download-button .library-note {
-  font-weight: normal;
+  font-family: 'Courier New', Courier, monospace;  /* ✅ same as link */
   font-size: 1em;
-  color: #444;
-  margin: 0;
+  line-height: 1.4;
+  color: #1b1b1b; /* normal text colour */
+}
+
+.download-button .library-note a {
+  color: #805463;              /* mulberry */
+  font-weight: normal;         /* not bold */
+  text-decoration: underline;  /* underline instead */
 }
 
 /* Revision toggle */
@@ -551,13 +568,12 @@ input:checked + .slider:before { transform: translateX(24px); }
 
 /* Revision mode cells */
 .prose td.covered {
-  background-color: #6b8f71 !important;   /* solid green */
-  color: transparent !important;          /* hide text */
-  text-shadow: none !important;           /* remove any shadow/outline */
+  color: transparent !important;            /* hide text */
+  text-shadow: none !important;
   -webkit-text-fill-color: transparent !important; /* Safari/Chrome fix */
   cursor: pointer;
   position: relative;
-  user-select: none;                      /* prevent highlighting hidden text */
+  user-select: none;                        /* prevent highlighting hidden text */
 }
 
 /* Overlay text */
@@ -567,18 +583,16 @@ input:checked + .slider:before { transform: translateX(24px); }
   top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: rgba(0,0,0,0.55);   /* semi-transparent overlay text */
   font-size: 0.8em;
   font-weight: 600;
-  opacity: 0.85;
-  pointer-events: none; /* lets clicks hit the cell itself */
+  pointer-events: none;       /* lets clicks hit the cell itself */
 }
 
 /* Revealed cells */
 .prose td.covered.revealed {
-  color: inherit !important;              /* restore original text */
+  color: inherit !important;               /* restore original text */
   -webkit-text-fill-color: inherit !important;
-  background-color: inherit !important;
 }
 
 .prose td.covered.revealed::after {
@@ -601,4 +615,19 @@ input:checked + .slider:before { transform: translateX(24px); }
   top: 214px; /* 40px ECG bar + 174px toolbar */
   z-index: 100;
   background: #fdfcf7;
+}
+
+
+/* Fix library note baseline alignment */
+.download-button .library-note {
+  display: block;          /* treat like normal paragraph */
+  text-align: center;      /* keep whole sentence centred */
+}
+
+.download-button .library-note a {
+  display: inline;         /* behave like normal text */
+  vertical-align: baseline;/* sit flush with surrounding text */
+  color: #805463;          /* mulberry */
+  font-weight: normal;
+  text-decoration: underline;
 }
