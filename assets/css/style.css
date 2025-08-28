@@ -519,7 +519,7 @@ h1,h2,h3 { color:#2a2a2a; }
   margin-bottom: 0.4em;
 }
 .download-button .library-note {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;  /* ✅ same as link */
   font-size: 1em;
   line-height: 1.4;
   color: #1b1b1b; /* normal text colour */
@@ -527,9 +527,8 @@ h1,h2,h3 { color:#2a2a2a; }
 
 .download-button .library-note a {
   color: #805463;              /* mulberry */
-  font-weight: normal;         /* ✅ no bold */
-  text-decoration: underline;  /* ✅ underline instead */
-  vertical-align: baseline;    /* ✅ align with text */
+  font-weight: normal;         /* not bold */
+  text-decoration: underline;  /* underline instead */
 }
 
 /* Revision toggle */
