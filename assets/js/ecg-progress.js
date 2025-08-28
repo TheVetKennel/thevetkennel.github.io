@@ -9,20 +9,27 @@
   const BAR_HEIGHT = 40;
   const REPEATS = 10;
 
-  function sizePattern() {
-    const vw = window.innerWidth || document.documentElement.clientWidth;
-    const tileWidth = Math.max(40, Math.round(vw / REPEATS));
-    const tileHeight = BAR_HEIGHT;
+function sizePattern() {
+  const vw = window.innerWidth || document.documentElement.clientWidth;
+  const tileWidth = Math.max(40, Math.round(vw / REPEATS));
+  const tileHeight = BAR_HEIGHT;
 
-    pattern.setAttribute('width', tileWidth);
-    pattern.setAttribute('height', tileHeight);
+  pattern.setAttribute('width', tileWidth);
+  pattern.setAttribute('height', tileHeight);
 
-    img.setAttribute('width', tileWidth);
-    img.setAttribute('height', tileHeight);
+  img.setAttribute('width', tileWidth);
+  img.setAttribute('height', tileHeight);
 
-    bgRect.setAttribute('width', vw);
-    bgRect.setAttribute('height', BAR_HEIGHT);
+  bgRect.setAttribute('width', vw);
+  bgRect.setAttribute('height', BAR_HEIGHT);
+
+  // ✅ Also size the solid cream background
+  const solidBg = document.getElementById('ecg-solid-bg');
+  if (solidBg) {
+    solidBg.setAttribute('width', vw);
+    solidBg.setAttribute('height', BAR_HEIGHT);
   }
+}
 
   function onScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
