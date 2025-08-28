@@ -20,15 +20,13 @@ function sizePattern() {
   img.setAttribute('width', tileWidth);
   img.setAttribute('height', tileHeight);
 
-  bgRect.setAttribute('width', vw);
-  bgRect.setAttribute('height', BAR_HEIGHT);
+  // ✅ size the solid background
+  solidBg.setAttribute('width', vw);
+  solidBg.setAttribute('height', BAR_HEIGHT);
 
-  // ✅ Also size the solid cream background
-  const solidBg = document.getElementById('ecg-solid-bg');
-  if (solidBg) {
-    solidBg.setAttribute('width', vw);
-    solidBg.setAttribute('height', BAR_HEIGHT);
-  }
+  // ✅ optional: if keeping bg-rect
+  // bgRect.setAttribute('width', vw);
+  // bgRect.setAttribute('height', BAR_HEIGHT);
 }
 
   function onScroll() {
