@@ -35,6 +35,10 @@
     const pct = maxScroll > 0 ? (scrollTop / maxScroll) : 0;
 
     const vw = window.innerWidth || document.documentElement.clientWidth;
+
+    // 👇 DEBUG
+    console.log("onScroll", { scrollTop, maxScroll, pct, width: pct * vw });
+
     fillRect.setAttribute('width', pct * vw);
     fillRect.setAttribute('height', BAR_HEIGHT);
   }
@@ -45,18 +49,3 @@
   sizePattern();
   onScroll();
 })();
-
-function onScroll() {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
-  const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-  const winHeight = window.innerHeight || document.documentElement.clientHeight;
-  const maxScroll = docHeight - winHeight;
-  const pct = maxScroll > 0 ? (scrollTop / maxScroll) : 0;
-
-  const vw = window.innerWidth || document.documentElement.clientWidth;
-
-  console.log("onScroll", { scrollTop, maxScroll, pct, width: pct * vw }); // 👈 add this
-
-  fillRect.setAttribute('width', pct * vw);
-  fillRect.setAttribute('height', BAR_HEIGHT);
-}
