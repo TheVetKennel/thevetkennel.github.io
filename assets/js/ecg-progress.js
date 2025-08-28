@@ -28,19 +28,20 @@
   }
 
   function onScroll() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
-    const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-    const winHeight = window.innerHeight || document.documentElement.clientHeight;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight;
+    const winHeight = window.innerHeight;
     const maxScroll = docHeight - winHeight;
-    const pct = maxScroll > 0 ? (scrollTop / maxScroll) : 0;
 
-    const vw = window.innerWidth || document.documentElement.clientWidth;
+    // clamp between 0–1
+    const pct = maxScroll > 0 ? Math.min(scrollTop / maxScroll, 1) : 0;
 
-    // 👇 DEBUG
-    console.log("onScroll", { scrollTop, maxScroll, pct, width: pct * vw });
-
+    const vw = window.innerWidth;
     fillRect.setAttribute('width', pct * vw);
     fillRect.setAttribute('height', BAR_HEIGHT);
+
+    // DEBUG
+    console.log("page:", window.location.pathname, "pct:", pct);
   }
 
   window.addEventListener('resize', () => { sizePattern(); onScroll(); }, { passive: true });
