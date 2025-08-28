@@ -14,105 +14,104 @@
 </head>
 <body>
 
-<!-- ECG Scroll Progress Bar -->
-<div id="ecg-progress" aria-hidden="true">
-  <svg id="ecg-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <defs>
-      <pattern id="ecgPattern" patternUnits="userSpaceOnUse" width="100" height="40">
-        <image id="ecgImage" href="data:image/png;base64,{{ site.data.ecg_base64 }}" 
-               x="0" y="0" width="100" height="40" preserveAspectRatio="none" />
-      </pattern>
-    </defs>
-
-    <!-- ✅ Solid cream background -->
-    <rect id="ecg-solid-bg" x="0" y="0" height="40" width="100%" fill="#fdfcf7"></rect>
-
-    <!-- ✅ Scrolling ECG fill (the animated part) -->
-<rect id="ecg-fill-rect" x="0" y="0" height="40" width="0" fill="url(#ecgPattern)"></rect>
-  </svg>
-</div>
-
-<script src="{{ "/assets/js/ecg-progress.js" | relative_url }}"></script>
-</body>
-</html>
-
   {% include header.html %}
 
-<main class="post">
+  <main class="post">
 
-  <!-- Page title -->
-  <h1 class="post-title">{{ page.title }}</h1>
+    <!-- Page title -->
+    <h1 class="post-title">{{ page.title }}</h1>
 
-  <!-- Toolbar -->
-  <div class="post-toolbar">
+    <!-- Toolbar -->
+    <div class="post-toolbar">
 
-    <!-- Left: Revision toggle -->
-    <div class="toolbar-box">
-      <div class="revision-toggle">
-        <label class="switch">
-          <input type="checkbox" id="revision-mode">
-          <span class="slider"></span>
-        </label>
-        <span class="toggle-text">Toggle Revision Mode (click cells to reveal)</span>
+      <!-- Left: Revision toggle -->
+      <div class="toolbar-box">
+        <div class="revision-toggle">
+          <label class="switch">
+            <input type="checkbox" id="revision-mode">
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-text">Toggle Revision Mode (click cells to reveal)</span>
+        </div>
       </div>
-    </div>
 
-    <!-- Middle: Notebook navigation -->
-    <div class="toolbar-box">
-      {% include notebook-nav.html %}
-    </div>
-
-    <!-- Right: PDF button -->
-    <div class="toolbar-box">
-      <div class="download-button">
-        <a href="javascript:window.print()" class="cta-button">📄 Download as PDF</a>
-        <p class="library-note">
-          …or get the editable, pretty version from the 
-          <a href="{{ '/library/' | relative_url }}">Library</a>!
-        </p>
+      <!-- Middle: Notebook navigation -->
+      <div class="toolbar-box">
+        {% include notebook-nav.html %}
       </div>
+
+      <!-- Right: PDF button -->
+      <div class="toolbar-box">
+        <div class="download-button">
+          <a href="javascript:window.print()" class="cta-button">📄 Download as PDF</a>
+          <p class="library-note">
+            …or get the editable, pretty version from the 
+            <a href="{{ '/library/' | relative_url }}">Library</a>!
+          </p>
+        </div>
+      </div>
+
     </div>
 
+    <!-- Post content -->
+    {{ content }}
+
+  </main>
+  
+  {% include footer.html %}
+
+  <!-- ECG Scroll Progress Bar -->
+  <div id="ecg-progress" aria-hidden="true">
+    <svg id="ecg-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <!-- ECG pattern tile: fixed 100x40, repeats automatically -->
+        <pattern id="ecgPattern" patternUnits="userSpaceOnUse" width="100" height="40">
+          <image id="ecgImage"
+                 href="data:image/png;base64,{{ site.data.ecg_base64 }}"
+                 x="0" y="0" width="100" height="40"
+                 preserveAspectRatio="none" />
+        </pattern>
+      </defs>
+
+      <!-- Solid cream background across full width -->
+      <rect id="ecg-solid-bg" x="0" y="0" height="40" width="100%" fill="#fdfcf7"></rect>
+
+      <!-- Scrolling ECG fill (animated via JS) -->
+      <rect id="ecg-fill-rect" x="0" y="0" height="40" width="0" fill="url(#ecgPattern)"></rect>
+    </svg>
   </div>
 
-  <!-- Post content -->
-  {{ content }}
+  <script src="{{ "/assets/js/ecg-progress.js" | relative_url }}"></script>
 
-</main>
-  
-{% include footer.html %}
+  <!-- Revision mode script -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("revision-mode");
+    const tables = document.querySelectorAll(".prose table");
 
-<script src="{{ "/assets/js/ecg-progress.js" | relative_url }}"></script>
-
-<!-- Revision mode script -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("revision-mode");
-  const tables = document.querySelectorAll(".prose table");
-
-  toggle.addEventListener("change", () => {
-    tables.forEach(table => {
-      const rows = table.rows;
-      for (let i = 0; i < rows.length; i++) {
-        for (let j = 0; j < rows[i].cells.length; j++) {
-          const cell = rows[i].cells[j];
-          // skip first row and first column
-          if (i === 0 || j === 0) continue;
-          if (toggle.checked) {
-            cell.classList.add("covered");
-            cell.classList.remove("revealed");
-            cell.addEventListener("click", () => {
-              cell.classList.toggle("revealed");
-            });
-          } else {
-            cell.classList.remove("covered", "revealed");
+    toggle.addEventListener("change", () => {
+      tables.forEach(table => {
+        const rows = table.rows;
+        for (let i = 0; i < rows.length; i++) {
+          for (let j = 0; j < rows[i].cells.length; j++) {
+            const cell = rows[i].cells[j];
+            // skip first row and first column
+            if (i === 0 || j === 0) continue;
+            if (toggle.checked) {
+              cell.classList.add("covered");
+              cell.classList.remove("revealed");
+              cell.addEventListener("click", () => {
+                cell.classList.toggle("revealed");
+              });
+            } else {
+              cell.classList.remove("covered", "revealed");
+            }
           }
         }
-      }
+      });
     });
   });
-});
-</script>
+  </script>
 
 </body>
 </html>
