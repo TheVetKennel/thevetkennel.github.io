@@ -615,3 +615,18 @@ input:checked + .slider:before { transform: translateX(24px); }
   z-index: 100;
   background: #fdfcf7;
 }
+
+
+/* Fix library note baseline alignment */
+.download-button .library-note {
+  display: block;          /* treat like normal paragraph */
+  text-align: center;      /* keep whole sentence centred */
+}
+
+.download-button .library-note a {
+  display: inline;         /* behave like normal text */
+  vertical-align: baseline;/* sit flush with surrounding text */
+  color: #805463;          /* mulberry */
+  font-weight: normal;
+  text-decoration: underline;
+}
