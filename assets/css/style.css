@@ -565,13 +565,12 @@ input:checked + .slider:before { transform: translateX(24px); }
 
 /* Revision mode cells */
 .prose td.covered {
-  background-color: #6b8f71 !important;   /* solid green */
-  color: transparent !important;          /* hide text */
-  text-shadow: none !important;           /* remove any shadow/outline */
+  color: transparent !important;            /* hide text */
+  text-shadow: none !important;
   -webkit-text-fill-color: transparent !important; /* Safari/Chrome fix */
   cursor: pointer;
   position: relative;
-  user-select: none;                      /* prevent highlighting hidden text */
+  user-select: none;                        /* prevent highlighting hidden text */
 }
 
 /* Overlay text */
@@ -581,18 +580,16 @@ input:checked + .slider:before { transform: translateX(24px); }
   top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: rgba(0,0,0,0.55);   /* semi-transparent overlay text */
   font-size: 0.8em;
   font-weight: 600;
-  opacity: 0.85;
-  pointer-events: none; /* lets clicks hit the cell itself */
+  pointer-events: none;       /* lets clicks hit the cell itself */
 }
 
 /* Revealed cells */
 .prose td.covered.revealed {
-  color: inherit !important;              /* restore original text */
+  color: inherit !important;               /* restore original text */
   -webkit-text-fill-color: inherit !important;
-  background-color: inherit !important;
 }
 
 .prose td.covered.revealed::after {
