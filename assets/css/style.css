@@ -433,7 +433,6 @@ h1,h2,h3 { color:#2a2a2a; }
 
 /* Make toggle + library note boxes fully centered */
 .post-toolbar .toolbar-box .revision-toggle,
-.post-toolbar .toolbar-box .library-note,
 .post-toolbar .toolbar-box .cta-button {
   display: flex;
   justify-content: center;
