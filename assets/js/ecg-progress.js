@@ -1,33 +1,31 @@
 (function () {
   const svg = document.getElementById('ecg-svg');
   if (!svg) return;
+
   const pattern = document.getElementById('ecgPattern');
   const img = document.getElementById('ecgImage');
-  const bgRect = document.getElementById('ecg-bg-rect');
   const fillRect = document.getElementById('ecg-fill-rect');
+  const solidBg = document.getElementById('ecg-solid-bg');
 
   const BAR_HEIGHT = 40;
   const REPEATS = 10;
 
-function sizePattern() {
-  const vw = window.innerWidth || document.documentElement.clientWidth;
-  const tileWidth = Math.max(40, Math.round(vw / REPEATS));
-  const tileHeight = BAR_HEIGHT;
+  function sizePattern() {
+    const vw = window.innerWidth || document.documentElement.clientWidth;
+    const tileWidth = Math.max(40, Math.round(vw / REPEATS));
+    const tileHeight = BAR_HEIGHT;
 
-  pattern.setAttribute('width', tileWidth);
-  pattern.setAttribute('height', tileHeight);
+    // pattern tile size
+    pattern.setAttribute('width', tileWidth);
+    pattern.setAttribute('height', tileHeight);
 
-  img.setAttribute('width', tileWidth);
-  img.setAttribute('height', tileHeight);
+    img.setAttribute('width', tileWidth);
+    img.setAttribute('height', tileHeight);
 
-  // ✅ size the solid background
-  solidBg.setAttribute('width', vw);
-  solidBg.setAttribute('height', BAR_HEIGHT);
-
-  // ✅ optional: if keeping bg-rect
-  // bgRect.setAttribute('width', vw);
-  // bgRect.setAttribute('height', BAR_HEIGHT);
-}
+    // cream background always full width
+    solidBg.setAttribute('width', vw);
+    solidBg.setAttribute('height', BAR_HEIGHT);
+  }
 
   function onScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
