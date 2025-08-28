@@ -448,12 +448,23 @@ h1,h2,h3 { color:#2a2a2a; }
   font-size: 1em;
 }
 
-/* Make toolbar text match nav headings */
-.revision-toggle .toggle-text,
-.download-button .library-note {
-  font-family: 'Courier New', Courier, monospace; /* same as nav headings */
-  font-weight: bold;                              /* same thickness */
-  color: #805463;                                 /* same mulberry color */
+/* Make ALL toolbar box text match Notebook Navigation style */
+.post-toolbar .toolbar-box {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  color: #1b1b1b;  /* same as centre */
+  font-weight: normal;
+  text-align: center;
+}
+
+.post-toolbar .toolbar-box a {
+  color: #805463; /* keep links mulberry */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.post-toolbar .toolbar-box a:hover {
+  text-decoration: underline;
 }
 
 /* Notebook nav in toolbar: center headings, left-align children */
