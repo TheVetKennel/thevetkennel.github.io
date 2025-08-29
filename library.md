@@ -12,7 +12,7 @@ permalink: /library/
   <link rel="canonical" href="https://thevetkennel.etsy.com">
 </head>
 <body>
-  <p>If you’re not redirected automatically, 
-     <a href="https://thevetkennel.etsy.com">click here to visit The Vet Kennel shop</a>.</p>
+  <p>Sit tight! You're being taken to the library..... if it's taking a while, 
+     <a href="https://thevetkennel.etsy.com">click here to speed things up</a>.</p>
 </body>
 </html>
