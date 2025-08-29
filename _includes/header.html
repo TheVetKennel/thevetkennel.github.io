@@ -4,13 +4,32 @@
     <a class="site-title" href="{{ '/' | relative_url }}">The Vet Kennel</a>
     {% assign cur = page.url | replace: '.html','' %}
     <ul class="nav-links">
-      <li><a href="{{ '/notebook' | relative_url }}" class="{% if cur contains '/notebook' or page.categories contains 'notebook' %}active{% endif %}">Notebook</a></li>
+      <li>
+        <a href="{{ '/notebook' | relative_url }}" 
+           class="{% if cur contains '/notebook' or page.categories contains 'notebook' %}active{% endif %}">
+          Notebook
+        </a>
+      </li>
 
-      <!-- Changed Library link to Etsy -->
-      <li><a href="https://thevetkennel.etsy.com" target="_blank" rel="noopener noreferrer">Library</a></li>
+      <!-- Library now external, no active highlight -->
+      <li>
+        <a href="https://thevetkennel.etsy.com" target="_blank" rel="noopener noreferrer">
+          Library
+        </a>
+      </li>
 
-      <li><a href="{{ '/about/' | relative_url }}" class="{% if cur contains '/about' %}active{% endif %}">About</a></li>
-      <li><a href="{{ '/contact' | relative_url }}" class="{% if cur contains '/contact' %}active{% endif %}">Contact</a></li>
+      <li>
+        <a href="{{ '/about/' | relative_url }}" 
+           class="{% if cur contains '/about' %}active{% endif %}">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="{{ '/contact' | relative_url }}" 
+           class="{% if cur contains '/contact' %}active{% endif %}">
+          Contact
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
