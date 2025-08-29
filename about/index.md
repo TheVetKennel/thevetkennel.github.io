@@ -19,11 +19,18 @@ thumbnail: /assets/images/pda-thumbnail.png
   <p>A safe, cozy corner for evidence-based, accessible vet study resources, with no prior knowledge assumed. My website may be basic (me and technology don't get on) but it's teeming with gold nuggets of veterinary info.</p>
 
 
-  <h3>How do I use it? 🗂</h3>
-  <ul>
-    <li>Peruse the <a href="{{ '/notebook/' | relative_url }}">Notebook</a> to find concise summary tables filled with the diagnoses you need to know. </li>
-    <li>Grab the goods from the <a href="{{ '/library/' | relative_url }}">Library</a> when you’re ready to practice with active-recall flashcard decks. Or, if you crave organisation during your hectic clinical rotations; find study planners, SOAP templates, placement logbooks, and whatnot.</li>
-  </ul>
+<h3>How do I use it? 🗂</h3>
+<ul>
+  <li>
+    Peruse the <a href="{{ '/notebook/' | relative_url }}">Notebook</a> 
+    to find concise summary tables filled with the diagnoses you need to know.
+  </li>
+  <li>
+    Grab the goods from the 
+    <a href="https://thevetkennel.etsy.com" target="_blank" rel="noopener noreferrer">Library</a> 
+    when you’re ready to practice with active-recall flashcard decks. Or, if you crave organisation during your hectic clinical rotations; find study planners, SOAP templates, placement logbooks, and whatnot.
+  </li>
+</ul>
 
   <h3>Do you know what you're talking about? 🧐</h3>
   <p>I make sure I do. Everything here is mapped to the ICVA <em>Species & Diagnoses</em> and <em>Competency Domains</em>. I cross-check content with the Merck Veterinary Manual, Saunders Comprehensive Review for the NAVLE, Vetprep, Zuku, as well as peer-reviewed studies published in journals found in ResearchGate, AVMA Journals, and PubMedCentral. This is all in addition to my own notes and knowledge from my time studying the Bachelor of Veterinary Medicine course at the Royal Veterinary College London. If you read anything that sounds off, please do drop me a message and I will investigate and update.</p>
