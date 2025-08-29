@@ -1,7 +1,18 @@
 ---
-layout: default
-title: Library
+layout: none
+permalink: /library/
 ---
 
-<h1>Library</h1>
-<p>Don't look here omg so embarassing its so ugly I haven't finished okayy. Just... just go.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting…</title>
+  <meta http-equiv="refresh" content="0; url=https://thevetkennel.etsy.com">
+  <link rel="canonical" href="https://thevetkennel.etsy.com">
+</head>
+<body>
+  <p>If you’re not redirected automatically, 
+     <a href="https://thevetkennel.etsy.com">click here to visit The Vet Kennel shop</a>.</p>
+</body>
+</html>
